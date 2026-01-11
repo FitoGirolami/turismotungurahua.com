@@ -1,759 +1,765 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dinámicas Culturales y Territoriales en Tungurahua | Informe académico-turístico</title>
+    <title>Dinámicas Culturales y Territoriales en Tungurahua | Informe académico-turístico</title>
 
-  <!-- SEO básico -->
-  <meta name="description" content="Informe académico-turístico sobre Tungurahua (Ecuador): historia regional, patrimonio cultural inmaterial, tradición oral documentada, oficios, turismo y el auge de parques temáticos. Incluye el caso del fenómeno de los duendes (2013–presente) con fuentes enlazadas." />
-  <link rel="canonical" href="https://turismotungurahua.com/informe-tungurahua/" />
-  <meta name="robots" content="index,follow" />
+    <!-- SEO básico -->
+    <meta name="description" content="Informe académico-turístico sobre Tungurahua (Ecuador): historia regional, patrimonio cultural inmaterial, tradición oral documentada, oficios, turismo y el auge de parques temáticos. Incluye el caso del fenómeno de los duendes (2013–presente) con fuentes enlazadas." />
+    <link rel="canonical" href="https://turismotungurahua.com/informe-tungurahua/" />
+    <meta name="robots" content="index,follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Dinámicas Culturales y Territoriales en Tungurahua" />
-  <meta property="og:description" content="Informe académico-turístico verificable: historia, PCI, tradición oral y transformación turística en Tungurahua, incluyendo parques temáticos y el fenómeno de los duendes." />
-  <meta property="og:url" content="https://turismotungurahua.com/informe-tungurahua/" />
-  <meta property="og:image" content="https://turismotungurahua.com/assets/og-tungurahua.jpg" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Dinámicas Culturales y Territoriales en Tungurahua" />
+    <meta property="og:description" content="Informe académico-turístico verificable: historia, PCI, tradición oral y transformación turística en Tungurahua, incluyendo parques temáticos y el fenómeno de los duendes." />
+    <meta property="og:url" content="https://turismotungurahua.com/informe-tungurahua/" />
+    <meta property="og:image" content="https://turismotungurahua.com/assets/og-tungurahua.jpg" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dinámicas Culturales y Territoriales en Tungurahua" />
-  <meta name="twitter:description" content="Informe académico-turístico con fuentes enlazadas: Tungurahua, patrimonio, turismo, parques temáticos y fenómeno de los duendes." />
-  <meta name="twitter:image" content="https://turismotungurahua.com/assets/og-tungurahua.jpg" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dinámicas Culturales y Territoriales en Tungurahua" />
+    <meta name="twitter:description" content="Informe académico-turístico con fuentes enlazadas: Tungurahua, patrimonio, turismo, parques temáticos y fenómeno de los duendes." />
+    <meta name="twitter:image" content="https://turismotungurahua.com/assets/og-tungurahua.jpg" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap');
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap');
 
-    body{font-family:'Inter',sans-serif;background-color:#f5f5f2;color:#2d2a26}
-    h1,h2,h3,.serif{font-family:'Merriweather',serif}
+        body { font-family: 'Inter', sans-serif; background-color: #f5f5f2; color: #2d2a26; }
+        h1, h2, h3, .serif { font-family: 'Merriweather', serif; }
 
-    ::-webkit-scrollbar{width:8px}
-    ::-webkit-scrollbar-track{background:#e5e5e0}
-    ::-webkit-scrollbar-thumb{background:#8c857b;border-radius:4px}
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e5e5e0; }
+        ::-webkit-scrollbar-thumb { background: #8c857b; border-radius: 4px; }
 
-    .chart-container{position:relative;width:100%;max-width:800px;height:400px;max-height:50vh;margin:0 auto}
-    .active-tab{border-bottom:3px solid #78350f;color:#451a03;font-weight:600}
+        .chart-container { position: relative; width: 100%; max-width: 800px; height: 400px; max-height: 50vh; margin: 0 auto; }
+        
+        .active-tab { border-bottom: 3px solid #78350f; color: #451a03; font-weight: 600; }
 
-    .card-shadow{box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);transition:transform .2s ease-in-out}
-    .card-shadow:hover{transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}
+        .card-shadow { box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06); transition: transform .2s ease-in-out; }
+        .card-shadow:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05); }
 
-    .fade-in{animation:fadeIn .5s ease-in}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+        .fade-in { animation: fadeIn .5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .cite{font-size:.75em;vertical-align:super;color:#0f766e;text-decoration:none;font-weight:700;margin-left:.15rem}
-    .cite:hover{color:#be123c;text-decoration:underline}
-    .ref-link{color:#0f766e;text-decoration:underline;word-break:break-word}
-    .ref-link:hover{color:#be123c}
-    .ref-tag{display:inline-block;font-size:.7rem;padding:.15rem .4rem;border-radius:.4rem;background:#e7e5e4;color:#57534e;margin-left:.4rem}
-    .ref-box{background:#ffffff;border:1px solid #e7e5e4;border-radius:.75rem}
-  </style>
+        .cite { font-size: .75em; vertical-align: super; color: #0f766e; text-decoration: none; font-weight: 700; margin-left: .15rem; }
+        .cite:hover { color: #be123c; text-decoration: underline; }
+        
+        .ref-link { color: #0f766e; text-decoration: underline; word-break: break-word; }
+        .ref-link:hover { color: #be123c; }
+        
+        .ref-tag { display: inline-block; font-size: .7rem; padding: .15rem .4rem; border-radius: .4rem; background: #e7e5e4; color: #57534e; margin-left: .4rem; }
+        .ref-box { background: #ffffff; border: 1px solid #e7e5e4; border-radius: .75rem; }
+    </style>
 
-  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- Chosen Palette: "Andean Earth & Mist" - Warm neutrals (#f5f5f2), Volcanic Dark Grey (#2d2a26), Deep Earth Brown (#78350f), Muted Agricultural Green (#577353) -->
+    <!-- Application Structure Plan: Dashboard structure with 5 modules (Territory, History, Heritage, Economy, Case Study). Methodology prioritized in header. -->
+    <!-- Visualization & Content Choices: Chart.js for economic models. CSS Grid for legend cards. Timeline for history. No SVG used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-  <!-- Header -->
-  <header class="bg-stone-900 text-stone-100 py-12 px-6 shadow-lg">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-        <div class="md:w-3/4">
-          <p class="text-stone-400 uppercase tracking-widest text-xs font-semibold mb-2">
-            Informe académico-turístico • Provincia de Tungurahua • Enfoque verificable
-          </p>
-          <h1 class="text-3xl md:text-5xl font-bold serif leading-tight mb-4">
-            Dinámicas Culturales y Territoriales en Tungurahua
-          </h1>
-          <h2 class="text-xl md:text-2xl text-stone-300 font-light italic">
-            Tradición, Patrimonio Cultural Inmaterial, Turismo y Parques Temáticos
-          </h2>
+    <!-- Header -->
+    <header class="bg-stone-900 text-stone-100 py-12 px-6 shadow-lg">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div class="md:w-3/4">
+                    <p class="text-stone-400 uppercase tracking-widest text-xs font-semibold mb-2">
+                        Informe académico-turístico • Provincia de Tungurahua • Enfoque verificable
+                    </p>
+                    <h1 class="text-3xl md:text-5xl font-bold serif leading-tight mb-4">
+                        Dinámicas Culturales y Territoriales en Tungurahua
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-stone-300 font-light italic">
+                        Tradición, Patrimonio Cultural Inmaterial, Turismo y Parques Temáticos
+                    </h2>
+                </div>
+                <div class="text-right md:w-1/4">
+                    <div class="inline-block bg-stone-800 rounded px-3 py-1 text-xs text-stone-400 border border-stone-700 mb-2">
+                        DOI: previsto (Zenodo)
+                    </div>
+                    <p class="text-xs text-stone-500">Versión 1.2 • Enero 2026</p>
+                </div>
+            </div>
+
+            <!-- Abstract + metodología -->
+            <div class="mt-8 border-t border-stone-700 pt-6">
+                <button onclick="toggleSection('abstract-content')" class="flex items-center text-amber-600 hover:text-amber-500 transition-colors text-sm font-semibold uppercase tracking-wide">
+                    <span>Leer Resumen / Metodología (auditabilidad)</span>
+                    <span class="ml-2 text-lg">↓</span>
+                </button>
+
+                <div id="abstract-content" class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed fade-in">
+                    <div>
+                        <h3 class="text-white font-bold mb-2">Resumen</h3>
+                        <p class="mb-3">
+                            Este informe analiza Tungurahua (Ecuador) distinguiendo tres capas: <strong>(1) evidencia documental</strong>,
+                            <strong>(2) tradición oral documentada</strong> y <strong>(3) narrativa turística contemporánea</strong>.
+                            Se comparan territorios con continuidad productiva (p. ej., Patate, Huambaló) y corredores paisajísticos (p. ej., Río Verde),
+                            con Baños de Agua Santa como nodo turístico de alta intensidad.
+                        </p>
+                        <p>
+                            Se incorpora un eje específico: la expansión de <strong>parques temáticos</strong> y atractivos “instagrameables”
+                            (2010–presente) y, dentro de ese marco, el <strong>fenómeno de los duendes</strong> como narrativa turística contemporánea,
+                            que se masifica tras el posicionamiento de proyectos artísticos autorales: <em>La Casa del Duende (2013)</em> y
+                            <em>La Aldea Mágica (2018)</em>. <a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold mb-2">Metodología y límites</h3>
+                        <ul class="list-disc pl-4 space-y-1 text-stone-400">
+                            <li><strong>Enfoque:</strong> cualitativo-comparativo + revisión documental.</li>
+                            <li><strong>Fuentes primarias/altamente confiables:</strong> IGEPN (informes volcánicos), INPC (PCI), GAD/PDOT.</li>
+                            <li><strong>Fuentes secundarias:</strong> prensa histórica, bibliografía académica, compilaciones.</li>
+                            <li><strong>Wikipedia:</strong> uso contextual/auxiliar, nunca base única de afirmaciones críticas.</li>
+                            <li><strong>Parques temáticos:</strong> se describen como dispositivos turísticos (infraestructura/relato/consumo), no como juicio moral sobre actores.</li>
+                            <li><strong>Duendes:</strong> se diferencia <em>obra/propuesta autoral</em> vs. <em>reproducción temática/comercial</em>, sin atribuir intenciones sin evidencia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="text-right md:w-1/4">
-          <div class="inline-block bg-stone-800 rounded px-3 py-1 text-xs text-stone-400 border border-stone-700 mb-2">
-            DOI: previsto (Zenodo)
-          </div>
-          <p class="text-xs text-stone-500">Versión 1.2 • Enero 2026</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 overflow-x-auto">
+            <div class="flex space-x-6 md:space-x-10 min-w-max">
+                <button onclick="switchTab('territorio')" class="nav-btn active-tab py-4 text-sm uppercase tracking-wide transition-colors hover:text-stone-900" id="btn-territorio">Territorio</button>
+                <button onclick="switchTab('historia')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-historia">Marco Histórico</button>
+                <button onclick="switchTab('patrimonio')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-patrimonio">Patrimonio Oral</button>
+                <button onclick="switchTab('economia')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-economia">Economía & Oficios</button>
+                <button onclick="switchTab('duende')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-duende">Caso: Duendes & Parques</button>
+                <a href="#fuentes" class="py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900">Fuentes</a>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- Abstract + metodología -->
-      <div class="mt-8 border-t border-stone-700 pt-6">
-        <button onclick="toggleSection('abstract-content')" class="flex items-center text-amber-600 hover:text-amber-500 transition-colors text-sm font-semibold uppercase tracking-wide">
-          <span>Leer Resumen / Metodología (auditabilidad)</span>
-          <span class="ml-2 text-lg">↓</span>
-        </button>
+    <!-- Main -->
+    <main class="flex-grow bg-[#f5f5f2] p-6">
+        <div class="max-w-6xl mx-auto min-h-[600px]">
 
-        <div id="abstract-content" class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed fade-in">
-          <div>
-            <h3 class="text-white font-bold mb-2">Resumen</h3>
-            <p class="mb-3">
-              Este informe analiza Tungurahua (Ecuador) distinguiendo tres capas: <strong>(1) evidencia documental</strong>,
-              <strong>(2) tradición oral documentada</strong> y <strong>(3) narrativa turística contemporánea</strong>.
-              Se comparan territorios con continuidad productiva (p. ej., Patate, Huambaló) y corredores paisajísticos (p. ej., Río Verde),
-              con Baños de Agua Santa como nodo turístico de alta intensidad.
-            </p>
-            <p>
-              Se incorpora un eje específico: la expansión de <strong>parques temáticos</strong> y atractivos “instagrameables”
-              (2010–presente) y, dentro de ese marco, el <strong>fenómeno de los duendes</strong> como narrativa turística contemporánea,
-              que se masifica tras el posicionamiento de proyectos artísticos autorales: <em>La Casa del Duende (2013)</em> y
-              <em>La Aldea Mágica (2018)</em>. <a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
-            </p>
-          </div>
+            <!-- 1) Territorio -->
+            <section id="sec-territorio" class="fade-in block">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Configuración territorial comparada</h2>
+                    <p class="text-stone-600 max-w-3xl">
+                        Comparación de nodos territoriales seleccionados. Para datos administrativos (altitudes/categorías/fechas), se priorizan GAD/PDOT; Wikipedia se usa como apoyo contextual cuando no hay un documento oficial accesible en esta versión.
+                    </p>
+                </div>
 
-          <div>
-            <h3 class="text-white font-bold mb-2">Metodología y límites</h3>
-            <ul class="list-disc pl-4 space-y-1 text-stone-400">
-              <li><strong>Enfoque:</strong> cualitativo-comparativo + revisión documental.</li>
-              <li><strong>Fuentes primarias/altamente confiables:</strong> IGEPN (informes volcánicos), INPC (PCI), GAD/PDOT.</li>
-              <li><strong>Fuentes secundarias:</strong> prensa histórica, bibliografía académica, compilaciones.</li>
-              <li><strong>Wikipedia:</strong> uso contextual/auxiliar, nunca base única de afirmaciones críticas.</li>
-              <li><strong>Parques temáticos:</strong> se describen como dispositivos turísticos (infraestructura/relato/consumo), no como juicio moral sobre actores.</li>
-              <li><strong>Duendes:</strong> se diferencia <em>obra/propuesta autoral</em> vs. <em>reproducción temática/comercial</em>, sin atribuir intenciones sin evidencia.</li>
-            </ul>
-          </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Baños -->
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-500">
+                        <div class="text-xs font-bold text-amber-600 uppercase mb-2">Turismo • Religiosidad • Termalismo</div>
+                        <h3 class="text-xl font-bold mb-2 serif">Baños de Agua Santa</h3>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Centro de peregrinación (Virgen de Agua Santa) y termalismo; reconfigurado por el ciclo eruptivo 1999–2000 y el reposicionamiento turístico posterior.
+                            <a class="cite" href="#ref-gad-banos-historia">[1]</a><a class="cite" href="#ref-igepn-anual-2000">[2]</a>
+                        </p>
+                        <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
+                            <div class="flex justify-between"><span>Referencia general:</span> <strong>cantón (Tungurahua)</strong></div>
+                            <div class="flex justify-between"><span>Enlace contextual:</span> <strong>Wikipedia (sec.)</strong><a class="cite" href="#ref-wiki-banos">[3]</a></div>
+                            <div class="flex justify-between"><span>Eje:</span> <strong>Servicios turísticos</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Patate -->
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-green-600">
+                        <div class="text-xs font-bold text-green-700 uppercase mb-2">Valle interandino • Agro-producción</div>
+                        <h3 class="text-xl font-bold mb-2 serif">Cantón Patate</h3>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Territorio con continuidad agrícola y agenda de planificación territorial (PDOT/PUGS) como base verificable de matriz productiva y gestión local.
+                            <a class="cite" href="#ref-gad-patate-pdot">[4]</a>
+                        </p>
+                        <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
+                            <div class="flex justify-between"><span>Planificación:</span> <strong>PDOT/PUGS</strong><a class="cite" href="#ref-gad-patate-pdot">[4]</a></div>
+                            <div class="flex justify-between"><span>Documento prov.:</span> <strong>PDF GAD Prov.</strong><a class="cite" href="#ref-gadprov-patate-pdf">[5]</a></div>
+                            <div class="flex justify-between"><span>Eje:</span> <strong>Agricultura</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Huambaló -->
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-800">
+                        <div class="text-xs font-bold text-amber-900 uppercase mb-2">Oficios • Manufactura</div>
+                        <h3 class="text-xl font-bold mb-2 serif">Huambaló (Pelileo)</h3>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Caso representativo de especialización en manufactura/ebanistería dentro de la provincia (en esta versión: descripción interpretativa; se recomienda enlazar PDOT de Pelileo o registro sectorial).
+                            <a class="cite" href="#ref-corpus-campo">[9]</a>
+                        </p>
+                        <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
+                            <div class="flex justify-between"><span>Tipo:</span> <strong>parroquia (referencial)</strong></div>
+                            <div class="flex justify-between"><span>Base empírica:</span> <strong>campo/corpus</strong><a class="cite" href="#ref-corpus-campo">[9]</a></div>
+                            <div class="flex justify-between"><span>Eje:</span> <strong>Manufactura</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Río Verde -->
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-emerald-500">
+                        <div class="text-xs font-bold text-emerald-700 uppercase mb-2">Corredor paisajístico • Visita de paso</div>
+                        <h3 class="text-xl font-bold mb-2 serif">Río Verde</h3>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Zona de transición ecológica y corredor de visita asociado a hitos paisajísticos; alta dependencia de servicios al visitante en escenarios de turismo de naturaleza.
+                            <a class="cite" href="#ref-corpus-campo">[9]</a>
+                        </p>
+                        <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
+                            <div class="flex justify-between"><span>Base empírica:</span> <strong>campo/corpus</strong><a class="cite" href="#ref-corpus-campo">[9]</a></div>
+                            <div class="flex justify-between"><span>Eje:</span> <strong>Turismo de naturaleza</strong></div>
+                            <div class="flex justify-between"><span>Nota:</span> <strong>requiere PDOT enlazado</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-6 bg-white rounded-lg border border-stone-200">
+                    <h3 class="font-bold text-lg mb-3">Parques temáticos como “dispositivo” de turismo contemporáneo</h3>
+                    <p class="text-stone-700 mb-4">
+                        Entre 2010 y el presente, se observa el crecimiento de atractivos de alto impacto visual (miradores, manos gigantes, columpios, “parques” temáticos)
+                        que reconfiguran el territorio como experiencia de consumo rápido. Este informe los analiza como dispositivos turísticos (infraestructura + relato + circulación en redes),
+                        y enmarca allí el <strong>fenómeno de los duendes</strong>: una estética que se vuelve ampliamente replicable y masiva, especialmente tras proyectos autorales que la visibilizan en la ciudad.
+                        <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2) Historia -->
+            <section id="sec-historia" class="hidden fade-in">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Marco histórico y cronológico (hechos documentados)</h2>
+                    <p class="text-stone-600 max-w-3xl">
+                        Línea de tiempo con énfasis en eventos verificables (fuentes institucionales/científicas) y su relación con transformaciones socioeconómicas y turísticas.
+                    </p>
+                </div>
+
+                <div class="relative border-l-4 border-stone-300 ml-6 space-y-12 my-10">
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-stone-500">Historia local (síntesis institucional)</span>
+                            <h4 class="text-lg font-bold text-amber-900">Construcción temprana del asentamiento y memoria local</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Referencias municipales sobre el desarrollo histórico y cultural de Baños (síntesis institucional).
+                                <a class="cite" href="#ref-gad-banos-historia">[1]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-600 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-blue-400">
+                            <span class="text-xs font-bold text-blue-600">1999–2000</span>
+                            <h4 class="text-lg font-bold text-blue-800">Ciclo eruptivo y retorno social</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Reportes del IGEPN documentan el periodo de reactivación; el retorno del 5 de enero de 2000 se consolida como hito social.
+                                <a class="cite" href="#ref-igepn-anual-2000">[2]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-amber-500 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-amber-500">
+                            <span class="text-xs font-bold text-amber-600">2010–presente</span>
+                            <h4 class="text-lg font-bold text-amber-800">Turismo visual, redes y parques temáticos</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Aumento de atractivos “instagramiables” y parques temáticos como infraestructura cultural-turística contemporánea. Lectura apoyada en observación/corpus (con DOI previsto).
+                                <a class="cite" href="#ref-corpus-campo">[9]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-stone-500">2013</span>
+                            <h4 class="text-lg font-bold text-amber-900">Aparición pública de una propuesta autoral: La Casa del Duende</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Se registra la referencia de origen del proyecto <em>La Casa del Duende</em> (2013) según su documentación pública.
+                                <a class="cite" href="#ref-lcd-preguntas">[10]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-stone-500">2018</span>
+                            <h4 class="text-lg font-bold text-amber-900">Consolidación de espacio-experiencia: La Aldea Mágica</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Apertura/puesta en marcha del espacio <em>La Aldea Mágica</em> (2018) según su documentación pública.
+                                <a class="cite" href="#ref-aldea-historia">[11]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-600 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-rose-400">
+                            <span class="text-xs font-bold text-rose-600">2018–presente</span>
+                            <h4 class="text-lg font-bold text-rose-800">“Fiebre” de duendes y expansión temática</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Tras la visibilización de propuestas autorales, la estética del duende se vuelve altamente replicable y se expande en productos, parques temáticos y señalética turística.
+                                En este informe se trata como fenómeno de difusión estética y turística (requiere inventario con DOI: registro fotográfico/geo-referenciado).
+                                <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
+                        <div class="bg-white p-5 rounded-lg shadow-sm">
+                            <span class="text-xs font-bold text-stone-500">Contexto académico/regional</span>
+                            <h4 class="text-lg font-bold text-amber-900">Impactos sociales y lecturas de recuperación</h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Bibliografía académica para contexto de provincia y procesos de crisis/recuperación (FLACSO).
+                                <a class="cite" href="#ref-flacso-tungurahua-ano-despues">[8]</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3) Patrimonio oral -->
+            <section id="sec-patrimonio" class="hidden fade-in">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Patrimonio oral vs. narrativa turística</h2>
+                        <p class="text-stone-600 max-w-2xl text-sm">
+                            Base de ejemplos categorizados. “Tradición documentada” exige compilación/archivo/entrevistas con protocolo (ideal: DOI). “Narrativa turística” incluye guiones y parques temáticos contemporáneos.
+                        </p>
+                    </div>
+                    <div class="bg-white p-1 rounded-lg border border-stone-300 flex text-xs mt-4 md:mt-0">
+                        <button onclick="filterLegends('all')" class="px-4 py-2 rounded bg-stone-800 text-white hover:bg-stone-700 transition" id="filter-all">Ver todo</button>
+                        <button onclick="filterLegends('documentada')" class="px-4 py-2 rounded hover:bg-stone-100 transition text-stone-600" id="filter-doc">Tradición documentada</button>
+                        <button onclick="filterLegends('turistica')" class="px-4 py-2 rounded hover:bg-stone-100 transition text-stone-600" id="filter-tour">Narrativa turística</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="legends-grid"></div>
+
+                <div class="mt-8 p-4 bg-amber-50 border border-amber-200 rounded text-sm text-amber-900">
+                    <strong>Nota metodológica:</strong> en “narrativa turística” se incluyen explícitamente parques temáticos y relatos de “seres mágicos” usados como valor agregado para la experiencia.
+                    <a class="cite" href="#ref-corpus-campo">[9]</a>
+                </div>
+            </section>
+
+            <!-- 4) Economía -->
+            <section id="sec-economia" class="hidden fade-in">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Matriz productiva y oficios (modelo conceptual)</h2>
+                    <p class="text-stone-600 max-w-3xl">
+                        El gráfico funciona como <strong>modelo heurístico</strong> (no estadística oficial única) y debe triangularse con PDOT cantonales y observación de campo.
+                        <a class="cite" href="#ref-gad-patate-pdot">[4]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                    <div class="bg-white p-6 rounded-lg card-shadow">
+                        <h3 class="font-bold text-stone-700 mb-4 text-center">Estimación comparativa de dependencia por sector (%)</h3>
+                        <div class="chart-container">
+                            <canvas id="economyChart"></canvas>
+                        </div>
+                        <p class="text-xs text-center text-stone-400 mt-2">
+                            Modelo conceptual: PDOT/planificación donde exista + observación de campo (2024–2025). <a class="cite" href="#ref-gad-patate-pdot">[4]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white p-5 rounded-lg border-l-4 border-amber-800">
+                            <h4 class="font-bold text-amber-900 mb-2">Huambaló: continuidad del oficio</h4>
+                            <p class="text-sm text-stone-700">
+                                Interpretación basada en especialización productiva y cadenas locales (recomendación: enlazar PDOT/registro sectorial).
+                                <a class="cite" href="#ref-corpus-campo">[9]</a>
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg border-l-4 border-green-600">
+                            <h4 class="font-bold text-green-800 mb-2">Patate: territorio agrícola planificado</h4>
+                            <p class="text-sm text-stone-700">
+                                PDOT/PUGS del GAD de Patate como base verificable para matriz productiva y prioridades de gestión.
+                                <a class="cite" href="#ref-gad-patate-pdot">[4]</a>
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-lg border-l-4 border-red-500">
+                            <h4 class="font-bold text-red-800 mb-2">Baños: servicios, marca, parques y souvenirs</h4>
+                            <p class="text-sm text-stone-700">
+                                Observación: la expansión de parques temáticos y souvenirs “serializables” acompaña el aumento de demanda de experiencias rápidas y fotografiables.
+                                En el eje “duendes”, se diferencia obra/propuesta autoral (2013/2018) de la reproducción masiva posterior.
+                                <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5) Caso Duende -->
+            <section id="sec-duende" class="hidden fade-in">
+                <div class="mb-8 text-center">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Caso: Duendes, parques temáticos y difusión estética (2013–presente)</h2>
+                    <p class="text-stone-600 max-w-3xl mx-auto">
+                        Se separa (A) repertorios coloniales/andinos (marco comparativo), (B) propuesta autoral contemporánea (proyectos identificables) y
+                        (C) expansión temática comercial/turística (parques, señalética, souvenirs). La atribución de causalidad fuerte requiere un inventario con DOI (fotos + fechas + georreferenciación).
+                    </p>
+                </div>
+
+                <!-- Bloque 3 columnas -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                    <!-- A: Marco comparativo -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 bg-stone-100 border-b border-stone-200">
+                            <div class="uppercase tracking-widest text-xs font-bold text-stone-500 mb-2">A. Marco comparativo</div>
+                            <h3 class="text-xl font-serif font-bold text-stone-800">“Duende” en registros amplios</h3>
+                            <p class="text-sm text-stone-700 mt-3">
+                                Columna de referencia para distinguir “entidades domésticas o de monte” de usos turísticos actuales. Si se quiere fijar rasgos por zona, debe incorporarse bibliografía específica (versión ampliada).
+                            </p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 text-sm text-stone-700">
+                                <li class="flex items-start"><span class="mr-2">📜</span><span><strong>Ámbito:</strong> relatos familiares o rurales.</span></li>
+                                <li class="flex items-start"><span class="mr-2">⚖️</span><span><strong>Función:</strong> advertencia/orden moral (hipótesis a validar con corpus).</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- B: Propuesta autoral -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 bg-emerald-50 border-b border-emerald-100">
+                            <div class="uppercase tracking-widest text-xs font-bold text-emerald-700 mb-2">B. Propuesta autoral (Baños)</div>
+                            <h3 class="text-xl font-serif font-bold text-emerald-900">La Casa del Duende (2013) y La Aldea Mágica (2018)</h3>
+                            <p class="text-sm text-stone-700 mt-3">
+                                Proyectos artísticos identificables que consolidan una estética contemporánea del duende y la instalan como experiencia cultural local.
+                                <a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
+                            </p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 text-sm text-stone-700">
+                                <li class="flex items-start"><span class="mr-2">🏷️</span><span><strong>2013:</strong> referencia pública del origen de <em>La Casa del Duende</em>.</span> <a class="cite" href="#ref-lcd-preguntas">[10]</a></li>
+                                <li class="flex items-start"><span class="mr-2">🌿</span><span><strong>2018:</strong> consolidación de <em>La Aldea Mágica</em> como espacio-experiencia.</span> <a class="cite" href="#ref-aldea-historia">[11]</a></li>
+                                <li class="flex items-start"><span class="mr-2">🧩</span><span><strong>Clave analítica:</strong> autoría, coherencia simbólica y trazabilidad documental del proyecto.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- C: Parques temáticos y fiebre -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6 bg-amber-50 border-b border-amber-100">
+                            <div class="uppercase tracking-widest text-xs font-bold text-amber-700 mb-2">C. Expansión turística</div>
+                            <h3 class="text-xl font-serif font-bold text-amber-900">Parques temáticos y “fiebre” de duendes</h3>
+                            <p class="text-sm text-stone-700 mt-3">
+                                Posteriormente, la estética del duende se expande como recurso turístico replicable: parques temáticos, figuras seriadas, señalética y souvenirs.
+                                Este documento lo trata como <strong>difusión estética + economía de la atención</strong>. Para afirmar magnitud y cronología con precisión: inventario con DOI.
+                                <a class="cite" href="#ref-corpus-campo">[9]</a>
+                            </p>
+                        </div>
+                        <div class="p-6">
+                            <ul class="space-y-3 text-sm text-stone-700">
+                                <li class="flex items-start"><span class="mr-2">🎡</span><span><strong>Parques temáticos:</strong> infraestructura + guion + foto.</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
+                                <li class="flex items-start"><span class="mr-2">📈</span><span><strong>Fiebre:</strong> aumento visible de presencia en comercios/atractivos (observación de campo).</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
+                                <li class="flex items-start"><span class="mr-2">🗺️</span><span><strong>Recomendación:</strong> mapa de puntos (geo) + fotos + fecha + fuente (DOI).</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-8 max-w-6xl mx-auto p-5 bg-white border border-stone-200 rounded-xl">
+                    <h4 class="font-bold text-stone-800 mb-2">Cómo volver esto “auditable” (para Zenodo/DOI)</h4>
+                    <p class="text-sm text-stone-700">
+                        Publicar un dataset con DOI que contenga: (1) listado de parques/atractivos con coordenadas, (2) fotografías fechadas,
+                        (3) capturas de publicaciones (si aplica) con URL y fecha, (4) criterios de clasificación: “propuesta autoral” vs “atracción temática” vs “souvenir seriado”.
+                        <a class="cite" href="#ref-corpus-campo">[9]</a>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Fuentes -->
+            <section id="fuentes" class="mt-14">
+                <div class="mb-6">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Fuentes y trazabilidad</h2>
+                    <p class="text-stone-600 max-w-3xl">
+                        Referencias enlazadas. Se indica tipo de fuente y rol (primaria/secundaria/contextual). Wikipedia se incluye como apoyo contextual, no como prueba principal.
+                    </p>
+                </div>
+
+                <div class="ref-box p-6">
+                    <ol class="list-decimal list-inside space-y-4 text-sm text-stone-700">
+
+                        <li id="ref-gad-banos-historia">
+                            <strong>GAD Municipal de Baños de Agua Santa.</strong> “Historia”. <span class="ref-tag">institucional</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://www.municipiobanos.gob.ec/historia/" target="_blank" rel="noopener noreferrer">https://www.municipiobanos.gob.ec/historia/</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-igepn-anual-2000">
+                            <strong>IGEPN (Instituto Geofísico, EPN).</strong> “Tungurahua – Informe anual 2000” (PDF). <span class="ref-tag">científica / primaria</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://www.igepn.edu.ec/tungurahua-informes/tung-anuales/256--57/file" target="_blank" rel="noopener noreferrer">https://www.igepn.edu.ec/tungurahua-informes/tung-anuales/256--57/file</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-wiki-banos">
+                            <strong>Wikipedia.</strong> “Baños (Ecuador)”. <span class="ref-tag">secundaria / contextual</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://es.wikipedia.org/wiki/Ba%C3%B1os_%28Ecuador%29" target="_blank" rel="noopener noreferrer">https://es.wikipedia.org/wiki/Ba%C3%B1os_%28Ecuador%29</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-gad-patate-pdot">
+                            <strong>GAD Municipal de Patate.</strong> “Plan de Desarrollo y Ordenamiento (PDOT/PUGS)” (sección de documentos). <span class="ref-tag">institucional / planificación</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://patate.gob.ec/index.php/gadmscp/la-alcaldia/plan-de-desarrollo?own_categories=0" target="_blank" rel="noopener noreferrer">https://patate.gob.ec/index.php/gadmscp/la-alcaldia/plan-de-desarrollo?own_categories=0</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-gadprov-patate-pdf">
+                            <strong>Gobierno Provincial de Tungurahua.</strong> “Cantón Patate” (PDF). <span class="ref-tag">institucional</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://www.tungurahua.gob.ec/file/2020/07/canton-patate.pdf" target="_blank" rel="noopener noreferrer">https://www.tungurahua.gob.ec/file/2020/07/canton-patate.pdf</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-inpc-instructivo-pci">
+                            <strong>INPC (Instituto Nacional de Patrimonio Cultural).</strong> “Instructivo para fichas de inventario de inmaterial”. <span class="ref-tag">normativa / primaria</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://www.patrimoniocultural.gob.ec/instructivo-para-fichas-de-inventario-de-inmaterial/" target="_blank" rel="noopener noreferrer">https://www.patrimoniocultural.gob.ec/instructivo-para-fichas-de-inventario-de-inmaterial/</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-inpc-revista-ficha">
+                            <strong>INPC.</strong> Revista/Documento con ejemplo de ficha PCI (incluye caso en Tungurahua: Salasaca). <span class="ref-tag">primaria / ejemplo</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/04/15_revistapci7.pdf" target="_blank" rel="noopener noreferrer">https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/04/15_revistapci7.pdf</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-flacso-tungurahua-ano-despues">
+                            <strong>FLACSO Andes (PDF).</strong> “Tungurahua: un año después”. <span class="ref-tag">académica</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://biblio.flacsoandes.edu.ec/libros/digital/47035.pdf" target="_blank" rel="noopener noreferrer">https://biblio.flacsoandes.edu.ec/libros/digital/47035.pdf</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-corpus-campo">
+                            <strong>Corpus de campo (equipo del proyecto).</strong> Notas de observación, entrevistas y registro fotográfico (2024–2025). <span class="ref-tag">dato primario (DOI previsto)</span>
+                            <div class="mt-1 text-stone-500">
+                                DOI: por publicar en Zenodo (recomendado: depositar como “dataset” + versiones).
+                            </div>
+                        </li>
+
+                        <li id="ref-lcd-preguntas">
+                            <strong>La Casa del Duende.</strong> “Preguntas / Origen del proyecto (2013)”. <span class="ref-tag">fuente primaria (proyecto)</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://lacasadelduende.art/preguntas.html" target="_blank" rel="noopener noreferrer">https://lacasadelduende.art/preguntas.html</a>
+                            </div>
+                        </li>
+
+                        <li id="ref-aldea-historia">
+                            <strong>La Aldea Mágica.</strong> “Historia / documentación (2018)”. <span class="ref-tag">fuente primaria (proyecto)</span>
+                            <div class="mt-1">
+                                <a class="ref-link" href="https://aldeamagica.art/duendes-de-banos.html" target="_blank" rel="noopener noreferrer">https://aldeamagica.art/duendes-de-banos.html</a>
+                            </div>
+                        </li>
+
+                    </ol>
+
+                    <div class="mt-6 p-4 bg-stone-50 border border-stone-200 rounded-lg text-sm text-stone-700">
+                        <strong>Regla de auditoría:</strong> toda afirmación que incluya “primero”, “origen”, “inicio”, porcentajes o fechas finas debe estar respaldada por fuente institucional (GAD/PDOT/INEC/INPC/IGEPN) o dataset con DOI. Para “fiebre”/difusión: inventario geo-fechado con DOI.
+                        <a class="cite" href="#ref-igepn-anual-2000">[2]</a><a class="cite" href="#ref-inpc-instructivo-pci">[6]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
+                    </div>
+                </div>
+            </section>
+
         </div>
-      </div>
-    </div>
-  </header>
+    </main>
 
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 overflow-x-auto">
-      <div class="flex space-x-6 md:space-x-10 min-w-max">
-        <button onclick="switchTab('territorio')" class="nav-btn active-tab py-4 text-sm uppercase tracking-wide transition-colors hover:text-stone-900" id="btn-territorio">Territorio</button>
-        <button onclick="switchTab('historia')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-historia">Marco Histórico</button>
-        <button onclick="switchTab('patrimonio')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-patrimonio">Patrimonio Oral</button>
-        <button onclick="switchTab('economia')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-economia">Economía & Oficios</button>
-        <button onclick="switchTab('duende')" class="nav-btn py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900" id="btn-duende">Caso: Duendes & Parques</button>
-        <a href="#fuentes" class="py-4 text-sm uppercase tracking-wide text-stone-500 hover:text-stone-900">Fuentes</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main -->
-  <main class="flex-grow bg-[#f5f5f2] p-6">
-    <div class="max-w-6xl mx-auto min-h-[600px]">
-
-      <!-- 1) Territorio -->
-      <section id="sec-territorio" class="fade-in block">
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Configuración territorial comparada</h2>
-          <p class="text-stone-600 max-w-3xl">
-            Comparación de nodos territoriales seleccionados. Para datos administrativos (altitudes/categorías/fechas), se priorizan GAD/PDOT; Wikipedia se usa como apoyo contextual cuando no hay un documento oficial accesible en esta versión.
-          </p>
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-white font-bold mb-2">Uso sugerido (académico-turístico)</h4>
+                <p class="text-xs">
+                    Ideal para turismo cultural con rigor: patrimonio inmaterial, historia, economía local, parques temáticos y análisis de narrativas contemporáneas. Publicar versiones con DOI para trazabilidad.
+                </p>
+            </div>
+            <div class="text-right">
+                <h4 class="text-white font-bold mb-2">Palabras clave (SEO académico)</h4>
+                <p class="text-xs italic">
+                    Tungurahua; patrimonio cultural inmaterial; turismo cultural; tradición oral documentada; parques temáticos; economía de la atención; Baños de Agua Santa; La Casa del Duende (2013); La Aldea Mágica (2018).
+                </p>
+                <div class="mt-4 pt-4 border-t border-stone-800">
+                    <p class="text-xs">&copy; 2026 • Informe v1.2</p>
+                </div>
+            </div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Baños -->
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-500">
-            <div class="text-xs font-bold text-amber-600 uppercase mb-2">Turismo • Religiosidad • Termalismo</div>
-            <h3 class="text-xl font-bold mb-2 serif">Baños de Agua Santa</h3>
-            <p class="text-sm text-stone-600 mb-4">
-              Centro de peregrinación (Virgen de Agua Santa) y termalismo; reconfigurado por el ciclo eruptivo 1999–2000 y el reposicionamiento turístico posterior.
-              <a class="cite" href="#ref-gad-banos-historia">[1]</a><a class="cite" href="#ref-igepn-anual-2000">[2]</a>
-            </p>
-            <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
-              <div class="flex justify-between"><span>Referencia general:</span> <strong>cantón (Tungurahua)</strong></div>
-              <div class="flex justify-between"><span>Enlace contextual:</span> <strong>Wikipedia (sec.)</strong><a class="cite" href="#ref-wiki-banos">[3]</a></div>
-              <div class="flex justify-between"><span>Eje:</span> <strong>Servicios turísticos</strong></div>
-            </div>
-          </div>
-
-          <!-- Patate -->
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-green-600">
-            <div class="text-xs font-bold text-green-700 uppercase mb-2">Valle interandino • Agro-producción</div>
-            <h3 class="text-xl font-bold mb-2 serif">Cantón Patate</h3>
-            <p class="text-sm text-stone-600 mb-4">
-              Territorio con continuidad agrícola y agenda de planificación territorial (PDOT/PUGS) como base verificable de matriz productiva y gestión local.
-              <a class="cite" href="#ref-gad-patate-pdot">[4]</a>
-            </p>
-            <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
-              <div class="flex justify-between"><span>Planificación:</span> <strong>PDOT/PUGS</strong><a class="cite" href="#ref-gad-patate-pdot">[4]</a></div>
-              <div class="flex justify-between"><span>Documento prov.:</span> <strong>PDF GAD Prov.</strong><a class="cite" href="#ref-gadprov-patate-pdf">[5]</a></div>
-              <div class="flex justify-between"><span>Eje:</span> <strong>Agricultura</strong></div>
-            </div>
-          </div>
-
-          <!-- Huambaló -->
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-800">
-            <div class="text-xs font-bold text-amber-900 uppercase mb-2">Oficios • Manufactura</div>
-            <h3 class="text-xl font-bold mb-2 serif">Huambaló (Pelileo)</h3>
-            <p class="text-sm text-stone-600 mb-4">
-              Caso representativo de especialización en manufactura/ebanistería dentro de la provincia (en esta versión: descripción interpretativa; se recomienda enlazar PDOT de Pelileo o registro sectorial).
-              <a class="cite" href="#ref-corpus-campo">[9]</a>
-            </p>
-            <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
-              <div class="flex justify-between"><span>Tipo:</span> <strong>parroquia (referencial)</strong></div>
-              <div class="flex justify-between"><span>Base empírica:</span> <strong>campo/corpus</strong><a class="cite" href="#ref-corpus-campo">[9]</a></div>
-              <div class="flex justify-between"><span>Eje:</span> <strong>Manufactura</strong></div>
-            </div>
-          </div>
-
-          <!-- Río Verde -->
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-emerald-500">
-            <div class="text-xs font-bold text-emerald-700 uppercase mb-2">Corredor paisajístico • Visita de paso</div>
-            <h3 class="text-xl font-bold mb-2 serif">Río Verde</h3>
-            <p class="text-sm text-stone-600 mb-4">
-              Zona de transición ecológica y corredor de visita asociado a hitos paisajísticos; alta dependencia de servicios al visitante en escenarios de turismo de naturaleza.
-              <a class="cite" href="#ref-corpus-campo">[9]</a>
-            </p>
-            <div class="bg-stone-100 p-3 rounded text-xs space-y-2">
-              <div class="flex justify-between"><span>Base empírica:</span> <strong>campo/corpus</strong><a class="cite" href="#ref-corpus-campo">[9]</a></div>
-              <div class="flex justify-between"><span>Eje:</span> <strong>Turismo de naturaleza</strong></div>
-              <div class="flex justify-between"><span>Nota:</span> <strong>requiere PDOT enlazado</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-8 p-6 bg-white rounded-lg border border-stone-200">
-          <h3 class="font-bold text-lg mb-3">Parques temáticos como “dispositivo” de turismo contemporáneo</h3>
-          <p class="text-stone-700 mb-4">
-            Entre 2010 y el presente, se observa el crecimiento de atractivos de alto impacto visual (miradores, manos gigantes, columpios, “parques” temáticos)
-            que reconfiguran el territorio como experiencia de consumo rápido. Este informe los analiza como dispositivos turísticos (infraestructura + relato + circulación en redes),
-            y enmarca allí el <strong>fenómeno de los duendes</strong>: una estética que se vuelve ampliamente replicable y masiva, especialmente tras proyectos autorales que la visibilizan en la ciudad.
-            <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- 2) Historia -->
-      <section id="sec-historia" class="hidden fade-in">
-        <div class="mb-8">
-          <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Marco histórico y cronológico (hechos documentados)</h2>
-          <p class="text-stone-600 max-w-3xl">
-            Línea de tiempo con énfasis en eventos verificables (fuentes institucionales/científicas) y su relación con transformaciones socioeconómicas y turísticas.
-          </p>
-        </div>
-
-        <div class="relative border-l-4 border-stone-300 ml-6 space-y-12 my-10">
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm">
-              <span class="text-xs font-bold text-stone-500">Historia local (síntesis institucional)</span>
-              <h4 class="text-lg font-bold text-amber-900">Construcción temprana del asentamiento y memoria local</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Referencias municipales sobre el desarrollo histórico y cultural de Baños (síntesis institucional).
-                <a class="cite" href="#ref-gad-banos-historia">[1]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-600 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-blue-400">
-              <span class="text-xs font-bold text-blue-600">1999–2000</span>
-              <h4 class="text-lg font-bold text-blue-800">Ciclo eruptivo y retorno social</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Reportes del IGEPN documentan el periodo de reactivación; el retorno del 5 de enero de 2000 se consolida como hito social.
-                <a class="cite" href="#ref-igepn-anual-2000">[2]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-amber-500 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-amber-500">
-              <span class="text-xs font-bold text-amber-600">2010–presente</span>
-              <h4 class="text-lg font-bold text-amber-800">Turismo visual, redes y parques temáticos</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Aumento de atractivos “instagramiables” y parques temáticos como infraestructura cultural-turística contemporánea. Lectura apoyada en observación/corpus (con DOI previsto).
-                <a class="cite" href="#ref-corpus-campo">[9]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm">
-              <span class="text-xs font-bold text-stone-500">2013</span>
-              <h4 class="text-lg font-bold text-amber-900">Aparición pública de una propuesta autoral: La Casa del Duende</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Se registra la referencia de origen del proyecto <em>La Casa del Duende</em> (2013) según su documentación pública.
-                <a class="cite" href="#ref-lcd-preguntas">[10]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm">
-              <span class="text-xs font-bold text-stone-500">2018</span>
-              <h4 class="text-lg font-bold text-amber-900">Consolidación de espacio-experiencia: La Aldea Mágica</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Apertura/puesta en marcha del espacio <em>La Aldea Mágica</em> (2018) según su documentación pública.
-                <a class="cite" href="#ref-aldea-historia">[11]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-600 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm border-l-4 border-rose-400">
-              <span class="text-xs font-bold text-rose-600">2018–presente</span>
-              <h4 class="text-lg font-bold text-rose-800">“Fiebre” de duendes y expansión temática</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Tras la visibilización de propuestas autorales, la estética del duende se vuelve altamente replicable y se expande en productos, parques temáticos y señalética turística.
-                En este informe se trata como fenómeno de difusión estética y turística (requiere inventario con DOI: registro fotográfico/geo-referenciado).
-                <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
-              </p>
-            </div>
-          </div>
-
-          <div class="relative pl-8">
-            <div class="absolute -left-3 top-0 bg-stone-800 h-6 w-6 rounded-full border-4 border-white"></div>
-            <div class="bg-white p-5 rounded-lg shadow-sm">
-              <span class="text-xs font-bold text-stone-500">Contexto académico/regional</span>
-              <h4 class="text-lg font-bold text-amber-900">Impactos sociales y lecturas de recuperación</h4>
-              <p class="text-sm text-stone-700 mt-2">
-                Bibliografía académica para contexto de provincia y procesos de crisis/recuperación (FLACSO).
-                <a class="cite" href="#ref-flacso-tungurahua-ano-despues">[8]</a>
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- 3) Patrimonio oral -->
-      <section id="sec-patrimonio" class="hidden fade-in">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-6">
-          <div>
-            <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Patrimonio oral vs. narrativa turística</h2>
-            <p class="text-stone-600 max-w-2xl text-sm">
-              Base de ejemplos categorizados. “Tradición documentada” exige compilación/archivo/entrevistas con protocolo (ideal: DOI). “Narrativa turística” incluye guiones y parques temáticos contemporáneos.
-            </p>
-          </div>
-          <div class="bg-white p-1 rounded-lg border border-stone-300 flex text-xs mt-4 md:mt-0">
-            <button onclick="filterLegends('all')" class="px-4 py-2 rounded bg-stone-800 text-white hover:bg-stone-700 transition" id="filter-all">Ver todo</button>
-            <button onclick="filterLegends('documentada')" class="px-4 py-2 rounded hover:bg-stone-100 transition text-stone-600" id="filter-doc">Tradición documentada</button>
-            <button onclick="filterLegends('turistica')" class="px-4 py-2 rounded hover:bg-stone-100 transition text-stone-600" id="filter-tour">Narrativa turística</button>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="legends-grid"></div>
-
-        <div class="mt-8 p-4 bg-amber-50 border border-amber-200 rounded text-sm text-amber-900">
-          <strong>Nota metodológica:</strong> en “narrativa turística” se incluyen explícitamente parques temáticos y relatos de “seres mágicos” usados como valor agregado para la experiencia.
-          <a class="cite" href="#ref-corpus-campo">[9]</a>
-        </div>
-      </section>
-
-      <!-- 4) Economía -->
-      <section id="sec-economia" class="hidden fade-in">
-        <div class="mb-6">
-          <h2 class="text-3xl font-bold text-stone-800 mb-4 serif">Matriz productiva y oficios (modelo conceptual)</h2>
-          <p class="text-stone-600 max-w-3xl">
-            El gráfico funciona como <strong>modelo heurístico</strong> (no estadística oficial única) y debe triangularse con PDOT cantonales y observación de campo.
-            <a class="cite" href="#ref-gad-patate-pdot">[4]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <div class="bg-white p-6 rounded-lg card-shadow">
-            <h3 class="font-bold text-stone-700 mb-4 text-center">Estimación comparativa de dependencia por sector (%)</h3>
-            <div class="chart-container">
-              <canvas id="economyChart"></canvas>
-            </div>
-            <p class="text-xs text-center text-stone-400 mt-2">
-              Modelo conceptual: PDOT/planificación donde exista + observación de campo (2024–2025). <a class="cite" href="#ref-gad-patate-pdot">[4]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
-            </p>
-          </div>
-
-          <div class="space-y-6">
-            <div class="bg-white p-5 rounded-lg border-l-4 border-amber-800">
-              <h4 class="font-bold text-amber-900 mb-2">Huambaló: continuidad del oficio</h4>
-              <p class="text-sm text-stone-700">
-                Interpretación basada en especialización productiva y cadenas locales (recomendación: enlazar PDOT/registro sectorial).
-                <a class="cite" href="#ref-corpus-campo">[9]</a>
-              </p>
-            </div>
-
-            <div class="bg-white p-5 rounded-lg border-l-4 border-green-600">
-              <h4 class="font-bold text-green-800 mb-2">Patate: territorio agrícola planificado</h4>
-              <p class="text-sm text-stone-700">
-                PDOT/PUGS del GAD de Patate como base verificable para matriz productiva y prioridades de gestión.
-                <a class="cite" href="#ref-gad-patate-pdot">[4]</a>
-              </p>
-            </div>
-
-            <div class="bg-white p-5 rounded-lg border-l-4 border-red-500">
-              <h4 class="font-bold text-red-800 mb-2">Baños: servicios, marca, parques y souvenirs</h4>
-              <p class="text-sm text-stone-700">
-                Observación: la expansión de parques temáticos y souvenirs “serializables” acompaña el aumento de demanda de experiencias rápidas y fotografiables.
-                En el eje “duendes”, se diferencia obra/propuesta autoral (2013/2018) de la reproducción masiva posterior.
-                <a class="cite" href="#ref-corpus-campo">[9]</a><a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5) Caso Duende -->
-      <section id="sec-duende" class="hidden fade-in">
-        <div class="mb-8 text-center">
-          <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Caso: Duendes, parques temáticos y difusión estética (2013–presente)</h2>
-          <p class="text-stone-600 max-w-3xl mx-auto">
-            Se separa (A) repertorios coloniales/andinos (marco comparativo), (B) propuesta autoral contemporánea (proyectos identificables) y
-            (C) expansión temática comercial/turística (parques, señalética, souvenirs). La atribución de causalidad fuerte requiere un inventario con DOI (fotos + fechas + georreferenciación).
-          </p>
-        </div>
-
-        <!-- Bloque 3 columnas -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-
-          <!-- A: Marco comparativo -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 bg-stone-100 border-b border-stone-200">
-              <div class="uppercase tracking-widest text-xs font-bold text-stone-500 mb-2">A. Marco comparativo</div>
-              <h3 class="text-xl font-serif font-bold text-stone-800">“Duende” en registros amplios</h3>
-              <p class="text-sm text-stone-700 mt-3">
-                Columna de referencia para distinguir “entidades domésticas o de monte” de usos turísticos actuales. Si se quiere fijar rasgos por zona, debe incorporarse bibliografía específica (versión ampliada).
-              </p>
-            </div>
-            <div class="p-6">
-              <ul class="space-y-3 text-sm text-stone-700">
-                <li class="flex items-start"><span class="mr-2">📜</span><span><strong>Ámbito:</strong> relatos familiares o rurales.</span></li>
-                <li class="flex items-start"><span class="mr-2">⚖️</span><span><strong>Función:</strong> advertencia/orden moral (hipótesis a validar con corpus).</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- B: Propuesta autoral -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 bg-emerald-50 border-b border-emerald-100">
-              <div class="uppercase tracking-widest text-xs font-bold text-emerald-700 mb-2">B. Propuesta autoral (Baños)</div>
-              <h3 class="text-xl font-serif font-bold text-emerald-900">La Casa del Duende (2013) y La Aldea Mágica (2018)</h3>
-              <p class="text-sm text-stone-700 mt-3">
-                Proyectos artísticos identificables que consolidan una estética contemporánea del duende y la instalan como experiencia cultural local.
-                <a class="cite" href="#ref-lcd-preguntas">[10]</a><a class="cite" href="#ref-aldea-historia">[11]</a>
-              </p>
-            </div>
-            <div class="p-6">
-              <ul class="space-y-3 text-sm text-stone-700">
-                <li class="flex items-start"><span class="mr-2">🏷️</span><span><strong>2013:</strong> referencia pública del origen de <em>La Casa del Duende</em>.</span> <a class="cite" href="#ref-lcd-preguntas">[10]</a></li>
-                <li class="flex items-start"><span class="mr-2">🌿</span><span><strong>2018:</strong> consolidación de <em>La Aldea Mágica</em> como espacio-experiencia.</span> <a class="cite" href="#ref-aldea-historia">[11]</a></li>
-                <li class="flex items-start"><span class="mr-2">🧩</span><span><strong>Clave analítica:</strong> autoría, coherencia simbólica y trazabilidad documental del proyecto.</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- C: Parques temáticos y fiebre -->
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-6 bg-amber-50 border-b border-amber-100">
-              <div class="uppercase tracking-widest text-xs font-bold text-amber-700 mb-2">C. Expansión turística</div>
-              <h3 class="text-xl font-serif font-bold text-amber-900">Parques temáticos y “fiebre” de duendes</h3>
-              <p class="text-sm text-stone-700 mt-3">
-                Posteriormente, la estética del duende se expande como recurso turístico replicable: parques temáticos, figuras seriadas, señalética y souvenirs.
-                Este documento lo trata como <strong>difusión estética + economía de la atención</strong>. Para afirmar magnitud y cronología con precisión: inventario con DOI.
-                <a class="cite" href="#ref-corpus-campo">[9]</a>
-              </p>
-            </div>
-            <div class="p-6">
-              <ul class="space-y-3 text-sm text-stone-700">
-                <li class="flex items-start"><span class="mr-2">🎡</span><span><strong>Parques temáticos:</strong> infraestructura + guion + foto.</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
-                <li class="flex items-start"><span class="mr-2">📈</span><span><strong>Fiebre:</strong> aumento visible de presencia en comercios/atractivos (observación de campo).</span> <a class="cite" href="#ref-corpus-campo">[9]</a></li>
-                <li class="flex items-start"><span class="mr-2">🗺️</span><span><strong>Recomendación:</strong> mapa de puntos (geo) + fotos + fecha + fuente (DOI).</span></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="mt-8 max-w-6xl mx-auto p-5 bg-white border border-stone-200 rounded-xl">
-          <h4 class="font-bold text-stone-800 mb-2">Cómo volver esto “auditable” (para Zenodo/DOI)</h4>
-          <p class="text-sm text-stone-700">
-            Publicar un dataset con DOI que contenga: (1) listado de parques/atractivos con coordenadas, (2) fotografías fechadas,
-            (3) capturas de publicaciones (si aplica) con URL y fecha, (4) criterios de clasificación: “propuesta autoral” vs “atracción temática” vs “souvenir seriado”.
-            <a class="cite" href="#ref-corpus-campo">[9]</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- Fuentes -->
-      <section id="fuentes" class="mt-14">
-        <div class="mb-6">
-          <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Fuentes y trazabilidad</h2>
-          <p class="text-stone-600 max-w-3xl">
-            Referencias enlazadas. Se indica tipo de fuente y rol (primaria/secundaria/contextual). Wikipedia se incluye como apoyo contextual, no como prueba principal.
-          </p>
-        </div>
-
-        <div class="ref-box p-6">
-          <ol class="list-decimal list-inside space-y-4 text-sm text-stone-700">
-
-            <li id="ref-gad-banos-historia">
-              <strong>GAD Municipal de Baños de Agua Santa.</strong> “Historia”. <span class="ref-tag">institucional</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://www.municipiobanos.gob.ec/historia/" target="_blank" rel="noopener noreferrer">https://www.municipiobanos.gob.ec/historia/</a>
-              </div>
-            </li>
-
-            <li id="ref-igepn-anual-2000">
-              <strong>IGEPN (Instituto Geofísico, EPN).</strong> “Tungurahua – Informe anual 2000” (PDF). <span class="ref-tag">científica / primaria</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://www.igepn.edu.ec/tungurahua-informes/tung-anuales/256--57/file" target="_blank" rel="noopener noreferrer">https://www.igepn.edu.ec/tungurahua-informes/tung-anuales/256--57/file</a>
-              </div>
-            </li>
-
-            <li id="ref-wiki-banos">
-              <strong>Wikipedia.</strong> “Baños (Ecuador)”. <span class="ref-tag">secundaria / contextual</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://es.wikipedia.org/wiki/Ba%C3%B1os_%28Ecuador%29" target="_blank" rel="noopener noreferrer">https://es.wikipedia.org/wiki/Ba%C3%B1os_%28Ecuador%29</a>
-              </div>
-            </li>
-
-            <li id="ref-gad-patate-pdot">
-              <strong>GAD Municipal de Patate.</strong> “Plan de Desarrollo y Ordenamiento (PDOT/PUGS)” (sección de documentos). <span class="ref-tag">institucional / planificación</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://patate.gob.ec/index.php/gadmscp/la-alcaldia/plan-de-desarrollo?own_categories=0" target="_blank" rel="noopener noreferrer">https://patate.gob.ec/index.php/gadmscp/la-alcaldia/plan-de-desarrollo?own_categories=0</a>
-              </div>
-            </li>
-
-            <li id="ref-gadprov-patate-pdf">
-              <strong>Gobierno Provincial de Tungurahua.</strong> “Cantón Patate” (PDF). <span class="ref-tag">institucional</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://www.tungurahua.gob.ec/file/2020/07/canton-patate.pdf" target="_blank" rel="noopener noreferrer">https://www.tungurahua.gob.ec/file/2020/07/canton-patate.pdf</a>
-              </div>
-            </li>
-
-            <li id="ref-inpc-instructivo-pci">
-              <strong>INPC (Instituto Nacional de Patrimonio Cultural).</strong> “Instructivo para fichas de inventario de inmaterial”. <span class="ref-tag">normativa / primaria</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://www.patrimoniocultural.gob.ec/instructivo-para-fichas-de-inventario-de-inmaterial/" target="_blank" rel="noopener noreferrer">https://www.patrimoniocultural.gob.ec/instructivo-para-fichas-de-inventario-de-inmaterial/</a>
-              </div>
-            </li>
-
-            <li id="ref-inpc-revista-ficha">
-              <strong>INPC.</strong> Revista/Documento con ejemplo de ficha PCI (incluye caso en Tungurahua: Salasaca). <span class="ref-tag">primaria / ejemplo</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/04/15_revistapci7.pdf" target="_blank" rel="noopener noreferrer">https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/04/15_revistapci7.pdf</a>
-              </div>
-            </li>
-
-            <li id="ref-flacso-tungurahua-ano-despues">
-              <strong>FLACSO Andes (PDF).</strong> “Tungurahua: un año después”. <span class="ref-tag">académica</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://biblio.flacsoandes.edu.ec/libros/digital/47035.pdf" target="_blank" rel="noopener noreferrer">https://biblio.flacsoandes.edu.ec/libros/digital/47035.pdf</a>
-              </div>
-            </li>
-
-            <li id="ref-corpus-campo">
-              <strong>Corpus de campo (equipo del proyecto).</strong> Notas de observación, entrevistas y registro fotográfico (2024–2025). <span class="ref-tag">dato primario (DOI previsto)</span>
-              <div class="mt-1 text-stone-500">
-                DOI: por publicar en Zenodo (recomendado: depositar como “dataset” + versiones).
-              </div>
-            </li>
-
-            <li id="ref-lcd-preguntas">
-              <strong>La Casa del Duende.</strong> “Preguntas / Origen del proyecto (2013)”. <span class="ref-tag">fuente primaria (proyecto)</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://lacasadelduende.art/preguntas.html" target="_blank" rel="noopener noreferrer">https://lacasadelduende.art/preguntas.html</a>
-              </div>
-            </li>
-
-            <li id="ref-aldea-historia">
-              <strong>La Aldea Mágica.</strong> “Historia / documentación (2018)”. <span class="ref-tag">fuente primaria (proyecto)</span>
-              <div class="mt-1">
-                <a class="ref-link" href="https://aldeamagica.art/duendes-de-banos.html" target="_blank" rel="noopener noreferrer">https://aldeamagica.art/duendes-de-banos.html</a>
-              </div>
-            </li>
-
-          </ol>
-
-          <div class="mt-6 p-4 bg-stone-50 border border-stone-200 rounded-lg text-sm text-stone-700">
-            <strong>Regla de auditoría:</strong> toda afirmación que incluya “primero”, “origen”, “inicio”, porcentajes o fechas finas debe estar respaldada por fuente institucional (GAD/PDOT/INEC/INPC/IGEPN) o dataset con DOI. Para “fiebre”/difusión: inventario geo-fechado con DOI.
-            <a class="cite" href="#ref-igepn-anual-2000">[2]</a><a class="cite" href="#ref-inpc-instructivo-pci">[6]</a><a class="cite" href="#ref-corpus-campo">[9]</a>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h4 class="text-white font-bold mb-2">Uso sugerido (académico-turístico)</h4>
-        <p class="text-xs">
-          Ideal para turismo cultural con rigor: patrimonio inmaterial, historia, economía local, parques temáticos y análisis de narrativas contemporáneas. Publicar versiones con DOI para trazabilidad.
-        </p>
-      </div>
-      <div class="text-right">
-        <h4 class="text-white font-bold mb-2">Palabras clave (SEO académico)</h4>
-        <p class="text-xs italic">
-          Tungurahua; patrimonio cultural inmaterial; turismo cultural; tradición oral documentada; parques temáticos; economía de la atención; Baños de Agua Santa; La Casa del Duende (2013); La Aldea Mágica (2018).
-        </p>
-        <div class="mt-4 pt-4 border-t border-stone-800">
-          <p class="text-xs">&copy; 2026 • Informe v1.2</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script>
-    const state = { currentTab: 'territorio', legendFilter: 'all' };
-
-    // Leyendas / narrativas (ejemplos)
-    // Nota: “documentada” debe apuntar a compilaciones o corpus con DOI; mientras no esté, se remite a [9].
-    const legendsData = [
-      {
-        title: "Relato moral nocturno (ejemplo regional)",
-        type: "documentada",
-        location: "Sierra centro (referencial)",
-        desc: "Ejemplo de relato con función social de control moral. Requiere cita a compilación/archivo o corpus con DOI en versión publicada.",
-        icon: "📚",
-        sourceId: "ref-corpus-campo"
-      },
-      {
-        title: "Procesión/figura de temor religioso (ejemplo)",
-        type: "documentada",
-        location: "Andes (referencial)",
-        desc: "Motivo asociado al imaginario colonial-católico. Debe enlazarse a compilación o corpus con DOI.",
-        icon: "⛪",
-        sourceId: "ref-corpus-campo"
-      },
-      {
-        title: "Duendes como “guardianes” en tours contemporáneos",
-        type: "turistica",
-        location: "Baños/Río Verde (contemporáneo)",
-        desc: "Guion turístico que agrega ‘mística’ ligera a la experiencia. Documentable por observación/registro (ideal: inventario con DOI).",
-        icon: "🎟️",
-        sourceId: "ref-corpus-campo"
-      },
-      {
-        title: "Parque temático con estética de duendes (modelo)",
-        type: "turistica",
-        location: "Circuitos turísticos (2018–presente)",
-        desc: "Dispositivo turístico: infraestructura + relato + foto. Se analiza como difusión estética replicable y economía de la atención.",
-        icon: "🎡",
-        sourceId: "ref-corpus-campo"
-      },
-      {
-        title: "Memoria de arriería y tránsito (ejemplo)",
-        type: "documentada",
-        location: "Antiguas rutas hacia Amazonía",
-        desc: "Memoria histórica sobre dificultad del tránsito pre-carretera; requiere soporte en hemeroteca/archivo o corpus con DOI.",
-        icon: "🐎",
-        sourceId: "ref-corpus-campo"
-      }
-    ];
-
-    function toggleSection(id){
-      const el = document.getElementById(id);
-      el.classList.toggle('hidden');
-    }
-
-    function switchTab(tabId){
-      state.currentTab = tabId;
-
-      document.querySelectorAll('.nav-btn').forEach(btn=>{
-        btn.classList.remove('active-tab','text-stone-900');
-        btn.classList.add('text-stone-500');
-      });
-
-      const active = document.getElementById(`btn-${tabId}`);
-      active.classList.add('active-tab','text-stone-900');
-      active.classList.remove('text-stone-500');
-
-      ['territorio','historia','patrimonio','economia','duende'].forEach(sect=>{
-        document.getElementById(`sec-${sect}`).classList.add('hidden');
-      });
-      document.getElementById(`sec-${tabId}`).classList.remove('hidden');
-
-      if(tabId === 'economia'){ renderChart(); }
-      if(tabId === 'patrimonio'){ renderLegends(); }
-    }
-
-    function renderLegends(){
-      const grid = document.getElementById('legends-grid');
-      grid.innerHTML = '';
-
-      const filtered = state.legendFilter === 'all'
-        ? legendsData
-        : legendsData.filter(l => l.type === state.legendFilter);
-
-      filtered.forEach(legend=>{
-        const isDoc = legend.type === 'documentada';
-        const borderColor = isDoc ? 'border-l-4 border-stone-600' : 'border-l-4 border-amber-400';
-        const badgeClass = isDoc ? 'bg-stone-200 text-stone-700' : 'bg-amber-100 text-amber-800';
-        const badgeText = isDoc ? 'Tradición (requiere fuente)' : 'Narrativa turística (campo)';
-
-        const card = document.createElement('div');
-        card.className = `bg-white p-6 rounded-lg card-shadow ${borderColor} fade-in`;
-        card.innerHTML = `
-          <div class="flex justify-between items-start mb-3">
-            <span class="text-2xl">${legend.icon}</span>
-            <span class="text-xs font-bold uppercase px-2 py-1 rounded ${badgeClass}">${badgeText}</span>
-          </div>
-          <h3 class="font-bold text-lg mb-1 serif">${legend.title}</h3>
-          <p class="text-xs text-stone-400 mb-3 italic">Zona: ${legend.location}</p>
-          <p class="text-sm text-stone-600 leading-relaxed">${legend.desc}
-            <a class="cite" href="#${legend.sourceId}">[9]</a>
-          </p>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function filterLegends(type){
-      state.legendFilter = type;
-
-      document.getElementById('filter-all').className =
-        `px-4 py-2 rounded transition ${type==='all' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
-      document.getElementById('filter-doc').className =
-        `px-4 py-2 rounded transition ${type==='documentada' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
-      document.getElementById('filter-tour').className =
-        `px-4 py-2 rounded transition ${type==='turistica' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
-
-      renderLegends();
-    }
-
-    let chartInstance = null;
-
-    function renderChart(){
-      if(chartInstance) return;
-
-      const ctx = document.getElementById('economyChart').getContext('2d');
-
-      chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Baños', 'Patate', 'Huambaló', 'Río Verde'],
-          datasets: [
-            { label: 'Turismo & Servicios', data: [85, 20, 10, 70], backgroundColor: '#f59e0b' },
-            { label: 'Agricultura', data: [10, 70, 20, 20], backgroundColor: '#4ade80' },
-            { label: 'Artesanía/Manufactura', data: [5, 10, 70, 10], backgroundColor: '#78350f' }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: {
-            x: { stacked: true },
-            y: { stacked: true, beginAtZero: true, max: 100, title: { display: true, text: 'Modelo conceptual (%)' } }
-          },
-          plugins: {
-            tooltip: { callbacks: { label: (context)=> `${context.dataset.label}: ${context.raw}%` } },
-            legend: { position: 'bottom' }
-          }
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const state = { currentTab: 'territorio', legendFilter: 'all' };
+
+        // Leyendas / narrativas (ejemplos)
+        // Nota: “documentada” debe apuntar a compilaciones o corpus con DOI; mientras no esté, se remite a [9].
+        const legendsData = [
+            {
+                title: "Relato moral nocturno (ejemplo regional)",
+                type: "documentada",
+                location: "Sierra centro (referencial)",
+                desc: "Ejemplo de relato con función social de control moral. Requiere cita a compilación/archivo o corpus con DOI en versión publicada.",
+                icon: "📚",
+                sourceId: "ref-corpus-campo"
+            },
+            {
+                title: "Procesión/figura de temor religioso (ejemplo)",
+                type: "documentada",
+                location: "Andes (referencial)",
+                desc: "Motivo asociado al imaginario colonial-católico. Debe enlazarse a compilación o corpus con DOI.",
+                icon: "⛪",
+                sourceId: "ref-corpus-campo"
+            },
+            {
+                title: "Duendes como “guardianes” en tours contemporáneos",
+                type: "turistica",
+                location: "Baños/Río Verde (contemporáneo)",
+                desc: "Guion turístico que agrega ‘mística’ ligera a la experiencia. Documentable por observación/registro (ideal: inventario con DOI).",
+                icon: "🎟️",
+                sourceId: "ref-corpus-campo"
+            },
+            {
+                title: "Parque temático con estética de duendes (modelo)",
+                type: "turistica",
+                location: "Circuitos turísticos (2018–presente)",
+                desc: "Dispositivo turístico: infraestructura + relato + foto. Se analiza como difusión estética replicable y economía de la atención.",
+                icon: "🎡",
+                sourceId: "ref-corpus-campo"
+            },
+            {
+                title: "Memoria de arriería y tránsito (ejemplo)",
+                type: "documentada",
+                location: "Antiguas rutas hacia Amazonía",
+                desc: "Memoria histórica sobre dificultad del tránsito pre-carretera; requiere soporte en hemeroteca/archivo o corpus con DOI.",
+                icon: "🐎",
+                sourceId: "ref-corpus-campo"
+            }
+        ];
+
+        function toggleSection(id){
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
         }
-      });
-    }
 
-    document.addEventListener('DOMContentLoaded', ()=>{
-      renderLegends();
-      switchTab('territorio');
-    });
-  </script>
+        function switchTab(tabId){
+            state.currentTab = tabId;
+
+            document.querySelectorAll('.nav-btn').forEach(btn=>{
+                btn.classList.remove('active-tab','text-stone-900');
+                btn.classList.add('text-stone-500');
+            });
+
+            const active = document.getElementById(`btn-${tabId}`);
+            active.classList.add('active-tab','text-stone-900');
+            active.classList.remove('text-stone-500');
+
+            ['territorio','historia','patrimonio','economia','duende'].forEach(sect=>{
+                document.getElementById(`sec-${sect}`).classList.add('hidden');
+            });
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+
+            if(tabId === 'economia'){ renderChart(); }
+            if(tabId === 'patrimonio'){ renderLegends(); }
+        }
+
+        function renderLegends(){
+            const grid = document.getElementById('legends-grid');
+            grid.innerHTML = '';
+
+            const filtered = state.legendFilter === 'all' 
+                ? legendsData 
+                : legendsData.filter(l => l.type === state.legendFilter);
+
+            filtered.forEach(legend=>{
+                const isDoc = legend.type === 'documentada';
+                const borderColor = isDoc ? 'border-l-4 border-stone-600' : 'border-l-4 border-amber-400';
+                const badgeClass = isDoc ? 'bg-stone-200 text-stone-700' : 'bg-amber-100 text-amber-800';
+                const badgeText = isDoc ? 'Tradición (requiere fuente)' : 'Narrativa turística (campo)';
+
+                const card = document.createElement('div');
+                card.className = `bg-white p-6 rounded-lg card-shadow ${borderColor} fade-in`;
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-2xl">${legend.icon}</span>
+                        <span class="text-xs font-bold uppercase px-2 py-1 rounded ${badgeClass}">${badgeText}</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-1 serif">${legend.title}</h3>
+                    <p class="text-xs text-stone-400 mb-3 italic">Zona: ${legend.location}</p>
+                    <p class="text-sm text-stone-600 leading-relaxed">${legend.desc}
+                        <a class="cite" href="#${legend.sourceId}">[9]</a>
+                    </p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterLegends(type){
+            state.legendFilter = type;
+            
+            document.getElementById('filter-all').className = 
+                `px-4 py-2 rounded transition ${type==='all' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
+            document.getElementById('filter-doc').className = 
+                `px-4 py-2 rounded transition ${type==='documentada' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
+            document.getElementById('filter-tour').className = 
+                `px-4 py-2 rounded transition ${type==='turistica' ? 'bg-stone-800 text-white' : 'hover:bg-stone-100 text-stone-600'}`;
+
+            renderLegends();
+        }
+
+        let chartInstance = null;
+
+        function renderChart(){
+            if(chartInstance) return;
+
+            const ctx = document.getElementById('economyChart').getContext('2d');
+            
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Baños', 'Patate', 'Huambaló', 'Río Verde'],
+                    datasets: [
+                        { label: 'Turismo & Servicios', data: [85, 20, 10, 70], backgroundColor: '#f59e0b' },
+                        { label: 'Agricultura', data: [10, 70, 20, 20], backgroundColor: '#4ade80' },
+                        { label: 'Artesanía/Manufactura', data: [5, 10, 70, 10], backgroundColor: '#78350f' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true, max: 100, title: { display: true, text: 'Modelo conceptual (%)' } }
+                    },
+                    plugins: {
+                        tooltip: { callbacks: { label: (context)=> `${context.dataset.label}: ${context.raw}%` } },
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', ()=>{
+            renderLegends();
+            switchTab('territorio');
+        });
+    </script>
 
 </body>
 </html>
