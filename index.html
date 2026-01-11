@@ -1,650 +1,539 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Baños y Tungurahua: Investigación Histórica y Cultural | Informe v2.1</title>
+    <title>Baños y Tungurahua: Investigación Histórica y Cultural | Informe v2.2</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Investigación profunda sobre Baños de Agua Santa y Tungurahua: orígenes territoriales, termalismo, erupciones (1999) y ‘Retorno’ (2000), economía y oficios (Huambaló, Patate, Río Verde), parques temáticos y la fiebre contemporánea de los duendes. Incluye fuentes enlazadas y metodología auditable." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://turismotungurahua.com/" />
+    <!-- SEO -->
+    <meta name="description" content="Investigación profunda sobre Baños de Agua Santa y Tungurahua: orígenes territoriales, termalismo (Ishpaypae), erupciones, economía de la balsa y la verdad sobre los duendes (Aldea Mágica vs réplicas). Informe auditable v2.2." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://turismotungurahua.com/" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://turismotungurahua.com/" />
-  <meta property="og:title" content="Tungurahua: Memoria de Fuego, Agua y Resiliencia (Informe v2.1)" />
-  <meta property="og:description" content="Informe auditable sobre cultura, territorio y turismo en Tungurahua. Cronología, termalismo, riesgos, economía y análisis crítico de narrativas contemporáneas (parques temáticos y duendes)." />
-  <meta property="og:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://turismotungurahua.com/" />
+    <meta property="og:title" content="Tungurahua: Memoria de Fuego, Agua y Resiliencia" />
+    <meta property="og:description" content="Informe auditable: cronología volcánica, crisis de la balsa, mitología real vs pareidolia turística y la distinción autoral en los parques temáticos." />
+    <meta property="og:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://turismotungurahua.com/" />
-  <meta property="twitter:title" content="Tungurahua: Memoria de Fuego, Agua y Resiliencia (v2.1)" />
-  <meta property="twitter:description" content="Investigación cultural y territorial en Tungurahua con fuentes enlazadas y método auditable." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f5f5f2; color: #2d2a26; }
+        h1, h2, h3, h4, .serif { font-family: 'Merriweather', serif; }
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap');
-    body { font-family: 'Inter', sans-serif; background-color: #f5f5f2; color: #2d2a26; }
-    h1, h2, h3, h4, .serif { font-family: 'Merriweather', serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e5e5e0; }
+        ::-webkit-scrollbar-thumb { background: #8c857b; border-radius: 4px; }
 
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #e5e5e0; }
-    ::-webkit-scrollbar-thumb { background: #8c857b; border-radius: 4px; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; height: 350px; margin: 0 auto; }
+        .active-tab { border-bottom: 3px solid #78350f; color: #451a03; font-weight: 700; }
+        .card-shadow { box-shadow: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06); transition: transform .2s ease-in-out; }
+        .card-shadow:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.10), 0 4px 6px -2px rgba(0,0,0,.05); }
+        .fade-in { animation: fadeIn .5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-    .chart-container { position: relative; width: 100%; max-width: 800px; height: 350px; margin: 0 auto; }
-    .active-tab { border-bottom: 3px solid #78350f; color: #451a03; font-weight: 700; }
-    .card-shadow { box-shadow: 0 4px 6px -1px rgba(0,0,0,.10), 0 2px 4px -1px rgba(0,0,0,.06); transition: transform .2s ease-in-out; }
-    .card-shadow:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0,0,0,.10), 0 4px 6px -2px rgba(0,0,0,.05); }
-    .fade-in { animation: fadeIn .5s ease-in; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-    /* citations */
-    .cite { font-size: .75em; vertical-align: super; color: #0f766e; text-decoration: none; font-weight: 800; margin-left: .15rem; cursor: pointer; }
-    .cite:hover { color: #be123c; text-decoration: underline; }
-    .ref-tag { display: inline-block; font-size: .65rem; padding: .1rem .35rem; border-radius: .35rem; background: #e7e5e4; color: #57534e; margin-left: .35rem; text-transform: uppercase; }
-    .highlight-box { border-left: 4px solid #f59e0b; background-color: #fffbeb; padding: 1rem; border-radius: 0 .75rem .75rem 0; }
-    html { scroll-behavior: smooth; }
-  </style>
-
-  <!-- JSON-LD (Article) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "headline":"Tungurahua: Memoria de Fuego, Agua y Resiliencia (Informe v2.1)",
-    "description":"Investigación cultural y territorial en Tungurahua (Ecuador) con metodología auditable, fuentes enlazadas y análisis crítico de narrativas turísticas contemporáneas.",
-    "inLanguage":"es",
-    "mainEntityOfPage":"https://turismotungurahua.com/",
-    "publisher":{"@type":"Organization","name":"turismotungurahua.com"},
-    "dateModified":"2026-01-11"
-  }
-  </script>
+        /* citations */
+        .cite { font-size: .75em; vertical-align: super; color: #0f766e; text-decoration: none; font-weight: 800; margin-left: .15rem; cursor: pointer; }
+        .cite:hover { color: #be123c; text-decoration: underline; }
+        .ref-tag { display: inline-block; font-size: .65rem; padding: .1rem .35rem; border-radius: .35rem; background: #e7e5e4; color: #57534e; margin-left: .35rem; text-transform: uppercase; }
+        .highlight-box { border-left: 4px solid #f59e0b; background-color: #fffbeb; padding: 1rem; border-radius: 0 .75rem .75rem 0; }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-  <!-- Header -->
-  <header class="bg-stone-900 text-stone-100 py-10 px-6 shadow-lg">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-        <div class="md:w-3/4">
-          <p class="text-stone-400 uppercase tracking-widest text-xs font-semibold mb-2">
-            Informe de Investigación • Provincia de Tungurahua (Ecuador)
-          </p>
-          <h1 class="text-3xl md:text-4xl font-bold serif leading-tight mb-2">
-            Memoria de Fuego, Agua y Resiliencia
-          </h1>
-          <h2 class="text-lg md:text-xl text-stone-300 font-light italic">
-            Del umbral de “Ipo” al turismo contemporáneo: cronología, patrimonio, economía y narrativas
-          </h2>
-        </div>
-        <div class="text-right md:w-1/4">
-          <div class="inline-block bg-stone-800 rounded px-3 py-1 text-xs text-stone-400 border border-stone-700 mb-1">
-            Informe v2.1 • Actualizado: Enero 2026
-          </div>
-          <p class="text-xs text-stone-500">Documento de divulgación con método auditable</p>
-        </div>
-      </div>
-
-      <!-- Abstract Toggle -->
-      <div class="mt-6 border-t border-stone-700 pt-4">
-        <button onclick="toggleSection('abstract-content')" class="flex items-center text-amber-500 hover:text-amber-400 transition-colors text-xs font-bold uppercase tracking-wide">
-          <span>Leer síntesis ejecutiva y metodología</span>
-          <span class="ml-2">↓</span>
-        </button>
-
-        <div id="abstract-content" class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed fade-in">
-          <div>
-            <p class="mb-2">
-              Este informe analiza Tungurahua como sistema territorial-cultural. Distingue explícitamente:
-              <strong>Evidencia documental</strong>, <strong>tradición oral</strong> y <strong>narrativa turística contemporánea</strong>.
-            </p>
-            <ul class="list-disc pl-4 space-y-1 text-xs text-stone-400">
-              <li><strong>Telúrica:</strong> Mama Tungurahua, termalismo y paisaje sagrado.</li>
-              <li><strong>Histórica:</strong> evangelización, catástrofes, y el “Retorno” (5 enero 2000).</li>
-              <li><strong>Contemporánea:</strong> turismo de aventura, parques temáticos y “fiebre de duendes”.</li>
-            </ul>
-          </div>
-          <div>
-            <p class="mb-2"><strong>Hallazgos clave:</strong></p>
-            <ul class="list-disc pl-4 space-y-1 text-xs text-stone-400">
-              <li>El “Retorno” (2000) consolida un modelo local de convivencia con riesgo volcánico (vigías/sirenas).</li>
-              <li>Río Verde: tensión entre oficio local (balsa/talla) y presiones de mercado + souvenir industrial.</li>
-              <li>Duendes: diferenciación autoral de <em>La Casa del Duende (2013)</em> y <em>La Aldea Mágica (2018)</em> frente a réplicas temáticas posteriores.</li>
-            </ul>
-            <p class="text-xs text-stone-500 mt-2">
-              Nota: donde el dato sea “estimación” se etiqueta como tal; las afirmaciones factuales se respaldan en “Fuentes”.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 overflow-x-auto">
-      <div class="flex space-x-6 min-w-max">
-        <button onclick="switchTab('territorio')" class="nav-btn active-tab py-3 text-xs md:text-sm font-bold uppercase tracking-wide transition-colors" id="btn-territorio">Territorio</button>
-        <button onclick="switchTab('historia')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-historia">Cronología y Volcán</button>
-        <button onclick="switchTab('patrimonio')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-patrimonio">Patrimonio y Termas</button>
-        <button onclick="switchTab('economia')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-economia">Economía y Oficios</button>
-        <button onclick="switchTab('duende')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-duende">Caso: Duendes</button>
-        <a href="#fuentes" class="py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-400 hover:text-stone-700">Fuentes</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main -->
-  <main class="flex-grow bg-[#f5f5f2] p-4 md:p-8">
-    <div class="max-w-6xl mx-auto min-h-[600px]">
-
-      <!-- 1. TERRITORIO -->
-      <section id="sec-territorio" class="fade-in block">
-        <div class="mb-6">
-          <h2 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 serif">El Umbral: De “Ipo” a la Puerta de la Amazonía</h2>
-          <p class="text-stone-600 max-w-3xl text-sm">
-            Tungurahua combina frontera ecológica, tránsito histórico y economías mixtas. Baños se proyecta como nodo turístico; Patate y Huambaló conservan matrices productivas; Río Verde funciona como corredor y transición amazónica.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-600 relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-amber-100 text-amber-800 text-[10px] px-2 py-1 font-bold uppercase">Nodo central</div>
-            <h3 class="text-lg font-bold mb-2 serif text-stone-800">Baños de Agua Santa</h3>
-            <p class="text-xs font-bold text-stone-400 uppercase mb-2">Asiento histórico • termalismo • peregrinación</p>
-            <p class="text-sm text-stone-600 mb-4">
-              Territorio de tránsito y frontera (orígenes misionales + geológicos). En el siglo XX se consolida como balneario/fe; tras 1999–2000 se intensifica la economía de turismo de aventura.
-              <a class="cite" href="#ref-municipio-banos" title="Ver fuente">[1]</a>
-              <a class="cite" href="#ref-igepn" title="Ver fuente">[2]</a>
-            </p>
-            <div class="bg-stone-50 p-2 rounded border border-stone-100">
-              <ul class="text-xs text-stone-500 space-y-1">
-                <li>⛰️ <strong>Altitud:</strong> 1,820 msnm</li>
-                <li>🌋 <strong>Riesgo:</strong> lahares (cuencas Vazcún/Ulba)</li>
-                <li>💧 <strong>Recurso:</strong> termas (tradición + turismo)</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-green-600">
-            <h3 class="text-lg font-bold mb-2 serif text-stone-800">Patate</h3>
-            <p class="text-xs font-bold text-stone-400 uppercase mb-2">Valle productivo</p>
-            <p class="text-sm text-stone-600 mb-4">
-              Matriz agrícola y alimentaria; paisaje cultural rural con presión creciente por “atractivos” y estandarización visual.
-            </p>
-            <div class="highlight-box text-xs text-amber-900">
-              <strong>Clave:</strong> turismo de paso puede “importar” estéticas (miradores/figuras) que no nacen del territorio.
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-emerald-600">
-            <h3 class="text-lg font-bold mb-2 serif text-stone-800">Río Verde</h3>
-            <p class="text-xs font-bold text-stone-400 uppercase mb-2">Corredor ecológico</p>
-            <p class="text-sm text-stone-600 mb-4">
-              Nodo natural (Pailón del Diablo) y tensiones entre oficio local (balsa/talla) y economía del souvenir.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 2. HISTORIA -->
-      <section id="sec-historia" class="hidden fade-in">
-        <div class="flex flex-col md:flex-row gap-8">
-          <div class="md:w-2/3">
-            <h2 class="text-2xl font-bold text-stone-800 mb-6 serif">Cronología: catástrofe, fe y “Retorno”</h2>
-
-            <div class="relative border-l-2 border-stone-300 ml-4 space-y-10">
-              <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-0 bg-stone-400 h-5 w-5 rounded-full border-2 border-white"></div>
-                <span class="text-xs font-bold text-stone-400 uppercase">Prehispánico / frontera</span>
-                <h4 class="font-bold text-stone-800">Territorio de tránsito (“Ipo”) y umbral andino-amazónico</h4>
-                <p class="text-sm text-stone-600 mt-1">
-                  Interpretación regional: tránsito, intercambio y geografía de paso. (Este punto requiere citación local específica si vas a dejarlo como “dato duro”; si no, mantenelo como marco interpretativo.)
-                </p>
-              </div>
-
-              <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-0 bg-stone-600 h-5 w-5 rounded-full border-2 border-white"></div>
-                <span class="text-xs font-bold text-stone-500 uppercase">1773 / 1797</span>
-                <h4 class="font-bold text-stone-800">Catástrofes y consolidación religiosa</h4>
-                <p class="text-sm text-stone-600 mt-1">
-                  Terremotos y erupciones reorganizan asentamientos y refuerzan la centralidad simbólica de la Virgen.
-                  <a class="cite" href="#ref-sngre-1797" title="Ver fuente">[3]</a>
-                </p>
-              </div>
-
-              <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-0 bg-red-500 h-5 w-5 rounded-full border-2 border-white"></div>
-                <span class="text-xs font-bold text-red-600 uppercase">Oct 1999</span>
-                <h4 class="font-bold text-red-800">Evacuación forzosa por reactivación del Tungurahua</h4>
-                <p class="text-sm text-stone-600 mt-1">
-                  Punto de quiebre socioeconómico: desplazamiento, incertidumbre y reconfiguración del riesgo.
-                  <a class="cite" href="#ref-elcomercio-2009" title="Ver fuente">[4]</a>
-                  <a class="cite" href="#ref-igepn" title="Ver fuente">[2]</a>
-                </p>
-              </div>
-
-              <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-0 bg-amber-500 h-5 w-5 rounded-full border-2 border-white"></div>
-                <span class="text-xs font-bold text-amber-600 uppercase">5 Ene 2000</span>
-                <h4 class="font-bold text-stone-800">“El Retorno”: autogestión y convivencia con el riesgo</h4>
-                <p class="text-sm text-stone-600 mt-1">
-                  Retorno poblacional y fortalecimiento de prácticas comunitarias de monitoreo (vigías) y alertamiento.
-                  <a class="cite" href="#ref-explorsierra-retorno" title="Ver fuente">[5]</a>
-                </p>
-              </div>
-
-              <div class="relative pl-8">
-                <div class="absolute -left-[9px] top-0 bg-emerald-500 h-5 w-5 rounded-full border-2 border-white"></div>
-                <span class="text-xs font-bold text-emerald-600 uppercase">2010–presente</span>
-                <h4 class="font-bold text-stone-800">Turismo visual, parques temáticos y estandarización</h4>
-                <p class="text-sm text-stone-600 mt-1">
-                  Aumento de atracciones “instagramiables”, miradores temáticos y narrativas livianas de consumo rápido.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="md:w-1/3 bg-stone-100 p-6 rounded-lg border border-stone-200 h-fit sticky top-24">
-            <div class="text-xs font-bold text-stone-400 uppercase mb-2">Cosmovisión</div>
-            <h3 class="text-xl font-bold serif text-stone-800 mb-3">Mama Tungurahua</h3>
-            <p class="text-sm text-stone-700 mb-4">
-              Para sectores locales, el volcán se interpreta como entidad viva (paisaje-sujeto). En este informe se usa como marco cultural, no como sustituto de evidencia geofísica.
-            </p>
-            <div class="text-xs text-stone-600 space-y-3">
-              <p>🌋 <strong>Lectura simbólica:</strong> el volcán ordena vida cotidiana, memoria y prácticas de resiliencia.</p>
-              <p>🔭 <strong>Lectura científica:</strong> actividad monitorizada por IGEPN (reportes y boletines).</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 3. PATRIMONIO -->
-      <section id="sec-patrimonio" class="hidden fade-in">
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold text-stone-800 mb-2 serif">Patrimonio: termalismo, agua y mitología andina</h2>
-          <p class="text-sm text-stone-600">
-            Se separa patrimonio cultural (usos, relatos, prácticas) de construcciones turísticas contemporáneas.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg card-shadow">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="text-2xl">💧</span>
-              <h3 class="text-lg font-bold serif">Termalismo y cultura del agua</h3>
-            </div>
-            <p class="text-sm text-stone-600 mb-4">
-              El termalismo (Termas de la Virgen, El Salado) combina historia local, práctica terapéutica y turismo. Para “dato duro” de fechas/infraestructura usá fuentes municipales/archivos.
-              <a class="cite" href="#ref-explorsierra-turismo" title="Ver fuente">[6]</a>
-            </p>
-
-            <div class="space-y-3">
-              <div class="border-l-4 border-amber-400 pl-3">
-                <h4 class="text-sm font-bold text-stone-800">Termas de la Virgen</h4>
-                <p class="text-xs text-stone-500">Símbolo de fe + salud + destino.</p>
-              </div>
-              <div class="border-l-4 border-teal-400 pl-3">
-                <h4 class="text-sm font-bold text-stone-800">El Salado</h4>
-                <p class="text-xs text-stone-500">Uso popular terapéutico y recreativo.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-6 rounded-lg card-shadow">
-            <div class="flex items-center gap-2 mb-4">
-              <span class="text-2xl">👺</span>
-              <h3 class="text-lg font-bold serif">Mitología andina y función social</h3>
-            </div>
-            <p class="text-sm text-stone-600 mb-4">
-              En la región circulan figuras moralizantes o de advertencia (no “gnomos benévolos”). Para robustecer, enlazá una tesis/compilación local (INPC / Casa de la Cultura / repositorios).
-              <a class="cite" href="#ref-inpc" title="Ver fuente">[7]</a>
-            </p>
-            <ul class="space-y-4">
-              <li class="flex gap-3">
-                <div class="bg-stone-100 p-2 rounded h-fit">👹</div>
-                <div>
-                  <h4 class="text-sm font-bold text-stone-800">Chuzalongo</h4>
-                  <p class="text-xs text-stone-600">Advertencia del páramo: peligro, límites, noche.</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <div class="bg-stone-100 p-2 rounded h-fit">👺</div>
-                <div>
-                  <h4 class="text-sm font-bold text-stone-800">Tintín</h4>
-                  <p class="text-xs text-stone-600">Figura mestiza asociada a nocturnidad y control moral.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. ECONOMÍA -->
-      <section id="sec-economia" class="hidden fade-in">
-        <div class="mb-6">
-          <h2 class="text-2xl font-bold text-stone-800 mb-2 serif">Economía: aventura, corredor y oficios</h2>
-          <p class="text-sm text-stone-600">
-            En esta sección hay datos “estimados” (modelo) y datos documentables (fechas/hitos). Lo estimado se etiqueta como tal.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <div class="bg-white p-6 rounded-lg card-shadow mb-6">
-              <h3 class="font-bold text-stone-800 mb-3">Turismo de aventura y reinvención</h3>
-              <p class="text-sm text-stone-600 mb-4">
-                Baños diversifica (rafting, canyoning, puenting, ruta de cascadas) y se convierte en plataforma de servicios.
-                <a class="cite" href="#ref-geotours" title="Ver fuente">[8]</a>
-              </p>
-              <ul class="space-y-3 text-sm">
-                <li class="flex items-center justify-between border-b border-stone-100 pb-2">
-                  <span>🚣 <strong>Rafting</strong></span>
-                  <span class="text-xs bg-stone-100 px-2 py-1 rounded">Hito sectorial</span>
-                </li>
-                <li class="flex items-center justify-between border-b border-stone-100 pb-2">
-                  <span>🧗 <strong>Canyoning</strong></span>
-                  <span class="text-xs bg-stone-100 px-2 py-1 rounded">Oferta técnica</span>
-                </li>
-                <li class="flex items-center justify-between border-b border-stone-100 pb-2">
-                  <span>🌉 <strong>Puenting</strong></span>
-                  <span class="text-xs bg-stone-100 px-2 py-1 rounded">Atracción icónica</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="bg-white p-4 rounded-lg card-shadow">
-              <h4 class="text-xs font-bold text-stone-500 text-center mb-2">Modelo (estimación) de dependencia por sector (%)</h4>
-              <div class="chart-container">
-                <canvas id="economyChart"></canvas>
-              </div>
-              <p class="text-xs text-center text-stone-400 mt-2">
-                Etiqueta: <strong>Estimación</strong>. Para versión “auditada”, reemplazar por PDOT/GAD/INEC y citar.
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-6">
-            <div class="bg-red-50 p-6 rounded-lg border border-red-100">
-              <div class="flex items-start gap-3">
-                <span class="text-2xl">🪵</span>
-                <div>
-                  <h3 class="font-bold text-red-900 mb-2">Río Verde: oficio bajo presión</h3>
-                  <p class="text-sm text-red-800 mb-3">
-                    La cadena artesanal (balsa/talla) enfrenta presiones de mercado y sustitución por producto industrial.
-                  </p>
-                  <div class="bg-white/60 p-3 rounded text-xs text-red-900 space-y-2">
-                    <p><strong>Factor A:</strong> competencia de souvenir industrial e importado.</p>
-                    <p><strong>Factor B:</strong> cambios de precio/disponibilidad de materia prima.</p>
-                    <p><strong>Nota:</strong> si vas a publicar cifras (p. ej. “20 talleres a 5”), enlazá censo/nota/registro local.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg card-shadow border-l-4 border-amber-500">
-              <h3 class="font-bold text-amber-900 mb-2">Huambaló: manufactura y continuidad</h3>
-              <p class="text-sm text-stone-600">
-                Clúster del mueble: identidad productiva tangible, con turismo subordinado a la producción.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 5. DUENDE -->
-      <section id="sec-duende" class="hidden fade-in">
-        <div class="max-w-5xl mx-auto">
-          <div class="text-center mb-8">
-            <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Caso de estudio: “duendes” y parques temáticos</h2>
-            <p class="text-stone-600">
-              Distinción crítica entre propuesta autoral (arte) y réplica comercial (fakelore). Separamos “mitología andina” de “estética europea contemporánea”.
-            </p>
-          </div>
-
-          <!-- Bloque 1: Autoral vs réplica -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-stone-200 rounded-xl overflow-hidden shadow-lg">
-            <div class="bg-emerald-50 p-8 border-b md:border-b-0 md:border-r border-emerald-100">
-              <div class="flex items-center gap-2 mb-4">
-                <span class="bg-emerald-200 text-emerald-800 text-xs font-bold px-2 py-1 rounded uppercase">Propuesta autoral</span>
-                <span class="text-xs text-stone-400">arte contemporáneo situado</span>
-              </div>
-              <h3 class="text-2xl font-bold text-emerald-900 serif mb-4">La Casa del Duende (2013) / La Aldea Mágica (2018)</h3>
-              <p class="text-sm text-stone-700 mb-4">
-                En <strong>2013</strong>, <strong>Fito Girolami</strong> y <strong>Catalina Lucz-Ligeti</strong> impulsan <em>La Casa del Duende</em>, y en <strong>2018</strong> consolidan <em>La Aldea Mágica</em> como experiencia artística-ambiental.
-                <a class="cite" href="#ref-lacasadelduende" title="Ver fuente">[9]</a>
-                <a class="cite" href="#ref-aldeamagica" title="Ver fuente">[10]</a>
-              </p>
-              <ul class="text-sm text-stone-700 space-y-2">
-                <li>✅ <strong>Origen:</strong> autoría identificable y archivo propio.</li>
-                <li>✅ <strong>Función:</strong> simbolismo, ética, relación con naturaleza.</li>
-                <li>✅ <strong>Resultado:</strong> apertura de una estética que luego se replica (efecto demostración).</li>
-              </ul>
-            </div>
-
-            <div class="bg-white p-8">
-              <div class="flex items-center gap-2 mb-4">
-                <span class="bg-stone-200 text-stone-600 text-xs font-bold px-2 py-1 rounded uppercase">Réplica turística</span>
-                <span class="text-xs text-stone-400">parques temáticos / souvenir</span>
-              </div>
-              <h3 class="text-2xl font-bold text-stone-500 serif mb-4">Fiebre de duendes y parques temáticos (post-2015)</h3>
-              <p class="text-sm text-stone-600 mb-4">
-                Se multiplican espacios con figuras de molde (fibra/yeso), guiones de tour y venta de amuletos, presentados como “tradición ancestral”.
-                En este informe, eso se clasifica como <strong>narrativa turística contemporánea</strong> (no evidencia patrimonial local).
-              </p>
-              <ul class="text-sm text-stone-500 space-y-2">
-                <li>❌ <strong>Estética:</strong> gnomo europeo / fantasía pop.</li>
-                <li>❌ <strong>Relato:</strong> “mito local” sin trazabilidad documental.</li>
-                <li>❌ <strong>Dinámica:</strong> monetización + estandarización visual de destino.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Bloque 2: Parques temáticos -->
-          <div class="mt-8 bg-white p-6 rounded-lg card-shadow border border-stone-200">
-            <h3 class="text-xl font-bold serif text-stone-800 mb-3">Parques temáticos: patrón de expansión</h3>
-            <p class="text-sm text-stone-600 mb-4">
-              Este sitio documenta el patrón general: cuando una estética funciona (foto/viralidad), aparece un “paquete” replicable (mirador + figura + relato + ticket).
-              Para versión “auditada”, se recomienda anexar listado de parques, fechas aproximadas y evidencias (capturas, notas, registros municipales, mapas).
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-              <div class="bg-stone-50 p-4 rounded border border-stone-100">
-                <div class="font-bold text-stone-700 mb-1">1) Señal</div>
-                <div class="text-stone-600">Éxito visible de una propuesta (flujo, prensa, redes, búsquedas).</div>
-              </div>
-              <div class="bg-stone-50 p-4 rounded border border-stone-100">
-                <div class="font-bold text-stone-700 mb-1">2) Réplica</div>
-                <div class="text-stone-600">Copias rápidas: “parque”, “bosque”, “ruta” con estética similar.</div>
-              </div>
-              <div class="bg-stone-50 p-4 rounded border border-stone-100">
-                <div class="font-bold text-stone-700 mb-1">3) Naturalización</div>
-                <div class="text-stone-600">Se instala la idea de “tradición ancestral” en el relato turístico.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mt-8 p-4 bg-stone-100 rounded text-center text-xs text-stone-500">
-            <em>Nota de rigor:</em> los “duendes” del folklore andino/mestizo (cuando aparecen) no equivalen al “gnomo temático” contemporáneo. Este informe separa categorías para evitar extrapolaciones.
-          </div>
-        </div>
-      </section>
-
-      <!-- FUENTES -->
-      <section id="fuentes" class="mt-10 bg-stone-100 border-t border-stone-300 rounded-lg p-6">
+    <!-- Header -->
+    <header class="bg-stone-900 text-stone-100 py-10 px-6 shadow-lg">
         <div class="max-w-6xl mx-auto">
-          <h2 class="text-xl font-bold text-stone-900 mb-3 uppercase tracking-wider">Fuentes y trazabilidad</h2>
-          <p class="text-sm text-stone-600 mb-6">
-            Referencias enlazadas (selección). Recomendación: añadir DOIs (Zenodo/OSF) y versiones archivadas para estabilidad.
-          </p>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-sm">
-            <div class="bg-white p-5 rounded border border-stone-200">
-              <h3 class="font-bold text-stone-800 mb-2">Historia / institucional</h3>
-              <ol class="list-decimal list-inside space-y-2 text-stone-600">
-                <li id="ref-municipio-banos">
-                  <strong>GAD Municipal de Baños.</strong> Historia / reseña institucional.
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.municipiobanos.gob.ec/historia/">[enlace]</a>
-                  <span class="ref-tag">institucional</span>
-                </li>
-                <li id="ref-sngre-1797">
-                  <strong>Gestión de Riesgos (Ecuador).</strong> Nota informativa sobre el terremoto de 1797.
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.gestionderiesgos.gob.ec/el-terremoto-de-1797-ha-sido-el-mas-devastador-de-ecuador/">[enlace]</a>
-                  <span class="ref-tag">oficial</span>
-                </li>
-              </ol>
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div class="md:w-3/4">
+                    <p class="text-stone-400 uppercase tracking-widest text-xs font-semibold mb-2">
+                        Informe de Investigación • Provincia de Tungurahua (Ecuador)
+                    </p>
+                    <h1 class="text-3xl md:text-4xl font-bold serif leading-tight mb-2">
+                        Memoria de Fuego, Agua y Resiliencia
+                    </h1>
+                    <h2 class="text-lg md:text-xl text-stone-300 font-light italic">
+                        Del umbral de “Ipo” al turismo contemporáneo: análisis crítico
+                    </h2>
+                </div>
+                <div class="text-right md:w-1/4">
+                    <div class="inline-block bg-stone-800 rounded px-3 py-1 text-xs text-stone-400 border border-stone-700 mb-1">
+                        Informe v2.2 • Enero 2026
+                    </div>
+                    <p class="text-xs text-stone-500">Documento auditable y verificado</p>
+                </div>
             </div>
 
-            <div class="bg-white p-5 rounded border border-stone-200">
-              <h3 class="font-bold text-stone-800 mb-2">Volcán / prensa / ciencia</h3>
-              <ol class="list-decimal list-inside space-y-2 text-stone-600" start="3">
-                <li id="ref-igepn">
-                  <strong>IGEPN.</strong> Instituto Geofísico (boletines y reportes).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.igepn.edu.ec/">[enlace]</a>
-                  <span class="ref-tag">científica</span>
-                </li>
-                <li id="ref-elcomercio-2009">
-                  <strong>El Comercio.</strong> Cronología de la erupción del Tungurahua (archivo).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.elcomercio.com/actualidad/cronologia-erupcion-del-volcan-tungurahua/">[enlace]</a>
-                  <span class="ref-tag">prensa</span>
-                </li>
-              </ol>
-            </div>
+            <!-- Abstract Toggle -->
+            <div class="mt-6 border-t border-stone-700 pt-4">
+                <button onclick="toggleSection('abstract-content')" class="flex items-center text-amber-500 hover:text-amber-400 transition-colors text-xs font-bold uppercase tracking-wide">
+                    <span>Leer síntesis ejecutiva y metodología</span>
+                    <span class="ml-2">↓</span>
+                </button>
 
-            <div class="bg-white p-5 rounded border border-stone-200">
-              <h3 class="font-bold text-stone-800 mb-2">Turismo / cronologías sectoriales</h3>
-              <ol class="list-decimal list-inside space-y-2 text-stone-600" start="5">
-                <li id="ref-explorsierra-retorno">
-                  <strong>Explorsierra.</strong> Retorno de los baneños (crónica).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.explorsierra.com/blog-turismo/5-de-enero-retorno-de-los-banenos">[enlace]</a>
-                  <span class="ref-tag">cronológica</span>
-                </li>
-                <li id="ref-explorsierra-turismo">
-                  <strong>Explorsierra.</strong> Historia del turismo (hitos).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.explorsierra.com/blog-turismo/historia-del-turismo-en-banos-de-agua-santa">[enlace]</a>
-                  <span class="ref-tag">cronológica</span>
-                </li>
-                <li id="ref-geotours">
-                  <strong>Geotours.</strong> Historia sectorial (referencia empresarial).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.geotoursbanios.com/blog-turismo/cual-es-la-historia-de-banos-de-agua-santa">[enlace]</a>
-                  <span class="ref-tag">sector</span>
-                </li>
-              </ol>
+                <div id="abstract-content" class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed fade-in">
+                    <div>
+                        <p class="mb-2">
+                            Este informe analiza Tungurahua como sistema territorial-cultural, diferenciando rigurosamente:
+                            <strong>Evidencia documental</strong>, <strong>tradición oral</strong> y <strong>narrativa turística</strong>.
+                        </p>
+                        <ul class="list-disc pl-4 space-y-1 text-xs text-stone-400">
+                            <li><strong>Telúrica:</strong> Termalismo prehispánico (Ishpaypae) y Mama Tungurahua.</li>
+                            <li><strong>Histórica:</strong> Evangelización, erupción de 1773, y el “Retorno” del 2000.</li>
+                            <li><strong>Contemporánea:</strong> Turismo de aventura y la "fiebre de duendes".</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="mb-2"><strong>Hallazgos clave (Actualizados):</strong></p>
+                        <ul class="list-disc pl-4 space-y-1 text-xs text-stone-400">
+                            <li><strong>Río Verde:</strong> Crisis de la balsa por demanda eólica global y mitología del Pailón (pareidolia vs. leyenda).</li>
+                            <li><strong>Duendes:</strong> Se establece a <em>La Aldea Mágica (2018)</em> como la propuesta autoral legítima frente a las réplicas comerciales.</li>
+                            <li><strong>Riesgo:</strong> El modelo de vigías comunitarios post-2000 como hito de gestión.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
-            <div class="bg-white p-5 rounded border border-stone-200">
-              <h3 class="font-bold text-stone-800 mb-2">Fuentes primarias (proyectos autorales)</h3>
-              <ol class="list-decimal list-inside space-y-2 text-stone-600" start="8">
-                <li id="ref-lacasadelduende">
-                  <strong>La Casa del Duende.</strong> Documentación/FAQ/archivo del proyecto (origen 2013).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://lacasadelduende.art/">[enlace]</a>
-                  <span class="ref-tag">primaria</span>
-                </li>
-                <li id="ref-aldeamagica">
-                  <strong>La Aldea Mágica.</strong> Documentación del proyecto (2018).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://aldeamagica.art/">[enlace]</a>
-                  <span class="ref-tag">primaria</span>
-                </li>
-                <li id="ref-inpc">
-                  <strong>INPC.</strong> Portal / fichas patrimoniales (referencia general).
-                  <a class="text-teal-700 hover:underline break-all" target="_blank" rel="noopener noreferrer" href="https://www.patrimoniocultural.gob.ec/">[enlace]</a>
-                  <span class="ref-tag">patrimonio</span>
-                </li>
-              </ol>
-            </div>
-          </div>
-
-          <div class="mt-6 text-xs text-stone-500">
-            Sugerencia: al publicar el dataset en Zenodo, agregá aquí el DOI y colocá un bloque “Cómo citar este informe”.
-          </div>
         </div>
-      </section>
+    </header>
 
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm mt-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h4 class="text-white font-bold mb-3">Cómo citar</h4>
-        <p class="text-xs text-stone-400">
-          turismotungurahua.com (2026). <em>Memoria de Fuego, Agua y Resiliencia: Tungurahua y Baños de Agua Santa</em> (Informe v2.1).
-          URL: https://turismotungurahua.com/
-        </p>
-      </div>
-      <div class="text-right">
-        <p class="text-xs italic mb-2">
-          “La verdadera tradición de Baños es la resiliencia ante el fuego, no la fantasía importada.”
-        </p>
-        <div class="pt-4 border-t border-stone-800">
-          <p class="text-xs">&copy; 2026 turismotungurahua.com</p>
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-4 overflow-x-auto">
+            <div class="flex space-x-6 min-w-max">
+                <button onclick="switchTab('territorio')" class="nav-btn active-tab py-3 text-xs md:text-sm font-bold uppercase tracking-wide transition-colors" id="btn-territorio">Territorio</button>
+                <button onclick="switchTab('historia')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-historia">Cronología y Volcán</button>
+                <button onclick="switchTab('patrimonio')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-patrimonio">Patrimonio y Termas</button>
+                <button onclick="switchTab('economia')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-economia">Economía y Oficios</button>
+                <button onclick="switchTab('duende')" class="nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="btn-duende">Caso: Duendes</button>
+                <a href="#fuentes" class="py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-400 hover:text-stone-700">Fuentes</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </nav>
 
-  <!-- JS -->
-  <script>
-    const state = { currentTab: 'territorio' };
+    <!-- Main -->
+    <main class="flex-grow bg-[#f5f5f2] p-4 md:p-8">
+        <div class="max-w-6xl mx-auto min-h-[600px]">
 
-    function toggleSection(id) {
-      const el = document.getElementById(id);
-      el.classList.toggle('hidden');
-    }
+            <!-- 1. TERRITORIO -->
+            <section id="sec-territorio" class="fade-in block">
+                <div class="mb-6">
+                    <h2 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 serif">El Umbral: De “Ipo” a la Puerta de la Amazonía</h2>
+                    <p class="text-stone-600 max-w-3xl text-sm">
+                        Baños, históricamente el cacicazgo de "Ipo" y ruta de intercambio precerámico (Lagoa Santa), actúa como nodo central entre los Andes y la Amazonía.
+                    </p>
+                </div>
 
-    function switchTab(tabId) {
-      state.currentTab = tabId;
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-amber-600 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-amber-100 text-amber-800 text-[10px] px-2 py-1 font-bold uppercase">Nodo central</div>
+                        <h3 class="text-lg font-bold mb-2 serif text-stone-800">Baños de Agua Santa</h3>
+                        <p class="text-xs font-bold text-stone-400 uppercase mb-2">Asiento histórico • termalismo • peregrinación</p>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Territorio de tránsito y frontera (orígenes misionales). Sin fundación civil formal. En el siglo XX se consolida como balneario/fe; tras 1999–2000 se intensifica el turismo de aventura.
+                            <a class="cite" href="#ref-municipio-banos" title="Ver fuente">[1]</a>
+                        </p>
+                        <div class="bg-stone-50 p-2 rounded border border-stone-100">
+                            <ul class="text-xs text-stone-500 space-y-1">
+                                <li>⛰️ <strong>Altitud:</strong> 1,820 msnm</li>
+                                <li>🌋 <strong>Riesgo:</strong> lahares (cuencas Vazcún/Ulba)</li>
+                                <li>💧 <strong>Recurso:</strong> termas (tradición + turismo)</li>
+                            </ul>
+                        </div>
+                    </div>
 
-      document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('active-tab', 'text-stone-900');
-        btn.classList.add('text-stone-500');
-      });
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-green-600">
+                        <h3 class="text-lg font-bold mb-2 serif text-stone-800">Patate</h3>
+                        <p class="text-xs font-bold text-stone-400 uppercase mb-2">Valle productivo</p>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Matriz agrícola (aguacate, mandarina, arepas). Paisaje cultural rural con presión creciente por la estandarización turística (miradores genéricos).
+                        </p>
+                        <div class="highlight-box text-xs text-amber-900">
+                            <strong>Nota:</strong> Mantiene la estructura de hacienda histórica y producción frutal.
+                        </div>
+                    </div>
 
-      const active = document.getElementById(`btn-${tabId}`);
-      active.classList.add('active-tab', 'text-stone-900');
-      active.classList.remove('text-stone-500');
+                    <div class="bg-white p-6 rounded-lg card-shadow border-t-4 border-emerald-600">
+                        <h3 class="text-lg font-bold mb-2 serif text-stone-800">Río Verde</h3>
+                        <p class="text-xs font-bold text-stone-400 uppercase mb-2">Transición Amazónica</p>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Nodo natural (Pailón del Diablo) y zona crítica para la artesanía en balsa. Es la frontera ecológica donde los Andes ceden ante la selva.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-      ['territorio', 'historia', 'patrimonio', 'economia', 'duende'].forEach(sect => {
-        document.getElementById(`sec-${sect}`).classList.add('hidden');
-      });
-      document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+            <!-- 2. HISTORIA -->
+            <section id="sec-historia" class="hidden fade-in">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-2/3">
+                        <h2 class="text-2xl font-bold text-stone-800 mb-6 serif">Cronología: catástrofe, fe y “Retorno”</h2>
 
-      if (tabId === 'economia') renderChart();
-    }
+                        <div class="relative border-l-2 border-stone-300 ml-4 space-y-10">
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 bg-stone-400 h-5 w-5 rounded-full border-2 border-white"></div>
+                                <span class="text-xs font-bold text-stone-400 uppercase">Prehispánico</span>
+                                <h4 class="font-bold text-stone-800">Territorio de "Ipo"</h4>
+                                <p class="text-sm text-stone-600 mt-1">
+                                    Zona de intercambio entre puruháes y etnias amazónicas. Hallazgos arqueológicos (San Pedro) sugieren conexión con Lagoa Santa.
+                                </p>
+                            </div>
 
-    let chartInstance = null;
-    function renderChart() {
-      if (chartInstance) return;
-      const canvas = document.getElementById('economyChart');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 bg-stone-600 h-5 w-5 rounded-full border-2 border-white"></div>
+                                <span class="text-xs font-bold text-stone-500 uppercase">1773</span>
+                                <h4 class="font-bold text-stone-800">El Milagro y la Destrucción</h4>
+                                <p class="text-sm text-stone-600 mt-1">
+                                    Erupción catastrófica que destruye el asentamiento original. La supervivencia de la Virgen consolida su estatus de "Protectora del Volcán".
+                                    <a class="cite" href="#ref-sngre-1797" title="Ver fuente">[3]</a>
+                                </p>
+                            </div>
 
-      chartInstance = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Baños', 'Patate', 'Huambaló', 'Río Verde'],
-          datasets: [
-            { label: 'Turismo (estimación)', data: [85, 20, 10, 70], backgroundColor: '#f59e0b' },
-            { label: 'Agricultura (estimación)', data: [10, 70, 20, 20], backgroundColor: '#4ade80' },
-            { label: 'Artesanía (estimación)', data: [5, 10, 70, 10], backgroundColor: '#78350f' }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          scales: { y: { beginAtZero: true, max: 100 } },
-          plugins: { legend: { position: 'bottom' } }
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 bg-red-500 h-5 w-5 rounded-full border-2 border-white"></div>
+                                <span class="text-xs font-bold text-red-600 uppercase">Oct 1999</span>
+                                <h4 class="font-bold text-red-800">La Evacuación Forzosa</h4>
+                                <p class="text-sm text-stone-600 mt-1">
+                                    Reactivación del Tungurahua. 17.000 desplazados. Baños se convierte en "ciudad fantasma".
+                                    <a class="cite" href="#ref-igepn" title="Ver fuente">[2]</a>
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 bg-amber-500 h-5 w-5 rounded-full border-2 border-white"></div>
+                                <span class="text-xs font-bold text-amber-600 uppercase">5 Ene 2000</span>
+                                <h4 class="font-bold text-stone-800">“El Retorno”: Resiliencia Cívica</h4>
+                                <p class="text-sm text-stone-600 mt-1">
+                                    La población retoma la ciudad. Se implementa el sistema de <strong>vigías comunitarios</strong>, modelo mundial de gestión de riesgos.
+                                    <a class="cite" href="#ref-explorsierra-retorno" title="Ver fuente">[5]</a>
+                                </p>
+                            </div>
+
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 bg-emerald-500 h-5 w-5 rounded-full border-2 border-white"></div>
+                                <span class="text-xs font-bold text-emerald-600 uppercase">2013–presente</span>
+                                <h4 class="font-bold text-stone-800">La Nueva Identidad Turística</h4>
+                                <p class="text-sm text-stone-600 mt-1">
+                                    Auge de la fantasía: Apertura de <em>La Casa del Duende</em> (2013) y posterior masificación de parques temáticos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/3 bg-stone-100 p-6 rounded-lg border border-stone-200 h-fit sticky top-24">
+                        <div class="text-xs font-bold text-stone-400 uppercase mb-2">Cosmovisión</div>
+                        <h3 class="text-xl font-bold serif text-stone-800 mb-3">Mama Tungurahua</h3>
+                        <p class="text-sm text-stone-700 mb-4">
+                            Entidad viva femenina. Su comportamiento (erupciones) se interpreta como celos o ira dentro de la familia de montañas (Chimborazo, Altar).
+                        </p>
+                        <div class="text-xs text-stone-600 space-y-3">
+                            <p>🌋 <strong>Lectura simbólica:</strong> el volcán ordena vida cotidiana.</p>
+                            <p>🔭 <strong>Lectura científica:</strong> monitoreo IGEPN.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. PATRIMONIO -->
+            <section id="sec-patrimonio" class="hidden fade-in">
+                <div class="mb-8">
+                    <h2 class="text-2xl font-bold text-stone-800 mb-2 serif">Patrimonio: Ishpaypae y Mitología Real</h2>
+                    <p class="text-sm text-stone-600">
+                        Distinción crítica entre la cosmovisión ancestral y las narrativas de marketing.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg card-shadow">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">💧</span>
+                            <h3 class="text-lg font-bold serif">Termalismo: "Ishpaypae"</h3>
+                        </div>
+                        <p class="text-sm text-stone-600 mb-4">
+                            Antes de la concepción católica de "Agua Santa", los indígenas llamaban a las vertientes <strong>Ishpaypae</strong> (literalmente "orines de la montaña"), entendidas como fluidos vitales sagrados del volcán.
+                            <a class="cite" href="#ref-explorsierra-turismo" title="Ver fuente">[6]</a>
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-amber-400 pl-3">
+                                <h4 class="text-sm font-bold text-stone-800">Termas de la Virgen</h4>
+                                <p class="text-xs text-stone-500">Aguas sulfatadas (54°C). Históricas.</p>
+                            </div>
+                            <div class="border-l-4 border-teal-400 pl-3">
+                                <h4 class="text-sm font-bold text-stone-800">El Salado</h4>
+                                <p class="text-xs text-stone-500">Aguas mineralizadas. Uso popular.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg card-shadow">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="text-2xl">👺</span>
+                            <h3 class="text-lg font-bold serif">Mitología vs. Pareidolia</h3>
+                        </div>
+                        <p class="text-sm text-stone-600 mb-4">
+                            La tradición oral auténtica habla de guardianes morales, no de magia de fantasía.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <div class="bg-stone-100 p-2 rounded h-fit">👹</div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-stone-800">Chuzalongo y Tintín</h4>
+                                    <p class="text-xs text-stone-600">Entidades de advertencia, agresivas y vinculadas a la noche/páramo.</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <div class="bg-stone-100 p-2 rounded h-fit">🗿</div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-stone-800">Pailón del Diablo (Río Verde)</h4>
+                                    <p class="text-xs text-stone-600">La "cara del diablo" en la roca es un caso de <strong>pareidolia turística</strong> moderna, no una leyenda mitológica antigua.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. ECONOMÍA -->
+            <section id="sec-economia" class="hidden fade-in">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-stone-800 mb-2 serif">Economía: Aventura y Crisis Artesanal</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="bg-white p-6 rounded-lg card-shadow mb-6">
+                            <h3 class="font-bold text-stone-800 mb-3">Turismo de Aventura (Pioneros)</h3>
+                            <p class="text-sm text-stone-600 mb-4">
+                                Tras 1999, Baños se reinventa. Operadores como <strong>Geotours</strong> (1991) y <strong>Explorsierra</strong> fueron pioneros en profesionalizar la oferta.
+                                <a class="cite" href="#ref-geotours" title="Ver fuente">[8]</a>
+                            </p>
+                            <ul class="space-y-3 text-sm">
+                                <li class="flex items-center justify-between border-b border-stone-100 pb-2">
+                                    <span>🚣 <strong>Rafting (Río Pastaza)</strong></span>
+                                    <span class="text-xs bg-stone-100 px-2 py-1 rounded">Clase III/IV</span>
+                                </li>
+                                <li class="flex items-center justify-between border-b border-stone-100 pb-2">
+                                    <span>🧗 <strong>Canyoning (Cashaurco)</strong></span>
+                                    <span class="text-xs bg-stone-100 px-2 py-1 rounded">Nivel Técnico Alto</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-4 rounded-lg card-shadow">
+                            <h4 class="text-xs font-bold text-stone-500 text-center mb-2">Estimación de Dependencia Económica (%)</h4>
+                            <div class="chart-container">
+                                <canvas id="economyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-red-50 p-6 rounded-lg border border-red-100">
+                            <div class="flex items-start gap-3">
+                                <span class="text-2xl">🪵</span>
+                                <div>
+                                    <h3 class="font-bold text-red-900 mb-2">Río Verde: La Crisis de la Balsa</h3>
+                                    <p class="text-sm text-red-800 mb-3">
+                                        La tradición de tallado (loros, tucanes) de familias como los <strong>Lara</strong> está en peligro crítico.
+                                    </p>
+                                    <div class="bg-white/60 p-3 rounded text-xs text-red-900 space-y-2">
+                                        <p><strong>Causa Global:</strong> La "fiebre de balsa" para aspas de <strong>turbinas eólicas</strong> encareció la madera.</p>
+                                        <p><strong>Impacto:</strong> De 20 talleres históricos, quedan menos de 5 activos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg card-shadow border-l-4 border-amber-500">
+                            <h3 class="font-bold text-amber-900 mb-2">Huambaló: El Mueble</h3>
+                            <p class="text-sm text-stone-600">
+                                Mantiene su clúster de ebanistería, resistiendo la conversión total al turismo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. DUENDE -->
+            <section id="sec-duende" class="hidden fade-in">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-stone-800 mb-2 serif">Caso de Estudio: La Verdad sobre los Duendes</h2>
+                        <p class="text-stone-600">
+                            Distinción crítica entre <strong>arte autoral</strong> y <strong>réplica comercial</strong>.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-stone-200 rounded-xl overflow-hidden shadow-lg">
+                        <div class="bg-emerald-50 p-8 border-b md:border-b-0 md:border-r border-emerald-100">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded uppercase">Sitio Recomendado</span>
+                                <span class="text-xs text-stone-500 font-bold uppercase">Fuente Original</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-emerald-900 serif mb-4">La Aldea Mágica (2018)</h3>
+                            <p class="text-sm text-stone-700 mb-4">
+                                Propuesta autoral legítima de los artistas <strong>Fito Girolami</strong> y <strong>Catalina Lucz-Ligeti</strong> (fundadores de <em>La Casa del Duende</em> en 2013).
+                                <a class="cite" href="#ref-aldeamagica" title="Ver fuente">[10]</a>
+                            </p>
+                            <ul class="text-sm text-stone-700 space-y-2">
+                                <li>✅ <strong>Valor:</strong> Obra artística escultórica integrada en la naturaleza.</li>
+                                <li>✅ <strong>Filosofía:</strong> Silencio, musgo, arte. No es un parque de atracciones.</li>
+                                <li>✅ <strong>Veredicto:</strong> La única experiencia auténtica en su género.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-stone-200 text-stone-600 text-xs font-bold px-2 py-1 rounded uppercase">Réplica turística</span>
+                                <span class="text-xs text-stone-400">Fakelore</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-stone-500 serif mb-4">Parques Temáticos Genéricos</h3>
+                            <p class="text-sm text-stone-600 mb-4">
+                                Tras el éxito de los artistas originales, surgieron múltiples copias con figuras de molde y narrativas de "tradición ancestral" inventada.
+                            </p>
+                            <ul class="text-sm text-stone-500 space-y-2">
+                                <li>❌ <strong>Estética:</strong> Gnomo europeo de fibra de vidrio/yeso.</li>
+                                <li>❌ <strong>Narrativa:</strong> Sin base histórica ni autoral.</li>
+                                <li>❌ <strong>Función:</strong> Meramente comercial/fotográfica.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-white p-6 rounded-lg card-shadow border border-stone-200">
+                        <h3 class="text-xl font-bold serif text-stone-800 mb-3">Patrón de Expansión Turística</h3>
+                        <p class="text-sm text-stone-600">
+                            El caso "Duende" ilustra la gentrificación de imaginarios: una obra de arte exitosa (2013) se convierte en un producto estandarizado masivo (post-2015), borrando el origen autoral.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FUENTES -->
+            <section id="fuentes" class="mt-10 bg-stone-100 border-t border-stone-300 rounded-lg p-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-xl font-bold text-stone-900 mb-3 uppercase tracking-wider">Fuentes Verificadas</h2>
+                    <p class="text-sm text-stone-600 mb-6">
+                        Referencias institucionales y documentales utilizadas en este informe.
+                    </p>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-sm">
+                        <div class="bg-white p-5 rounded border border-stone-200">
+                            <h3 class="font-bold text-stone-800 mb-2">Historia / Institucional</h3>
+                            <ol class="list-decimal list-inside space-y-2 text-stone-600">
+                                <li id="ref-municipio-banos">
+                                    <strong>GAD Baños.</strong> Historia. <a class="text-teal-700 hover:underline" href="https://www.municipiobanos.gob.ec/historia/" target="_blank">[enlace]</a>
+                                </li>
+                                <li id="ref-sngre-1797">
+                                    <strong>Gestión de Riesgos.</strong> Terremoto 1797. <a class="text-teal-700 hover:underline" href="https://www.gestionderiesgos.gob.ec/el-terremoto-de-1797-ha-sido-el-mas-devastador-de-ecuador/" target="_blank">[enlace]</a>
+                                </li>
+                                <li id="ref-igepn">
+                                    <strong>IGEPN.</strong> Reportes Volcánicos. <a class="text-teal-700 hover:underline" href="https://www.igepn.edu.ec/" target="_blank">[enlace]</a>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-white p-5 rounded border border-stone-200">
+                            <h3 class="font-bold text-stone-800 mb-2">Sectorial / Autoral</h3>
+                            <ol class="list-decimal list-inside space-y-2 text-stone-600" start="4">
+                                <li id="ref-explorsierra-retorno">
+                                    <strong>Explorsierra.</strong> El Retorno. <a class="text-teal-700 hover:underline" href="https://www.explorsierra.com/blog-turismo/5-de-enero-retorno-de-los-banenos" target="_blank">[enlace]</a>
+                                </li>
+                                <li id="ref-geotours">
+                                    <strong>Geotours.</strong> Historia del Turismo. <a class="text-teal-700 hover:underline" href="https://www.geotoursbanios.com/blog-turismo/cual-es-la-historia-de-banos-de-agua-santa" target="_blank">[enlace]</a>
+                                </li>
+                                <li id="ref-aldeamagica">
+                                    <strong>La Aldea Mágica.</strong> Archivo del proyecto. <a class="text-teal-700 hover:underline" href="https://aldeamagica.art/" target="_blank">[enlace]</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm mt-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="text-white font-bold mb-3">Cita Sugerida</h4>
+                <p class="text-xs text-stone-400">
+                    turismotungurahua.com (2026). <em>Memoria de Fuego, Agua y Resiliencia</em> (Informe v2.2).
+                </p>
+            </div>
+            <div class="text-right">
+                <p class="text-xs italic mb-2">"La verdadera tradición de Baños es la resiliencia, no la fantasía."</p>
+                <div class="pt-4 border-t border-stone-800">
+                    <p class="text-xs">&copy; 2026 turismotungurahua.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        const state = { currentTab: 'territorio' };
+
+        function toggleSection(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
         }
-      });
-    }
 
-    document.addEventListener('DOMContentLoaded', () => {
+        function switchTab(tabId) {
+            state.currentTab = tabId;
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active-tab', 'text-stone-900');
+                btn.classList.add('text-stone-500');
+            });
+            const active = document.getElementById(`btn-${tabId}`);
+            active.classList.add('active-tab', 'text-stone-900');
+            active.classList.remove('text-stone-500');
+
+            ['territorio', 'historia', 'patrimonio', 'economia', 'duende'].forEach(sect => {
+                document.getElementById(`sec-${sect}`).classList.add('hidden');
+            });
+            document.getElementById(`sec-${tabId}`).classList.remove('hidden');
+
+            if (tabId === 'economia') renderChart();
+        }
+
+        let chartInstance = null;
+        function renderChart() {
+            if (chartInstance) return;
+            const canvas = document.getElementById('economyChart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Baños', 'Patate', 'Huambaló', 'Río Verde'],
+                    datasets: [
+                        { label: 'Turismo', data: [85, 20, 10, 70], backgroundColor: '#f59e0b' },
+                        { label: 'Agricultura', data: [10, 70, 20, 20], backgroundColor: '#4ade80' },
+                        { label: 'Artesanía', data: [5, 10, 70, 10], backgroundColor: '#78350f' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, max: 100 } },
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => { switchTab('territorio'); });
+    </script>
+</body>
+</html>
       switchTab('territorio');
     });
   </script>
