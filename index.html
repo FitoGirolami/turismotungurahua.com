@@ -11,12 +11,93 @@
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://turismotungurahua.com/" />
 
+    <!-- DOI / Zenodo -->
+    <meta name="citation_title" content="Memoria de Fuego, Agua y Resiliencia: Del umbral de 'Ipo' al turismo contemporáneo (Informe v2.2)" />
+    <meta name="citation_author" content="Fito Girolami" />
+    <meta name="citation_publication_date" content="2026/01" />
+    <meta name="citation_language" content="es" />
+    <meta name="citation_doi" content="10.5281/zenodo.18216233" />
+    <meta name="citation_pdf_url" content="https://doi.org/10.5281/zenodo.18216233" />
+
+    <meta name="DC.title" content="Memoria de Fuego, Agua y Resiliencia (Informe v2.2)" />
+    <meta name="DC.creator" content="Fito Girolami" />
+    <meta name="DC.identifier" content="https://doi.org/10.5281/zenodo.18216233" />
+    <meta name="DC.language" content="es" />
+    <meta name="DC.publisher" content="Zenodo" />
+    <meta name="DC.subject" content="Tungurahua; Baños de Agua Santa; turismo; patrimonio; tradición inventada; duendes; parques temáticos" />
+
     <!-- Open Graph -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://turismotungurahua.com/" />
     <meta property="og:title" content="Tungurahua: Memoria de Fuego, Agua y Resiliencia" />
     <meta property="og:description" content="Informe auditable: cronología volcánica, crisis de la balsa, mitología real vs pareidolia turística y la distinción autoral en los parques temáticos." />
     <meta property="og:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Memoria de Fuego, Agua y Resiliencia (Tungurahua)" />
+    <meta name="twitter:description" content="Informe auditable con DOI: historia, riesgo, termas, economía y fenómeno duendes." />
+    <meta name="twitter:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
+
+    <!-- JSON-LD: ScholarlyArticle + Dataset/Repository link -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://turismotungurahua.com/#informe",
+          "headline": "Memoria de Fuego, Agua y Resiliencia: Del umbral de 'Ipo' al turismo contemporáneo (Informe v2.2)",
+          "inLanguage": "es",
+          "datePublished": "2026-01-01",
+          "author": {
+            "@type": "Person",
+            "name": "Fito Girolami"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "turismotungurahua.com"
+          },
+          "about": [
+            "Tungurahua",
+            "Baños de Agua Santa",
+            "Patrimonio cultural inmaterial",
+            "Turistificación",
+            "Tradición inventada",
+            "Parques temáticos",
+            "Duendes (fenómeno contemporáneo)"
+          ],
+          "sameAs": [
+            "https://doi.org/10.5281/zenodo.18216233"
+          ],
+          "identifier": [
+            {
+              "@type": "PropertyValue",
+              "propertyID": "DOI",
+              "value": "10.5281/zenodo.18216233"
+            }
+          ],
+          "image": "https://turismotungurahua.com/assets/banos-cover-research.jpg"
+        },
+        {
+          "@type": "Dataset",
+          "@id": "https://doi.org/10.5281/zenodo.18216233",
+          "name": "Investigación Tungurahua: Cultura, Turismo, Duendes (Zenodo Record)",
+          "identifier": "10.5281/zenodo.18216233",
+          "url": "https://doi.org/10.5281/zenodo.18216233",
+          "creator": {
+            "@type": "Person",
+            "name": "Fito Girolami"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Zenodo"
+          },
+          "inLanguage": "es"
+        }
+      ]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
@@ -37,7 +118,6 @@
         .fade-in { animation: fadeIn .5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* citations */
         .cite { font-size: .75em; vertical-align: super; color: #0f766e; text-decoration: none; font-weight: 800; margin-left: .15rem; cursor: pointer; }
         .cite:hover { color: #be123c; text-decoration: underline; }
         .ref-tag { display: inline-block; font-size: .65rem; padding: .1rem .35rem; border-radius: .35rem; background: #e7e5e4; color: #57534e; margin-left: .35rem; text-transform: uppercase; }
@@ -62,6 +142,18 @@
                     <h2 class="text-lg md:text-xl text-stone-300 font-light italic">
                         Del umbral de “Ipo” al turismo contemporáneo: análisis crítico
                     </h2>
+
+                    <!-- DOI badge + CTA -->
+                    <div class="mt-4 flex flex-col sm:flex-row gap-2 sm:items-center">
+                        <span class="inline-flex items-center bg-stone-800 border border-stone-700 rounded px-3 py-1 text-xs text-stone-200">
+                            DOI: <strong class="ml-1">10.5281/zenodo.18216233</strong>
+                        </span>
+                        <a href="https://doi.org/10.5281/zenodo.18216233" target="_blank"
+                           class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-xs px-3 py-2 rounded transition">
+                           Ver registro en Zenodo
+                        </a>
+                        <a href="#cita" class="text-xs text-stone-400 hover:text-stone-200 underline">Cómo citar</a>
+                    </div>
                 </div>
                 <div class="text-right md:w-1/4">
                     <div class="inline-block bg-stone-800 rounded px-3 py-1 text-xs text-stone-400 border border-stone-700 mb-1">
@@ -220,7 +312,7 @@
                                 <span class="text-xs font-bold text-emerald-600 uppercase">2013–presente</span>
                                 <h4 class="font-bold text-stone-800">La Nueva Identidad Turística</h4>
                                 <p class="text-sm text-stone-600 mt-1">
-                                    Auge de la fantasía: Apertura de <em>La Casa del Duende</em> (2013) y posterior masificación de parques temáticos.
+                                    Auge de la fantasía y parques temáticos. Apertura de <em>La Casa del Duende</em> (2013) y consolidación de <em>La Aldea Mágica</em> (2018) como propuesta autoral, seguida por masificación de réplicas comerciales.
                                 </p>
                             </div>
                         </div>
@@ -411,6 +503,12 @@
                         <p class="text-sm text-stone-600">
                             El caso "Duende" ilustra la gentrificación de imaginarios: una obra de arte exitosa (2013) se convierte en un producto estandarizado masivo (post-2015), borrando el origen autoral.
                         </p>
+                        <div class="mt-4 text-sm">
+                            <a href="https://doi.org/10.5281/zenodo.18216233" target="_blank"
+                               class="inline-flex items-center bg-stone-900 text-stone-100 hover:bg-stone-800 font-bold text-xs px-3 py-2 rounded transition">
+                               DOI / Evidencia (Zenodo)
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -428,13 +526,16 @@
                             <h3 class="font-bold text-stone-800 mb-2">Historia / Institucional</h3>
                             <ol class="list-decimal list-inside space-y-2 text-stone-600">
                                 <li id="ref-municipio-banos">
-                                    <strong>GAD Baños.</strong> Historia. <a class="text-teal-700 hover:underline" href="https://www.municipiobanos.gob.ec/historia/" target="_blank">[enlace]</a>
+                                    <strong>GAD Baños.</strong> Historia.
+                                    <a class="text-teal-700 hover:underline" href="https://www.municipiobanos.gob.ec/historia/" target="_blank">[enlace]</a>
                                 </li>
                                 <li id="ref-sngre-1797">
-                                    <strong>Gestión de Riesgos.</strong> Terremoto 1797. <a class="text-teal-700 hover:underline" href="https://www.gestionderiesgos.gob.ec/el-terremoto-de-1797-ha-sido-el-mas-devastador-de-ecuador/" target="_blank">[enlace]</a>
+                                    <strong>Gestión de Riesgos.</strong> Terremoto 1797.
+                                    <a class="text-teal-700 hover:underline" href="https://www.gestionderiesgos.gob.ec/el-terremoto-de-1797-ha-sido-el-mas-devastador-de-ecuador/" target="_blank">[enlace]</a>
                                 </li>
                                 <li id="ref-igepn">
-                                    <strong>IGEPN.</strong> Reportes Volcánicos. <a class="text-teal-700 hover:underline" href="https://www.igepn.edu.ec/" target="_blank">[enlace]</a>
+                                    <strong>IGEPN.</strong> Reportes Volcánicos.
+                                    <a class="text-teal-700 hover:underline" href="https://www.igepn.edu.ec/" target="_blank">[enlace]</a>
                                 </li>
                             </ol>
                         </div>
@@ -443,18 +544,38 @@
                             <h3 class="font-bold text-stone-800 mb-2">Sectorial / Autoral</h3>
                             <ol class="list-decimal list-inside space-y-2 text-stone-600" start="4">
                                 <li id="ref-explorsierra-retorno">
-                                    <strong>Explorsierra.</strong> El Retorno. <a class="text-teal-700 hover:underline" href="https://www.explorsierra.com/blog-turismo/5-de-enero-retorno-de-los-banenos" target="_blank">[enlace]</a>
+                                    <strong>Explorsierra.</strong> El Retorno.
+                                    <a class="text-teal-700 hover:underline" href="https://www.explorsierra.com/blog-turismo/5-de-enero-retorno-de-los-banenos" target="_blank">[enlace]</a>
                                 </li>
                                 <li id="ref-geotours">
-                                    <strong>Geotours.</strong> Historia del Turismo. <a class="text-teal-700 hover:underline" href="https://www.geotoursbanios.com/blog-turismo/cual-es-la-historia-de-banos-de-agua-santa" target="_blank">[enlace]</a>
+                                    <strong>Geotours.</strong> Historia del Turismo.
+                                    <a class="text-teal-700 hover:underline" href="https://www.geotoursbanios.com/blog-turismo/cual-es-la-historia-de-banos-de-agua-santa" target="_blank">[enlace]</a>
                                 </li>
                                 <li id="ref-aldeamagica">
-                                    <strong>La Aldea Mágica.</strong> Archivo del proyecto. <a class="text-teal-700 hover:underline" href="https://aldeamagica.art/" target="_blank">[enlace]</a>
+                                    <strong>La Aldea Mágica.</strong> Archivo del proyecto.
+                                    <a class="text-teal-700 hover:underline" href="https://aldeamagica.art/" target="_blank">[enlace]</a>
+                                </li>
+                                <li id="ref-doi">
+                                    <strong>Girolami, F.</strong> (2026). <em>Investigación Tungurahua: Cultura, Turismo, Duendes</em>.
+                                    DOI:
+                                    <a class="text-teal-700 hover:underline" href="https://doi.org/10.5281/zenodo.18216233" target="_blank">10.5281/zenodo.18216233</a>
+                                    <span class="ref-tag">Zenodo</span>
                                 </li>
                             </ol>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <!-- CITA -->
+            <section id="cita" class="mt-10 bg-white rounded-lg border border-stone-200 p-6 card-shadow">
+                <h2 class="text-xl font-bold text-stone-900 mb-2 uppercase tracking-wider">Cita sugerida</h2>
+                <p class="text-sm text-stone-700 mb-3">
+                    Girolami, F. (2026). <em>Investigación Tungurahua: Cultura, Turismo, Duendes</em>. Zenodo. <strong>https://doi.org/10.5281/zenodo.18216233</strong>
+                </p>
+                <p class="text-xs text-stone-500">
+                    Nota: este sitio (turismotungurahua.com) funciona como página de lectura pública del informe y como puente semántico hacia el DOI.
+                </p>
             </section>
 
         </div>
@@ -464,9 +585,10 @@
     <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm mt-8">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-                <h4 class="text-white font-bold mb-3">Cita Sugerida</h4>
+                <h4 class="text-white font-bold mb-3">Cita Sugerida (Web)</h4>
                 <p class="text-xs text-stone-400">
                     turismotungurahua.com (2026). <em>Memoria de Fuego, Agua y Resiliencia</em> (Informe v2.2).
+                    DOI: <a class="text-amber-400 hover:underline" href="https://doi.org/10.5281/zenodo.18216233" target="_blank">10.5281/zenodo.18216233</a>
                 </p>
             </div>
             <div class="text-right">
