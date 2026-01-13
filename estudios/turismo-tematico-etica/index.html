@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== PAGE IDENTITY ====== -->
+  <title>Turismo Temático y Ética en Baños (2013–2025) | Estudio auditable</title>
+  <meta name="description" content="Estudio auditable sobre turismo temático en Baños de Agua Santa (2013–2025): tradición inventada, fakelore, competencia simbólica, captura del relato y validación institucional. Incluye cronología comparada y visualizaciones." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical (ajustado a tu nueva ruta interna) -->
+  <link rel="canonical" href="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+  <meta property="og:title" content="Turismo Temático y Ética en Baños (2013–2025)" />
+  <meta property="og:description" content="Análisis auditable: tradición inventada, fakelore, competencia simbólica y validación institucional en el turismo contemporáneo." />
+  <!-- Reemplazá si querés una imagen específica -->
+  <meta property="og:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- ====== JSON-LD (Article) ====== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Turismo Temático y Ética en Baños (2013–2025): Tradición inventada, fakelore y competencia simbólica",
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-01-01",
+    "inLanguage": "es",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://turismotungurahua.com/estudios/turismo-tematico-etica/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "turismotungurahua.com"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Archivo de Investigación (turismotungurahua.com)"
+    },
+    "about": [
+      "Turismo",
+      "Ética",
+      "Tradición inventada",
+      "Fakelore",
+      "Competencia simbólica",
+      "Baños de Agua Santa",
+      "Tungurahua"
+    ],
+    "isBasedOn": [
+      {
+        "@type": "CreativeWork",
+        "name": "Registro con DOI en Zenodo (ver sección Cita y DOI)",
+        "url": "https://zenodo.org/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f4; /* Stone 100 */
+      color: #1c1917; /* Stone 900 */
+    }
+    h1, h2, h3, h4, .serif { font-family: 'Merriweather', serif; }
+
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      max-height: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (max-width: 640px) { .chart-container { height: 300px; } }
+
+    .timeline-point:hover .timeline-content {
+      transform: translateX(5px);
+      background-color: #fffbeb; /* Amber 50 */
+    }
+
+    .kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #f5f5f4;
+      border: 1px solid #e7e5e4;
+      padding: .15rem .35rem;
+      border-radius: .35rem;
+      font-size: .75rem;
+      color: #57534e;
+    }
+  </style>
+</head>
+
+<body class="antialiased selection:bg-amber-200 selection:text-amber-900">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="scrollToSection('header')">
+          <span class="text-2xl font-bold text-stone-800 tracking-tighter serif">turismotungurahua</span>
+          <span class="text-xs text-stone-400 hidden sm:inline">/ estudios</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <button onclick="scrollToSection('doi')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Cita y DOI</button>
+          <button onclick="scrollToSection('marco')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Marco teórico</button>
+          <button onclick="scrollToSection('cronologia')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Cronología</button>
+          <button onclick="scrollToSection('analisis')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Visualizaciones</button>
+          <button onclick="scrollToSection('institucional')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Rol institucional</button>
+          <button onclick="scrollToSection('conclusiones')" class="text-stone-600 hover:text-amber-700 transition text-sm font-medium">Conclusiones</button>
+        </div>
+
+        <div class="md:hidden">
+          <button class="text-stone-500 hover:text-stone-900" onclick="scrollToSection('doi')">Ir al DOI</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header id="header" class="bg-white border-b border-stone-200 pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 mb-6">
+        Estudio auditable • Baños de Agua Santa (Ecuador)
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4 leading-tight">
+        Turismo Temático y Ética (2013–2025)
+      </h1>
+      <p class="text-lg md:text-xl text-stone-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Un análisis documental sobre <strong>tradición inventada</strong>, <strong>fakelore</strong>,
+        <strong>competencia simbólica</strong> y <strong>validación institucional</strong> en la transformación turística contemporánea.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-10 bg-stone-50 p-6 rounded-xl border border-stone-100">
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Objeto de estudio</h3>
+          <p class="text-sm text-stone-600">Crecimiento de atracciones temáticas “mágicas” y disputa por legitimidad narrativa.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Método</h3>
+          <p class="text-sm text-stone-600">Cronología comparada + revisión de archivos web + análisis discursivo y estético.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-stone-900 mb-2">Criterio</h3>
+          <p class="text-sm text-stone-600">Distinguir cultura viva / memoria territorial / marketing y reproducción comercial.</p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-xs text-stone-400">
+        Sugerencia de uso: citar esta página como “estudio” y el DOI como “registro auditable”. 
+      </p>
+    </div>
+  </header>
+
+  <!-- DOI / Citation block -->
+  <section id="doi" class="py-14 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white border border-stone-200 rounded-xl p-6 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-bold serif text-stone-900">Cita y DOI</h2>
+            <p class="text-sm text-stone-600 mt-1">
+              Para trazabilidad y verificación pública, este estudio puede vincularse a un registro con DOI.
+            </p>
+          </div>
+          <div class="text-left md:text-right">
+            <div class="text-xs text-stone-500">DOI (editar si corresponde)</div>
+            <a id="doiLink" class="text-amber-700 font-bold hover:underline break-all" href="https://zenodo.org/" target="_blank" rel="noopener">
+              https://doi.org/10.5281/zenodo.XXXXXXX
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-stone-50 border border-stone-100 rounded-lg p-4">
+            <div class="text-xs font-bold text-stone-500 uppercase mb-2">Cita sugerida (web)</div>
+            <p class="text-sm text-stone-700">
+              turismotungurahua.com (2026). <em>Turismo Temático y Ética en Baños (2013–2025)</em>. 
+              Disponible en: <span class="kbd">/estudios/turismo-tematico-etica/</span>
+            </p>
+          </div>
+          <div class="bg-stone-50 border border-stone-100 rounded-lg p-4">
+            <div class="text-xs font-bold text-stone-500 uppercase mb-2">Cita sugerida (DOI)</div>
+            <p class="text-sm text-stone-700" id="doiCite">
+              Registro con DOI en Zenodo: <em>Turismo, ética y apropiación cultural (Baños de Agua Santa)</em>.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-4 text-xs text-stone-500">
+          Nota: este sitio evita afirmaciones personales. Describe <strong>patrones</strong> con marcos teóricos y evidencia temporal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marco Teórico -->
+  <section id="marco" class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold text-stone-900 mb-4 serif">Marco de referencia</h2>
+        <p class="text-stone-700 max-w-3xl">
+          Conceptos clave para distinguir entre cultura viva, creación contemporánea e industrialización del imaginario.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 transition cursor-default group">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl font-bold text-stone-800">Tradición inventada</h3>
+            <span class="text-xs font-mono text-stone-400">Hobsbawm</span>
+          </div>
+          <p class="text-stone-600 text-sm mb-4">
+            Prácticas rituales o simbólicas de creación reciente que simulan continuidad con el pasado por repetición y normalización.
+          </p>
+          <div class="h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 transition cursor-default group">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl font-bold text-stone-800">Fakelore</h3>
+            <span class="text-xs font-mono text-stone-400">Dorson</span>
+          </div>
+          <p class="text-stone-600 text-sm mb-4">
+            Folclore manufacturado presentado como genuino; útil para “justificar” atracciones sin base etnográfica local.
+          </p>
+          <div class="h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 transition cursor-default group">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl font-bold text-stone-800">Competencia simbólica</h3>
+            <span class="text-xs font-mono text-stone-400">Bourdieu</span>
+          </div>
+          <p class="text-stone-600 text-sm mb-4">
+            Lucha por legitimidad: quién define “lo auténtico”, quién captura el relato y quién recibe el reconocimiento.
+          </p>
+          <div class="h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></div>
+        </div>
+
+        <div class="bg-stone-50 p-6 rounded-lg shadow-sm border border-stone-200 hover:border-amber-400 transition cursor-default group">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-xl font-bold text-stone-800">Captura del relato</h3>
+            <span class="text-xs font-mono text-stone-400">Institucional</span>
+          </div>
+          <p class="text-stone-600 text-sm mb-4">
+            Cuando comunicación pública adopta una narrativa privada y la convierte en “identidad oficial” sin trazabilidad autoral.
+          </p>
+          <div class="h-1 w-0 bg-amber-500 group-hover:w-full transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cronología -->
+  <section id="cronologia" class="py-16 bg-stone-50 border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold text-stone-900 mb-4 serif">Cronología comparada</h2>
+        <p class="text-stone-600">
+          Visualiza precedencia temporal, punto de inflexión y proceso de saturación del imaginario.
+        </p>
+      </div>
+
+      <div class="relative border-l-2 border-stone-200 ml-4 md:ml-10 space-y-12 pb-12">
+        <div class="relative timeline-point group">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-stone-800 border-2 border-white shadow"></div>
+          <div class="ml-8 timeline-content transition-transform duration-300 p-4 rounded bg-white border border-stone-200">
+            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-stone-800 text-white mb-2">2013</span>
+            <h4 class="text-lg font-bold text-stone-900">Inicio de innovación estética (documentable)</h4>
+            <p class="text-sm text-stone-600 mt-1">
+              Surgen propuestas contemporáneas que introducen una estética “mágica” como experiencia cultural. 
+              (Este hito se usa aquí como referencia temporal, no como “folclore ancestral”.)
+            </p>
+          </div>
+        </div>
+
+        <div class="relative timeline-point group">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-stone-800 border-2 border-white shadow"></div>
+          <div class="ml-8 timeline-content transition-transform duration-300 p-4 rounded bg-white border border-stone-200">
+            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-stone-800 text-white mb-2">2018</span>
+            <h4 class="text-lg font-bold text-stone-900">Consolidación de formato (experiencia inmersiva)</h4>
+            <p class="text-sm text-stone-600 mt-1">
+              Se estabilizan códigos de recorrido, museografía “de sitio” y lenguaje simbólico asociado al bosque/naturaleza.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative timeline-point group">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-amber-500 border-2 border-white shadow animate-pulse"></div>
+          <div class="ml-8 timeline-content transition-transform duration-300 p-4 rounded bg-amber-50 border border-amber-100 shadow-sm">
+            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-amber-600 text-white mb-2">2019 – 2021</span>
+            <h4 class="text-lg font-bold text-stone-900">Punto de inflexión (reproducción)</h4>
+            <p class="text-sm text-stone-700 mt-1">
+              Aumenta la reproducción de códigos estéticos y la tematización. Indicadores frecuentes:
+            </p>
+            <ul class="list-disc ml-4 mt-2 text-xs text-stone-600 space-y-1">
+              <li>Uso repetido de “Aldea / Bosque / Encantado” como fórmulas comerciales.</li>
+              <li>Esculturas seriadas y estandarización del relato para foto/consumo rápido.</li>
+              <li>Re-encuadre del imaginario como “tradición local” sin trazabilidad.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="relative timeline-point group">
+          <div class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-red-500 border-2 border-white shadow"></div>
+          <div class="ml-8 timeline-content transition-transform duration-300 p-4 rounded bg-white border border-stone-200">
+            <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-600 text-white mb-2">2022 – 2025</span>
+            <h4 class="text-lg font-bold text-stone-900">Saturación + normalización</h4>
+            <p class="text-sm text-stone-600 mt-1">
+              Se consolida una “identidad sintética” donde el turista percibe la tematización como origen histórico.
+              El rol institucional se vuelve clave: omisión / agregación indiscriminada / promoción sin jerarquía.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs text-stone-500 mt-6">
+        Nota metodológica: los años son referencias de fase; el detalle fino debe sustentarse con capturas, enlaces archivados y registros (DOI).
+      </p>
+    </div>
+  </section>
+
+  <!-- Análisis / Charts -->
+  <section id="analisis" class="py-16 bg-white border-t border-stone-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-3xl font-bold text-stone-900 mb-4 serif">Visualizaciones: patrones</h2>
+        <p class="text-stone-700 max-w-3xl">
+          Gráficos orientativos para comunicar “forma” del fenómeno (comparaciones cualitativas y tendencia de saturación).
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="bg-stone-50 p-6 rounded-xl shadow-sm border border-stone-200">
+          <h3 class="text-lg font-bold text-stone-800 mb-2 text-center">Autoral vs. Reproducción (modelo cualitativo)</h3>
+          <p class="text-xs text-stone-500 text-center mb-6">Radar comparativo de atributos</p>
+
+          <div class="chart-container">
+            <canvas id="radarChart"></canvas>
+          </div>
+
+          <div class="mt-4 p-4 bg-white rounded border border-stone-200 text-xs text-stone-600">
+            <strong>Lectura:</strong> el objetivo no es “sentenciar”, sino mostrar trade-offs: profundidad narrativa y coherencia vs. escala comercial y promoción.
+          </div>
+        </div>
+
+        <div class="bg-stone-50 p-6 rounded-xl shadow-sm border border-stone-200">
+          <h3 class="text-lg font-bold text-stone-800 mb-2 text-center">Saturación del mercado (curva orientativa)</h3>
+          <p class="text-xs text-stone-500 text-center mb-6">Crecimiento de atracciones temáticas</p>
+
+          <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+          <div class="mt-4 p-4 bg-white rounded border border-stone-200 text-xs text-stone-600">
+            <strong>Lectura:</strong> el aumento post-2019 sugiere “efecto contagio”: reproducción del modelo por baja barrera de entrada.
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h3 class="text-xl font-bold text-stone-900 mb-6 border-b pb-2">Indicadores de reproducción (observables)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-stone-50 p-5 rounded border-l-4 border-stone-800">
+            <h4 class="font-bold text-stone-800 mb-2">Similitud narrativa</h4>
+            <p class="text-sm text-stone-600">
+              Repetición de fórmulas (“rescate del bosque”, “guardianes”, “ruta mágica”) como guión estándar para consumo turístico.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-5 rounded border-l-4 border-stone-800">
+            <h4 class="font-bold text-stone-800 mb-2">Similitud espacial</h4>
+            <p class="text-sm text-stone-600">
+              Recorridos, iluminación y “spots” fotográficos replicados como plantilla; el diseño se vuelve intercambiable.
+            </p>
+          </div>
+          <div class="bg-stone-50 p-5 rounded border-l-4 border-amber-500">
+            <h4 class="font-bold text-stone-800 mb-2">Omisión de trazabilidad</h4>
+            <p class="text-sm text-stone-600">
+              Se enuncia “tradición local” sin cadena de evidencia (archivos, citas, registros), generando confusión patrimonial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rol institucional -->
+  <section id="institucional" class="py-16 bg-stone-50 border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-stone-900 mb-8 serif">Rol institucional: de la omisión a la validación</h2>
+
+      <p class="text-stone-700 mb-8">
+        Se describe un patrón frecuente en destinos turísticos: el discurso público puede pasar de priorizar patrimonio natural/histórico
+        a incorporar tematización privada como identidad “oficial” sin criterios claros de trazabilidad.
+      </p>
+
+      <div class="space-y-6">
+        <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+          <div class="w-full md:w-32 flex-shrink-0 text-stone-400 font-bold text-right md:pr-4">Antes de 2015</div>
+          <div class="flex-grow bg-white border border-stone-200 p-4 rounded">
+            <h4 class="font-bold text-stone-800">Promoción de paisaje y termalismo</h4>
+            <p class="text-sm text-stone-600">Cascadas, aventura, rutas naturales y espiritualidad local como núcleo del relato.</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex justify-center w-full pl-32">
+          <span class="text-stone-300 text-xl">↓</span>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+          <div class="w-full md:w-32 flex-shrink-0 text-amber-600 font-bold text-right md:pr-4">2018 – 2020</div>
+          <div class="flex-grow bg-amber-50 border border-amber-100 p-4 rounded">
+            <h4 class="font-bold text-stone-800">Agregación del éxito privado</h4>
+            <p class="text-sm text-stone-600">La tematización comienza a aparecer como “atractivo” dentro de campañas generales.</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex justify-center w-full pl-32">
+          <span class="text-stone-300 text-xl">↓</span>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 items-start md:items-center">
+          <div class="w-full md:w-32 flex-shrink-0 text-red-600 font-bold text-right md:pr-4">Actualidad</div>
+          <div class="flex-grow bg-white border border-red-200 p-4 rounded shadow-sm">
+            <h4 class="font-bold text-stone-800">Normalización sin jerarquía</h4>
+            <p class="text-sm text-stone-600">
+              Se promueven “rutas mágicas” como paquete homogéneo, dificultando distinguir innovación, autoría, patrimonio y reproducción.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs text-stone-500 mt-6">
+        Recomendación metodológica: agregar evidencia verificable (capturas, URLs archivadas, resoluciones, guías oficiales por fecha) en el registro DOI.
+      </p>
+    </div>
+  </section>
+
+  <!-- Conclusiones -->
+  <section id="conclusiones" class="py-16 bg-stone-900 text-stone-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-white mb-8 serif">Conclusiones (ética turística)</h2>
+
+      <div class="space-y-4">
+        <details class="group bg-stone-800 rounded-lg p-4 cursor-pointer open">
+          <summary class="font-bold text-amber-400 flex justify-between items-center list-none">
+            <span>1) De inspiración a reproducción</span>
+            <span class="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="mt-3 text-stone-300 text-sm leading-relaxed">
+            La línea ética se vuelve crítica cuando la reproducción compite por el mismo público con mínima innovación,
+            utilizando los mismos códigos estéticos y discursivos sin trazabilidad o reconocimiento.
+          </p>
+        </details>
+
+        <details class="group bg-stone-800 rounded-lg p-4 cursor-pointer">
+          <summary class="font-bold text-amber-400 flex justify-between items-center list-none">
+            <span>2) Efecto en la memoria cultural</span>
+            <span class="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="mt-3 text-stone-300 text-sm leading-relaxed">
+            La saturación tematizada puede desplazar interés por historia territorial y patrimonio vivo,
+            instalando una identidad sintética que el visitante confunde con tradición ancestral.
+          </p>
+        </details>
+
+        <details class="group bg-stone-800 rounded-lg p-4 cursor-pointer">
+          <summary class="font-bold text-amber-400 flex justify-between items-center list-none">
+            <span>3) Responsabilidad pública</span>
+            <span class="transition group-open:rotate-180">▼</span>
+          </summary>
+          <p class="mt-3 text-stone-300 text-sm leading-relaxed">
+            La gestión turística mejora cuando jerarquiza evidencia, trazabilidad, calidad cultural y coherencia territorial;
+            y evita validaciones indiscriminadas que premian la reproducción por sobre la innovación.
+          </p>
+        </details>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-stone-700 text-xs text-stone-500">
+        <p class="font-bold mb-2">Referencias base (marcos):</p>
+        <ul class="space-y-1">
+          <li>Hobsbawm, E., & Ranger, T. (1983). <em>The Invention of Tradition</em>.</li>
+          <li>Dorson, R. M. (1976). <em>Folklore and Fakelore</em>.</li>
+          <li>Bourdieu (capital simbólico / legitimidad; marco general).</li>
+        </ul>
+        <p class="mt-3">
+          Este sitio prioriza una redacción descriptiva y auditable. Para evidencia puntual: ver DOI.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ====== EDIT THESE 2 LINES ONLY ======
+    const DOI_URL = "https://doi.org/10.5281/zenodo.18227304";   // <-- tu DOI real
+    const DOI = "10.5281/zenodo.18227304";                       // <-- tu DOI real
+
+    // Inject DOI into UI
+    document.addEventListener('DOMContentLoaded', function() {
+      const doiLink = document.getElementById('doiLink');
+      const doiCite = document.getElementById('doiCite');
+      doiLink.href = DOI_URL;
+      doiLink.textContent = DOI_URL;
+      doiCite.innerHTML = `Registro con DOI: <strong>${DOI}</strong> (Zenodo).`;
+    });
+
+    // Charts
+    document.addEventListener('DOMContentLoaded', function() {
+      // Radar
+      const ctxRadar = document.getElementById('radarChart').getContext('2d');
+      new Chart(ctxRadar, {
+        type: 'radar',
+        data: {
+          labels: ['Coherencia narrativa', 'Calidad material', 'Originalidad', 'Soporte institucional', 'Trazabilidad histórica'],
+          datasets: [{
+            label: 'Propuesta innovadora (referencia)',
+            data: [9, 9, 10, 3, 8],
+            fill: true,
+            backgroundColor: 'rgba(59, 130, 246, 0.18)',
+            borderColor: 'rgb(59, 130, 246)',
+            pointBackgroundColor: 'rgb(59, 130, 246)'
+          }, {
+            label: 'Reproducción comercial (promedio)',
+            data: [4, 5, 2, 9, 2],
+            fill: true,
+            backgroundColor: 'rgba(217, 119, 6, 0.18)',
+            borderColor: 'rgb(217, 119, 6)',
+            pointBackgroundColor: 'rgb(217, 119, 6)'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          elements: { line: { borderWidth: 3 } },
+          scales: {
+            r: {
+              angleLines: { display: true },
+              suggestedMin: 0,
+              suggestedMax: 10,
+              ticks: { display: false }
+            }
+          },
+          plugins: {
+            legend: { position: 'bottom' },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.dataset.label + ': ' + context.raw + '/10';
+                }
+              }
+            }
+          }
+        }
+      });
+
+      // Line
+      const ctxLine = document.getElementById('lineChart').getContext('2d');
+      new Chart(ctxLine, {
+        type: 'line',
+        data: {
+          labels: ['2013', '2015', '2017', '2019', '2021', '2023', '2025'],
+          datasets: [{
+            label: 'Atracciones temáticas (estimación)',
+            data: [1, 1, 2, 5, 12, 18, 22],
+            borderColor: 'rgb(220, 38, 38)',
+            backgroundColor: 'rgba(220, 38, 38, 0.15)',
+            tension: 0.35,
+            fill: true
+          },
+          {
+            label: 'Innovación autoral (estimación)',
+            data: [1, 1, 1, 1, 1, 2, 2],
+            borderColor: 'rgb(59, 130, 246)',
+            backgroundColor: 'rgba(59, 130, 246, 0.12)',
+            borderDash: [6, 6],
+            tension: 0.1,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom' },
+            tooltip: { mode: 'index', intersect: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: 'Número de sitios (orientativo)' }
+            }
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
