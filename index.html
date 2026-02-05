@@ -18,7 +18,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://turismotungurahua.com/" />
   <meta property="og:title" content="Tungurahua: Estudios auditables e investigación cultural" />
-  <meta property="og:description" content="Investigación histórica y cultural con DOI: territorio, volcán, termas, economía y turismo temático. Incluye el caso de duendes como fenómeno contemporáneo (2013)." />
+  <meta property="og:description" content="Investigación histórica y cultural con DOI: territorio, volcán, termas, economía y turismo temático. Incluye el caso de los duendes como fenómeno contemporáneo (2013)." />
   <meta property="og:image" content="https://turismotungurahua.com/assets/banos-cover-research.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -41,7 +41,7 @@
   <meta name="DC.publisher" content="Zenodo" />
   <meta name="DC.subject" content="Tungurahua; Baños de Agua Santa; turismo; patrimonio; tradición inventada; duendes; parques temáticos" />
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD (corregido: sin comentarios, JSON válido) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,7 +76,9 @@
           "Duendes (fenómeno contemporáneo)"
         ],
         "sameAs": ["https://doi.org/10.5281/zenodo.18216233"],
-        "identifier": [{ "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18216233" }],
+        "identifier": [
+          { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18216233" }
+        ],
         "image": "https://turismotungurahua.com/assets/banos-cover-research.jpg"
       },
       {
@@ -89,8 +91,6 @@
         "publisher": { "@type": "Organization", "name": "Zenodo" },
         "inLanguage": "es"
       },
-
-      /* Conexión editorial: compra de duendes artesanales (sin inventar datos de contacto) */
       {
         "@type": "WebPage",
         "@id": "https://turismotungurahua.com/#comprar-duendes-contexto",
@@ -114,6 +114,7 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;600&display=swap');
+
     body { font-family: 'Inter', sans-serif; background-color: #f5f5f2; color: #2d2a26; }
     h1, h2, h3, h4, .serif { font-family: 'Merriweather', serif; }
     html { scroll-behavior: smooth; }
@@ -134,13 +135,9 @@
 
     /* Botón/CTA coherente con el estilo */
     .ttg-cta-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      font-weight: 900;
-      letter-spacing: .02em;
-      border-radius: 999px;
-      padding: .65rem 1rem;
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-weight: 900; letter-spacing: .02em;
+      border-radius: 999px; padding: .65rem 1rem;
       border: 1px solid rgba(120,53,15,.25);
       background: rgba(245, 158, 11, .12);
       color: #451a03;
@@ -164,6 +161,7 @@
         <a href="/" class="font-extrabold tracking-tight text-stone-900">
           turismotungurahua<span class="text-amber-600">.com</span>
         </a>
+
         <div class="hidden md:flex items-center gap-6 text-sm font-bold uppercase tracking-wide">
           <a class="text-stone-600 hover:text-stone-900" href="#estudios">Estudios</a>
           <a class="text-stone-600 hover:text-stone-900" href="#turismo-tematico">Turismo temático</a>
@@ -171,6 +169,7 @@
           <a class="text-stone-600 hover:text-stone-900" href="#comprar-duendes">Comprar duendes</a>
           <a class="text-stone-600 hover:text-stone-900" href="#fuentes-v22">Fuentes</a>
         </div>
+
         <a href="https://doi.org/10.5281/zenodo.18216233" target="_blank" rel="noopener"
            class="text-xs font-extrabold bg-stone-900 text-stone-100 px-3 py-2 rounded hover:bg-stone-800">
           DOI (Zenodo)
@@ -185,9 +184,11 @@
       <p class="text-xs font-bold uppercase tracking-widest text-stone-500">
         Provincia de Tungurahua (Ecuador) • investigación auditable
       </p>
+
       <h1 class="text-3xl md:text-4xl font-extrabold serif mt-2 text-stone-900">
         Estudios, Historia y Cultura
       </h1>
+
       <p class="text-stone-600 mt-3 max-w-3xl">
         Este sitio reúne informes públicos con metodología explícita y enlaces verificables:
         territorio, cronología volcánica, termalismo, economía local y turismo temático.
@@ -205,16 +206,14 @@
         <a class="bg-amber-50 border border-amber-200 rounded-xl p-5 card-shadow" href="#informe-tungurahua-v22">
           <div class="text-xs font-bold uppercase text-amber-800">Informe v2.2</div>
           <div class="text-lg font-extrabold serif text-stone-900">Memoria de Fuego, Agua y Resiliencia</div>
-          <p class="text-sm text-stone-700 mt-2">
-            Lectura pública + puente semántico al DOI de Zenodo.
-          </p>
+          <p class="text-sm text-stone-700 mt-2"></p>
         </a>
 
         <a class="bg-stone-50 border border-stone-200 rounded-xl p-5 card-shadow" href="#comprar-duendes">
           <div class="text-xs font-bold uppercase text-stone-500">Guía cultural</div>
           <div class="text-lg font-extrabold serif text-stone-900">Duendes artesanales</div>
           <p class="text-sm text-stone-600 mt-2">
-            Conexión contextual: visitar la obra y, si resuena, adquirir piezas hechas a mano.
+            Conexión contextual: visitar la obra en La Aldea Mágica y, si resuena, adquirir Duendes hechos a mano.
           </p>
         </a>
       </div>
@@ -225,16 +224,20 @@
   <section id="turismo-tematico" class="bg-[#f5f5f2]">
     <div class="max-w-6xl mx-auto px-6 py-10">
       <h2 class="text-2xl md:text-3xl font-extrabold serif text-stone-900">Turismo temático y ética</h2>
+
       <p class="text-stone-600 mt-2 max-w-3xl">
         Si ya publicaste el estudio en <code class="bg-stone-100 px-2 py-1 rounded">/estudios/turismo-tematico-etica/</code>,
         este bloque lo impulsa desde el home (mejor descubrimiento interno + enlazado contextual).
       </p>
 
       <div class="mt-5 flex flex-col sm:flex-row gap-3">
-        <a href="/estudios/turismo-tematico-etica/" class="inline-flex items-center justify-center bg-stone-900 text-stone-100 px-4 py-3 rounded font-extrabold hover:bg-stone-800">
+        <a href="/estudios/turismo-tematico-etica/"
+           class="inline-flex items-center justify-center bg-stone-900 text-stone-100 px-4 py-3 rounded font-extrabold hover:bg-stone-800">
           Abrir estudio “Turismo temático y ética”
         </a>
-        <a href="#informe-tungurahua-v22" class="inline-flex items-center justify-center bg-amber-500 text-stone-900 px-4 py-3 rounded font-extrabold hover:bg-amber-400">
+
+        <a href="#informe-tungurahua-v22"
+           class="inline-flex items-center justify-center bg-amber-500 text-stone-900 px-4 py-3 rounded font-extrabold hover:bg-amber-400">
           Ir al Informe v2.2 (en esta página)
         </a>
       </div>
@@ -249,9 +252,11 @@
           <p class="text-xs font-extrabold uppercase tracking-widest text-stone-500">
             Conexión cultural • Baños de Agua Santa • oficio artesanal
           </p>
+
           <h2 class="text-2xl md:text-3xl font-extrabold serif text-stone-900 mt-2">
             Comprar duendes artesanales en Ecuador
           </h2>
+
           <p class="text-stone-600 mt-3">
             En Tungurahua, el “duende” funciona como fenómeno contemporáneo con capas culturales.
             Cuando esa capa se expresa como <strong>obra artesanal</strong> y <strong>experiencia de visita</strong>,
@@ -265,11 +270,13 @@
               <div class="text-sm font-extrabold text-stone-900">Experiencia cultural</div>
               <p class="text-xs text-stone-600 mt-1">Conocer el contexto antes de elegir.</p>
             </div>
+
             <div class="bg-stone-50 border border-stone-200 rounded-xl p-4">
               <div class="text-xs font-bold uppercase text-stone-500">Obra</div>
               <div class="text-sm font-extrabold text-stone-900">Piezas hechas a mano</div>
               <p class="text-xs text-stone-600 mt-1">Oficio + coherencia estética.</p>
             </div>
+
             <div class="bg-stone-50 border border-stone-200 rounded-xl p-4">
               <div class="text-xs font-bold uppercase text-stone-500">Compra</div>
               <div class="text-sm font-extrabold text-stone-900">Página oficial</div>
@@ -284,15 +291,18 @@
               Enlace recomendado
             </p>
 
-            <!-- Link a la página de compra (sitio oficial) -->
-            <a class="ttg-cta-pill" href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener">
+            <a class="ttg-cta-pill"
+               href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html"
+               target="_blank" rel="noopener">
               <span aria-hidden="true">🛒</span>
               <span>Comprar duendes (sitio oficial)</span>
               <span aria-hidden="true">→</span>
             </a>
 
             <div class="mt-3 text-xs text-stone-600">
-              También: <a class="font-extrabold text-stone-900 hover:underline" href="https://aldeamagica.art/" target="_blank" rel="noopener">aldeamagica.art</a>
+              También:
+              <a class="font-extrabold text-stone-900 hover:underline"
+                 href="https://aldeamagica.art/" target="_blank" rel="noopener">aldeamagica.art</a>
               <span class="text-stone-400">·</span>
               experiencia de visita y archivo del proyecto.
             </div>
@@ -311,27 +321,21 @@
            href="https://lacasadelduende.art/" target="_blank" rel="noopener">
           <div class="text-xs font-bold uppercase text-stone-500">Sitio</div>
           <div class="text-lg font-extrabold serif text-stone-900">La Casa del Duende</div>
-          <p class="text-sm text-stone-600 mt-2">
-            Portal oficial: obra, guía cultural y documentación pública.
-          </p>
+          <p class="text-sm text-stone-600 mt-2">Portal oficial: obra, guía cultural y documentación pública.</p>
         </a>
 
         <a class="bg-stone-50 border border-stone-200 rounded-xl p-5 card-shadow"
            href="https://aldeamagica.art/" target="_blank" rel="noopener">
           <div class="text-xs font-bold uppercase text-stone-500">Proyecto</div>
           <div class="text-lg font-extrabold serif text-stone-900">La Aldea Mágica</div>
-          <p class="text-sm text-stone-600 mt-2">
-            Archivo del proyecto y experiencia de visita (obra-jardín).
-          </p>
+          <p class="text-sm text-stone-600 mt-2">Archivo del proyecto y experiencia de visita (obra-jardín).</p>
         </a>
 
         <a class="bg-stone-50 border border-stone-200 rounded-xl p-5 card-shadow"
            href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html#contacto" target="_blank" rel="noopener">
           <div class="text-xs font-bold uppercase text-stone-500">Contacto</div>
           <div class="text-lg font-extrabold serif text-stone-900">Consulta directa</div>
-          <p class="text-sm text-stone-600 mt-2">
-            Disponibilidad, envío y coordinación (sección contacto).
-          </p>
+          <p class="text-sm text-stone-600 mt-2">Disponibilidad, envío y coordinación (sección contacto).</p>
         </a>
       </div>
     </div>
@@ -339,6 +343,7 @@
 
   <!-- ====== INFORME v2.2 (SECCIÓN COMPLETA) ====== -->
   <section id="informe-tungurahua-v22" class="bg-[#f5f5f2]">
+
     <!-- Header -->
     <header class="bg-stone-900 text-stone-100 py-10 px-6 shadow-lg">
       <div class="max-w-6xl mx-auto">
@@ -358,10 +363,12 @@
               <span class="inline-flex items-center bg-stone-800 border border-stone-700 rounded px-3 py-1 text-xs text-stone-200">
                 DOI: <strong class="ml-1">10.5281/zenodo.18216233</strong>
               </span>
+
               <a href="https://doi.org/10.5281/zenodo.18216233" target="_blank" rel="noopener"
                  class="inline-flex items-center justify-center bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-xs px-3 py-2 rounded transition">
                 Ver registro en Zenodo
               </a>
+
               <a href="#cita-v22" class="text-xs text-stone-400 hover:text-stone-200 underline">Cómo citar</a>
             </div>
           </div>
@@ -375,12 +382,14 @@
         </div>
 
         <div class="mt-6 border-t border-stone-700 pt-4">
-          <button onclick="TTG_toggleSection('abstract-content-v22')" class="flex items-center text-amber-500 hover:text-amber-400 transition-colors text-xs font-bold uppercase tracking-wide">
+          <button onclick="TTG_toggleSection('abstract-content-v22')"
+                  class="flex items-center text-amber-500 hover:text-amber-400 transition-colors text-xs font-bold uppercase tracking-wide">
             <span>Leer síntesis ejecutiva y metodología</span>
             <span class="ml-2">↓</span>
           </button>
 
-          <div id="abstract-content-v22" class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed">
+          <div id="abstract-content-v22"
+               class="hidden mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-stone-300 text-sm leading-relaxed">
             <div>
               <p class="mb-2">
                 Este informe analiza Tungurahua como sistema territorial-cultural, diferenciando rigurosamente:
@@ -392,6 +401,7 @@
                 <li><strong>Contemporánea:</strong> Turismo de aventura y la "fiebre de duendes".</li>
               </ul>
             </div>
+
             <div>
               <p class="mb-2"><strong>Hallazgos clave (Actualizados):</strong></p>
               <ul class="list-disc pl-4 space-y-1 text-xs text-stone-400">
@@ -409,12 +419,29 @@
     <nav class="sticky top-14 z-40 bg-white/95 backdrop-blur shadow-md border-b border-stone-200">
       <div class="max-w-6xl mx-auto px-4 overflow-x-auto">
         <div class="flex space-x-6 min-w-max">
-          <button onclick="TTG_switchTab('territorio')" class="ttg-nav-btn active-tab py-3 text-xs md:text-sm font-bold uppercase tracking-wide transition-colors" id="ttg-btn-territorio">Territorio</button>
-          <button onclick="TTG_switchTab('historia')" class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="ttg-btn-historia">Cronología y Volcán</button>
-          <button onclick="TTG_switchTab('patrimonio')" class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="ttg-btn-patrimonio">Patrimonio y Termas</button>
-          <button onclick="TTG_switchTab('economia')" class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="ttg-btn-economia">Economía y Oficios</button>
-          <button onclick="TTG_switchTab('duende')" class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500" id="ttg-btn-duende">Caso: Duendes</button>
-          <a href="#fuentes-v22" class="py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-400 hover:text-stone-700">Fuentes</a>
+          <button onclick="TTG_switchTab('territorio')"
+                  class="ttg-nav-btn active-tab py-3 text-xs md:text-sm font-bold uppercase tracking-wide transition-colors"
+                  id="ttg-btn-territorio">Territorio</button>
+
+          <button onclick="TTG_switchTab('historia')"
+                  class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500"
+                  id="ttg-btn-historia">Cronología y Volcán</button>
+
+          <button onclick="TTG_switchTab('patrimonio')"
+                  class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500"
+                  id="ttg-btn-patrimonio">Patrimonio y Termas</button>
+
+          <button onclick="TTG_switchTab('economia')"
+                  class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500"
+                  id="ttg-btn-economia">Economía y Oficios</button>
+
+          <button onclick="TTG_switchTab('duende')"
+                  class="ttg-nav-btn py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-500"
+                  id="ttg-btn-duende">Caso: Duendes</button>
+
+          <a href="#fuentes-v22" class="py-3 text-xs md:text-sm font-bold uppercase tracking-wide text-stone-400 hover:text-stone-700">
+            Fuentes
+          </a>
         </div>
       </div>
     </nav>
@@ -426,7 +453,9 @@
         <!-- 1. TERRITORIO -->
         <section id="ttg-sec-territorio" class="block">
           <div class="mb-6">
-            <h3 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 serif">El Umbral: De “Ipo” a la Puerta de la Amazonía</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 serif">
+              El Umbral: De “Ipo” a la Puerta de la Amazonía
+            </h3>
             <p class="text-stone-600 max-w-3xl text-sm">
               Baños actúa como nodo central entre los Andes y la Amazonía. Este apartado sintetiza el territorio y sus tensiones contemporáneas.
             </p>
@@ -482,18 +511,14 @@
                   <div class="absolute -left-[9px] top-0 bg-stone-400 h-5 w-5 rounded-full border-2 border-white"></div>
                   <span class="text-xs font-bold text-stone-400 uppercase">Prehispánico</span>
                   <h4 class="font-bold text-stone-800">Territorio de "Ipo"</h4>
-                  <p class="text-sm text-stone-600 mt-1">
-                    Zona de intercambio andino-amazónico (síntesis territorial).
-                  </p>
+                  <p class="text-sm text-stone-600 mt-1">Zona de intercambio andino-amazónico (síntesis territorial).</p>
                 </div>
 
                 <div class="relative pl-8">
                   <div class="absolute -left-[9px] top-0 bg-stone-600 h-5 w-5 rounded-full border-2 border-white"></div>
                   <span class="text-xs font-bold text-stone-500 uppercase">1773</span>
                   <h4 class="font-bold text-stone-800">El Milagro y la Destrucción</h4>
-                  <p class="text-sm text-stone-600 mt-1">
-                    Consolidación del relato religioso frente al volcán.
-                  </p>
+                  <p class="text-sm text-stone-600 mt-1">Consolidación del relato religioso frente al volcán.</p>
                 </div>
 
                 <div class="relative pl-8">
@@ -554,9 +579,8 @@
                 <span class="text-2xl">💧</span>
                 <h4 class="text-lg font-bold serif">Termalismo: "Ishpaypae"</h4>
               </div>
-              <p class="text-sm text-stone-600 mb-4">
-                Lectura prehispánica del recurso termal como fluido vital de la montaña.
-              </p>
+              <p class="text-sm text-stone-600 mb-4">Lectura prehispánica del recurso termal como fluido vital de la montaña.</p>
+
               <div class="space-y-3">
                 <div class="border-l-4 border-amber-400 pl-3">
                   <h5 class="text-sm font-bold text-stone-800">Termas de la Virgen</h5>
@@ -574,9 +598,8 @@
                 <span class="text-2xl">👺</span>
                 <h4 class="text-lg font-bold serif">Mitología vs. Pareidolia</h4>
               </div>
-              <p class="text-sm text-stone-600 mb-4">
-                Tradición oral auténtica (advertencia moral) vs lectura turística contemporánea.
-              </p>
+              <p class="text-sm text-stone-600 mb-4">Tradición oral auténtica (advertencia moral) vs lectura turística contemporánea.</p>
+
               <ul class="space-y-4">
                 <li class="flex gap-3">
                   <div class="bg-stone-100 p-2 rounded h-fit">👹</div>
@@ -611,6 +634,7 @@
                   Profesionalización de la oferta turística post-crisis.
                   <a class="cite" href="#ref-geotours" title="Ver fuente">[5]</a>
                 </p>
+
                 <ul class="space-y-3 text-sm">
                   <li class="flex items-center justify-between border-b border-stone-100 pb-2">
                     <span>🚣 <strong>Rafting</strong></span>
@@ -670,11 +694,13 @@
                   <span class="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded uppercase">Sitio Recomendado</span>
                   <span class="text-xs text-stone-500 font-bold uppercase">Fuente Original</span>
                 </div>
+
                 <h4 class="text-2xl font-bold text-emerald-900 serif mb-4">La Aldea Mágica (2018)</h4>
                 <p class="text-sm text-stone-700 mb-4">
                   Propuesta autoral legítima de Fito Girolami y Catalina Lucz-Ligeti.
                   <a class="cite" href="#ref-aldeamagica" title="Ver fuente">[6]</a>
                 </p>
+
                 <ul class="text-sm text-stone-700 space-y-2">
                   <li>✅ <strong>Valor:</strong> obra escultórica integrada en la naturaleza.</li>
                   <li>✅ <strong>Filosofía:</strong> arte y contemplación (no “parque”).</li>
@@ -698,10 +724,12 @@
                   <span class="bg-stone-200 text-stone-600 text-xs font-bold px-2 py-1 rounded uppercase">Réplica turística</span>
                   <span class="text-xs text-stone-400">Fakelore</span>
                 </div>
+
                 <h4 class="text-2xl font-bold text-stone-500 serif mb-4">Parques Temáticos Genéricos</h4>
                 <p class="text-sm text-stone-600 mb-4">
                   Replicación posterior con narrativa de “tradición ancestral” sin respaldo documentado.
                 </p>
+
                 <ul class="text-sm text-stone-500 space-y-2">
                   <li>❌ <strong>Estética:</strong> molde industrial (fibra/yeso).</li>
                   <li>❌ <strong>Narrativa:</strong> sin base histórica local verificable.</li>
@@ -783,9 +811,7 @@
             Girolami, F. (2026). <em>Investigación Tungurahua: Cultura, Turismo, Duendes</em>. Zenodo.
             <strong>https://doi.org/10.5281/zenodo.18216233</strong>
           </p>
-          <p class="text-xs text-stone-500">
-            Nota: este sitio funciona como página de lectura pública del informe y como puente semántico hacia el DOI.
-          </p>
+          <p class="text-xs text-stone-500"></p>
         </section>
 
       </div>
@@ -799,10 +825,11 @@
       <div>
         <h4 class="text-white font-bold mb-3">Cita sugerida (Web)</h4>
         <p class="text-xs text-stone-400">
-          turismotungurahua.com (2026). <em>Memoria de Fuego, Agua y Resiliencia</em> (Informe v2.2).
-          DOI: <a class="text-amber-400 hover:underline" href="https://doi.org/10.5281/zenodo.18216233" target="_blank" rel="noopener">10.5281/zenodo.18216233</a>
+          turismotungurahua.com (2026). <em>Memoria de Fuego, Agua y Resiliencia</em> (Informe v2.2). DOI:
+          <a class="text-amber-400 hover:underline" href="https://doi.org/10.5281/zenodo.18216233" target="_blank" rel="noopener">10.5281/zenodo.18216233</a>
         </p>
       </div>
+
       <div class="text-right">
         <p class="text-xs italic mb-2">"La verdadera tradición de Baños es la resiliencia, no la fantasía."</p>
         <div class="pt-4 border-t border-stone-800">
@@ -812,7 +839,7 @@
     </div>
   </footer>
 
-  <!-- JS (namespaced) -->
+  <!-- JS (namespaced) (corregido: template literals y sin colores fijados en Chart) -->
   <script>
     const TTG_state = { currentTab: 'territorio' };
     let TTG_chartInstance = null;
@@ -849,6 +876,7 @@
 
     function TTG_renderChart() {
       if (TTG_chartInstance || !window.Chart) return;
+
       const canvas = document.getElementById('ttg-economyChart');
       if (!canvas) return;
 
@@ -858,9 +886,9 @@
         data: {
           labels: ['Baños', 'Patate', 'Huambaló', 'Río Verde'],
           datasets: [
-            { label: 'Turismo', data: [85, 20, 10, 70], backgroundColor: '#f59e0b' },
-            { label: 'Agricultura', data: [10, 70, 20, 20], backgroundColor: '#4ade80' },
-            { label: 'Artesanía', data: [5, 10, 70, 10], backgroundColor: '#78350f' }
+            { label: 'Turismo', data: [85, 20, 10, 70] },
+            { label: 'Agricultura', data: [10, 70, 20, 20] },
+            { label: 'Artesanía', data: [5, 10, 70, 10] }
           ]
         },
         options: {
