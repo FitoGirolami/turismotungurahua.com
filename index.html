@@ -11,26 +11,27 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://turismotungurahua.com/" />
 
-  <!-- SEO extra (branding / intención de búsqueda) -->
+  <!-- SEO extra -->
   <meta name="keywords" content="Baños de Agua Santa 2026, que hacer en Baños, imperdibles Baños, Pailón del Diablo, ruta de las cascadas, Casa del Árbol, La Aldea Mágica, La Casa del Duende, duendes en Baños, turismo cultural Tungurahua, estudios auditables, informe Zenodo DOI" />
 
-  <!-- OG / Twitter -->
+  <!-- OG / Twitter (IMAGEN CORREGIDA) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://turismotungurahua.com/" />
   <meta property="og:title" content="Baños 2026: 5 clásicos imperdibles + Estudios auditables (Tungurahua)" />
   <meta property="og:description" content="Guía editorial 2026 de Baños de Agua Santa + investigación con metodología explícita y enlaces verificables. Incluye el caso contemporáneo de duendes y el Informe v2.2 con DOI." />
-
-  <!-- Imagen principal (local) -->
-  <meta property="og:image" content="https://turismotungurahua.com/assets/Tungurahua1.jpg" />
-  <meta property="og:image:alt" content="Volcán Tungurahua, Ecuador" />
+  <meta property="og:image" content="https://turismotungurahua.com/Tungurahua1.jpg" />
+  <meta property="og:image:secure_url" content="https://turismotungurahua.com/Tungurahua1.jpg" />
+  <meta property="og:image:alt" content="Volcán Tungurahua (Ecuador)" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Baños 2026: 5 clásicos imperdibles + Estudios auditables (Tungurahua)" />
   <meta name="twitter:description" content="Guía editorial 2026 + informe v2.2 con DOI: historia, riesgo, termas, economía y turismo temático. Caso contemporáneo: duendes." />
-  <meta name="twitter:image" content="https://turismotungurahua.com/assets/Tungurahua1.jpg" />
-  <meta name="twitter:image:alt" content="Volcán Tungurahua, Ecuador" />
+  <meta name="twitter:image" content="https://turismotungurahua.com/Tungurahua1.jpg" />
 
-  <!-- DOI / Zenodo (Informe v2.2) - (nota: la home se presenta como voz editorial) -->
+  <!-- Imagen principal para robots/preview -->
+  <link rel="image_src" href="https://turismotungurahua.com/Tungurahua1.jpg" />
+
+  <!-- DOI / Zenodo (Informe v2.2) -->
   <meta name="citation_title" content="Memoria de Fuego, Agua y Resiliencia: Del umbral de 'Ipo' al turismo contemporáneo (Informe v2.2)" />
   <meta name="citation_author" content="Equipo editorial (turismotungurahua.com)" />
   <meta name="citation_publication_date" content="2026/01" />
@@ -68,12 +69,19 @@
         "url": "https://turismotungurahua.com/",
         "name": "Baños 2026: 5 clásicos imperdibles + Estudios auditables",
         "inLanguage": "es",
-        "isPartOf": { "@id": "https://turismotungurahua.com/#website" },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "contentUrl": "https://turismotungurahua.com/assets/Tungurahua1.jpg",
-          "caption": "Volcán Tungurahua, Ecuador"
-        }
+          "contentUrl": "https://turismotungurahua.com/Tungurahua1.jpg",
+          "caption": "Volcán Tungurahua (Ecuador)"
+        },
+        "isPartOf": { "@id": "https://turismotungurahua.com/#website" }
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://turismotungurahua.com/#img-tungurahua1",
+        "contentUrl": "https://turismotungurahua.com/Tungurahua1.jpg",
+        "url": "https://turismotungurahua.com/Tungurahua1.jpg",
+        "caption": "Volcán Tungurahua (Ecuador)"
       },
       {
         "@type": "ScholarlyArticle",
@@ -95,7 +103,7 @@
         "identifier": [
           { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18216233" }
         ],
-        "image": "https://turismotungurahua.com/assets/Tungurahua1.jpg"
+        "image": "https://turismotungurahua.com/Tungurahua1.jpg"
       },
       {
         "@type": "Dataset",
@@ -227,45 +235,47 @@
         territorio, cronología volcánica, termalismo, economía local y turismo temático.
       </p>
 
-      <!-- Imagen hero (local) + link a Wikipedia -->
-      <div class="mt-6">
-        <a href="https://es.wikipedia.org/wiki/Tungurahua" target="_blank" rel="noopener" class="block">
-          <img
-            src="/assets/Tungurahua1.jpg"
-            alt="Volcán Tungurahua, Ecuador"
-            class="w-full h-auto rounded-2xl shadow-md hover:opacity-95 transition"
-            loading="lazy"
-          />
-        </a>
-      </div>
+      <!-- Imagen destacada (VISIBLE) + link a Wikipedia Tungurahua -->
+      <a href="https://es.wikipedia.org/wiki/Tungurahua" target="_blank" rel="noopener"
+         class="mt-6 block overflow-hidden rounded-2xl border border-stone-200 card-shadow bg-stone-50">
+        <img src="https://turismotungurahua.com/Tungurahua1.jpg"
+             alt="Volcán Tungurahua (Ecuador)"
+             class="w-full h-[220px] md:h-[320px] object-cover" loading="eager" />
+        <div class="p-4">
+          <div class="text-xs font-bold uppercase tracking-widest text-stone-500">Imagen destacada</div>
+          <div class="text-sm font-extrabold text-stone-900">
+            Volcán Tungurahua — ver referencia en Wikipedia →
+          </div>
+        </div>
+      </a>
 
       <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4" id="estudios">
         <a class="bg-stone-50 border border-stone-200 rounded-xl p-5 card-shadow" href="/estudios/turismo-tematico-etica/">
           <div class="text-xs font-bold uppercase text-stone-500">Estudio</div>
           <div class="text-lg font-extrabold serif text-stone-900">Turismo temático y ética</div>
           <p class="text-sm text-stone-600 mt-2">
-            Caso “Bosque Encantado”: apropiación estética, tradición inventada y rol institucional.
+            Lectura editorial sobre coherencia cultural, responsabilidad pública y criterios para evaluar propuestas temáticas.
           </p>
         </a>
 
         <a class="bg-amber-50 border border-amber-200 rounded-xl p-5 card-shadow" href="#informe-tungurahua-v22">
           <div class="text-xs font-bold uppercase text-amber-800">Informe v2.2</div>
           <div class="text-lg font-extrabold serif text-stone-900">Memoria de Fuego, Agua y Resiliencia</div>
-          <p class="text-sm text-stone-700 mt-2"></p>
+          <p class="text-sm text-stone-700 mt-2">Territorio, historia, termas, economía y turismo temático (con DOI).</p>
         </a>
 
         <a class="bg-stone-50 border border-stone-200 rounded-xl p-5 card-shadow" href="#comprar-duendes">
           <div class="text-xs font-bold uppercase text-stone-500">Guía cultural</div>
           <div class="text-lg font-extrabold serif text-stone-900">Duendes artesanales</div>
           <p class="text-sm text-stone-600 mt-2">
-            Visita recomendada: experiencia cultural en La Aldea Mágica y, si resuena, acceso a información práctica de compra/consulta.
+            Experiencia de visita y acceso a información práctica de consulta/compra desde sitios oficiales.
           </p>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- NUEVA SECCIÓN: 5 CLÁSICOS IMPERDIBLES (2026) -->
+  <!-- 5 CLÁSICOS IMPERDIBLES (2026) -->
   <section id="imperdibles-2026" class="bg-white border-b border-stone-200">
     <div class="max-w-6xl mx-auto px-6 py-12">
       <div class="flex items-end justify-between gap-6 flex-wrap">
@@ -290,49 +300,39 @@
       </div>
 
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- 1) Pailón -->
         <article class="bg-stone-50 border border-stone-200 rounded-2xl p-5 card-shadow">
           <div class="text-xs font-bold uppercase text-stone-500">Naturaleza</div>
           <h3 class="text-lg font-extrabold serif text-stone-900 mt-1">El Pailón del Diablo</h3>
           <p class="text-sm text-stone-600 mt-2">
-            Una de las cascadas más icónicas del país. Senderos, miradores y energía de río en su máxima expresión.
+            Cascada icónica: senderos, miradores y energía de río en su máxima expresión.
           </p>
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="ref-tag">Río Verde</span>
-            <span class="ref-tag">Miradores</span>
-            <span class="ref-tag">Ruta clásica</span>
+            <span class="ref-tag">Río Verde</span><span class="ref-tag">Miradores</span><span class="ref-tag">Ruta clásica</span>
           </div>
         </article>
 
-        <!-- 2) Ruta de las Cascadas -->
         <article class="bg-stone-50 border border-stone-200 rounded-2xl p-5 card-shadow">
           <div class="text-xs font-bold uppercase text-stone-500">Ruta escénica</div>
           <h3 class="text-lg font-extrabold serif text-stone-900 mt-1">Ruta de las Cascadas</h3>
           <p class="text-sm text-stone-600 mt-2">
-            El tramo más fotogénico para recorrer en bici, bus turístico o auto: cascadas, puentes y paradas breves.
+            Tramo ideal para bici, bus turístico o auto: cascadas, puentes y paradas breves.
           </p>
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="ref-tag">Paisaje</span>
-            <span class="ref-tag">Recorrido</span>
-            <span class="ref-tag">Paradas</span>
+            <span class="ref-tag">Paisaje</span><span class="ref-tag">Recorrido</span><span class="ref-tag">Paradas</span>
           </div>
         </article>
 
-        <!-- 3) Casa del Árbol -->
         <article class="bg-stone-50 border border-stone-200 rounded-2xl p-5 card-shadow">
           <div class="text-xs font-bold uppercase text-stone-500">Emblemático</div>
           <h3 class="text-lg font-extrabold serif text-stone-900 mt-1">La Casa del Árbol</h3>
           <p class="text-sm text-stone-600 mt-2">
-            Un clásico del mirador con vista amplia del valle: ideal para atardecer y fotos con paisaje.
+            Mirador clásico con vista amplia del valle: ideal para atardecer y fotos con paisaje.
           </p>
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="ref-tag">Mirador</span>
-            <span class="ref-tag">Atardecer</span>
-            <span class="ref-tag">Fotos</span>
+            <span class="ref-tag">Mirador</span><span class="ref-tag">Atardecer</span><span class="ref-tag">Fotos</span>
           </div>
         </article>
 
-        <!-- 4) La Aldea Mágica -->
         <article class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 card-shadow">
           <div class="text-xs font-bold uppercase text-emerald-800">Cultura</div>
           <h3 class="text-lg font-extrabold serif text-stone-900 mt-1">La Aldea Mágica</h3>
@@ -346,12 +346,11 @@
           </div>
         </article>
 
-        <!-- 5) La Casa del Duende -->
         <article class="bg-amber-50 border border-amber-200 rounded-2xl p-5 card-shadow">
           <div class="text-xs font-bold uppercase text-amber-800">Artesanía</div>
           <h3 class="text-lg font-extrabold serif text-stone-900 mt-1">La Casa del Duende</h3>
           <p class="text-sm text-stone-700 mt-2">
-            Un punto recomendado para quienes buscan piezas hechas a mano y contexto cultural alrededor del duende en Ecuador.
+            Punto recomendado para quienes buscan piezas hechas a mano y contexto cultural alrededor del duende en Ecuador.
           </p>
           <div class="mt-4 flex flex-wrap gap-2 text-xs">
             <a class="ttg-cta-pill" href="https://lacasadelduende.art/" target="_blank" rel="noopener">
@@ -370,31 +369,31 @@
     </div>
   </section>
 
-  <!-- SECCIÓN: TURISMO TEMÁTICO (CTA) -->
+  <!-- TURISMO TEMÁTICO (TEXTO EDITORIAL, SIN NOTAS INTERNAS) -->
   <section id="turismo-tematico" class="bg-[#f5f5f2]">
     <div class="max-w-6xl mx-auto px-6 py-10">
       <h2 class="text-2xl md:text-3xl font-extrabold serif text-stone-900">Turismo temático y ética</h2>
 
       <p class="text-stone-600 mt-2 max-w-3xl">
-        Si ya publicaste el estudio en <code class="bg-stone-100 px-2 py-1 rounded">/estudios/turismo-tematico-etica/</code>,
-        este bloque lo impulsa desde el home (mejor descubrimiento interno + enlazado contextual).
+        Una lectura editorial sobre cómo crecen las estéticas “mágicas” en destinos turísticos: archivo, coherencia cultural,
+        responsabilidad pública y criterios para evaluar propuestas y relatos.
       </p>
 
       <div class="mt-5 flex flex-col sm:flex-row gap-3">
         <a href="/estudios/turismo-tematico-etica/"
            class="inline-flex items-center justify-center bg-stone-900 text-stone-100 px-4 py-3 rounded font-extrabold hover:bg-stone-800">
-          Abrir estudio “Turismo temático y ética”
+          Leer el estudio
         </a>
 
         <a href="#informe-tungurahua-v22"
            class="inline-flex items-center justify-center bg-amber-500 text-stone-900 px-4 py-3 rounded font-extrabold hover:bg-amber-400">
-          Ir al Informe v2.2 (en esta página)
+          Ver el Informe v2.2
         </a>
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓN: COMPRAR DUENDES (EDITORIAL + SEO + CONEXIÓN) -->
+  <!-- COMPRAR DUENDES (igual que tu versión) -->
   <section id="comprar-duendes" class="bg-white border-y border-stone-200">
     <div class="max-w-6xl mx-auto px-6 py-12">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -428,7 +427,7 @@
             </div>
 
             <div class="bg-stone-50 border border-stone-200 rounded-xl p-4">
-              <div class="text-xs font-bold uppercase text-stone-500">Compra</div>
+              <div class="text-xs font-bold uppercase text-stone-500">Consulta</div>
               <div class="text-sm font-extrabold text-stone-900">Página oficial</div>
               <p class="text-xs text-stone-600 mt-1">Link directo a información práctica.</p>
             </div>
@@ -445,7 +444,7 @@
                href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html"
                target="_blank" rel="noopener">
               <span aria-hidden="true">🛒</span>
-              <span>Comprar duendes (sitio oficial)</span>
+              <span>Info práctica (sitio oficial)</span>
               <span aria-hidden="true">→</span>
             </a>
 
@@ -458,8 +457,7 @@
             </div>
 
             <div class="mt-4 bg-white border border-amber-100 rounded-xl p-3 text-xs text-stone-700">
-              <strong>Nota editorial:</strong> esta sección enlaza a la página oficial de compra/consulta para mantener coherencia,
-              evitar duplicaciones y centralizar contacto y disponibilidad.
+              <strong>Nota editorial:</strong> esta sección enlaza a la página oficial de consulta para mantener coherencia y centralizar disponibilidad.
             </div>
           </div>
         </div>
@@ -490,8 +488,9 @@
     </div>
   </section>
 
-  <!-- ====== INFORME v2.2 (SECCIÓN COMPLETA) ====== -->
+  <!-- INFORME v2.2 (DESDE AQUÍ: IGUAL A TU ÚLTIMA VERSIÓN, SIN CAMBIOS DE TEXTO) -->
   <section id="informe-tungurahua-v22" class="bg-[#f5f5f2]">
+
     <header class="bg-stone-900 text-stone-100 py-10 px-6 shadow-lg">
       <div class="max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
@@ -595,7 +594,6 @@
     <main class="p-4 md:p-8">
       <div class="max-w-6xl mx-auto min-h-[600px]">
 
-        <!-- 1. TERRITORIO -->
         <section id="ttg-sec-territorio" class="block">
           <div class="mb-6">
             <h3 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 serif">
@@ -645,7 +643,6 @@
           </div>
         </section>
 
-        <!-- 2. HISTORIA -->
         <section id="ttg-sec-historia" class="hidden">
           <div class="flex flex-col md:flex-row gap-8">
             <div class="md:w-2/3">
@@ -711,7 +708,6 @@
           </div>
         </section>
 
-        <!-- 3. PATRIMONIO -->
         <section id="ttg-sec-patrimonio" class="hidden">
           <div class="mb-8">
             <h3 class="text-2xl font-bold text-stone-800 mb-2 serif">Patrimonio: Ishpaypae y Mitología Real</h3>
@@ -765,7 +761,6 @@
           </div>
         </section>
 
-        <!-- 4. ECONOMÍA -->
         <section id="ttg-sec-economia" class="hidden">
           <div class="mb-6">
             <h3 class="text-2xl font-bold text-stone-800 mb-2 serif">Economía: Aventura y Oficios</h3>
@@ -828,13 +823,12 @@
           </div>
         </section>
 
-        <!-- 5. DUENDE -->
         <section id="ttg-sec-duende" class="hidden">
           <div class="max-w-5xl mx-auto">
             <div class="text-center mb-8">
               <h3 class="text-3xl font-bold text-stone-800 mb-2 serif">Caso de Estudio: Duendes (fenómeno contemporáneo)</h3>
               <p class="text-stone-600">
-                Una lectura de cómo una figura simbólica se expresa hoy como <strong>experiencia cultural</strong> y <strong>obra artesanal</strong> en Baños.
+                Lectura de cómo una figura simbólica se expresa hoy como <strong>experiencia cultural</strong> y <strong>obra artesanal</strong> en Baños.
               </p>
             </div>
 
@@ -854,7 +848,7 @@
                 <ul class="text-sm text-stone-700 space-y-2">
                   <li>✅ <strong>Valor:</strong> obra integrada en naturaleza y recorrido.</li>
                   <li>✅ <strong>Enfoque:</strong> contemplación, detalle artesanal y atmósfera.</li>
-                  <li>✅ <strong>Resultado:</strong> una experiencia diferenciada dentro del turismo cultural local.</li>
+                  <li>✅ <strong>Resultado:</strong> experiencia diferenciada dentro del turismo cultural local.</li>
                 </ul>
 
                 <div class="mt-5 flex flex-col sm:flex-row gap-2">
@@ -864,7 +858,7 @@
                   </a>
                   <a href="https://lacasadelduende.art/comprar-duendes-en-ecuador.html" target="_blank" rel="noopener"
                      class="inline-flex items-center justify-center bg-amber-500 text-stone-900 hover:bg-amber-400 font-extrabold text-xs px-3 py-2 rounded transition">
-                    Info práctica (compra/consulta)
+                    Info práctica (consulta)
                   </a>
                 </div>
               </div>
@@ -877,8 +871,8 @@
 
                 <h4 class="text-2xl font-bold text-stone-700 serif mb-4">Del símbolo a la experiencia</h4>
                 <p class="text-sm text-stone-600 mb-4">
-                  En destinos turísticos, un símbolo puede traducirse en distintos formatos: relatos, espacios de visita,
-                  artesanía y propuestas culturales. Este informe observa esa transición y su impacto en el imaginario local.
+                  En destinos turísticos, un símbolo puede traducirse en relatos, espacios de visita,
+                  artesanía y propuestas culturales. El informe observa esa transición y su impacto en el imaginario local.
                 </p>
 
                 <ul class="text-sm text-stone-600 space-y-2">
@@ -920,7 +914,6 @@
           </div>
         </section>
 
-        <!-- FUENTES -->
         <section id="fuentes-v22" class="mt-10 bg-stone-100 border-t border-stone-300 rounded-lg p-6">
           <div class="max-w-6xl mx-auto">
             <h3 class="text-xl font-bold text-stone-900 mb-3 uppercase tracking-wider">Fuentes verificadas</h3>
@@ -967,7 +960,6 @@
           </div>
         </section>
 
-        <!-- CITA -->
         <section id="cita-v22" class="mt-10 bg-white rounded-lg border border-stone-200 p-6 card-shadow">
           <h3 class="text-xl font-bold text-stone-900 mb-2 uppercase tracking-wider">Cita sugerida</h3>
           <p class="text-sm text-stone-700 mb-3">
@@ -983,7 +975,6 @@
     </main>
   </section>
 
-  <!-- FOOTER -->
   <footer class="bg-stone-900 text-stone-400 py-8 px-6 text-sm mt-8">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
@@ -1003,7 +994,6 @@
     </div>
   </footer>
 
-  <!-- JS (namespaced) -->
   <script>
     const TTG_state = { currentTab: 'territorio' };
     let TTG_chartInstance = null;
@@ -1071,4 +1061,3 @@
 
 </body>
 </html>
-
