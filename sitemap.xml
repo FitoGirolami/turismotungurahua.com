@@ -3,23 +3,30 @@
 
   <url>
     <loc>https://turismotungurahua.com/</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://turismotungurahua.com/start-here/</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://turismotungurahua.com/estudios/turismo-tematico-etica/</loc>
-    <lastmod>2026-02-17</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/guia-banos-agua-santa/Index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
 </urlset>
