@@ -29,5 +29,53 @@
     <priority>0.95</priority>
   </url>
 
-</urlset>
+  <url>
+    <loc>https://turismotungurahua.com/que-hacer-en-banos-ecuador/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
+  <url>
+    <loc>https://turismotungurahua.com/cascadas-de-banos-agua-santa/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/termas-de-banos-agua-santa/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/aventura-en-banos-ecuador/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/miradores-de-banos/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/historia-de-banos-agua-santa/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
+  <url>
+    <loc>https://turismotungurahua.com/duendes-en-banos-ecuador/index.html</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
