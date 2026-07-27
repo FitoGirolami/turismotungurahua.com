@@ -1,0 +1,22 @@
+/* Monthly cultural agenda */
+.agenda-hero{background:linear-gradient(145deg,#183326,#365c49)}
+.event-card{display:grid;grid-template-columns:minmax(220px,.82fr) minmax(0,1.18fr);overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 28px rgba(24,34,29,.065)}
+.event-card-wide{grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr)}
+.event-media{display:block;min-height:100%;background:var(--surface-2);overflow:hidden}
+.event-media img{width:100%;height:100%;min-height:320px;object-fit:cover;transition:transform .25s ease}
+.event-media:hover img{transform:scale(1.025)}
+.event-body{padding:24px}
+.event-date{margin:.85rem 0 .35rem;font-weight:850;color:var(--gold-2)}
+.event-facts{padding-left:1.15rem;margin:1rem 0}
+.event-facts li{margin:.35rem 0}
+.source-link{font-weight:850}
+.image-credit{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.75rem;margin-top:1rem}
+.agenda-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.agenda-preview .event-teaser{overflow:hidden;padding:0}
+.event-teaser img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.event-teaser-body{padding:20px}
+.btn-dark{background:var(--forest-2);color:#fff}
+.btn-dark:hover{background:var(--forest);color:#fff}
+@media(max-width:900px){.event-card,.event-card-wide{grid-template-columns:1fr}.event-media img{min-height:0;max-height:520px}.agenda-preview{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.agenda-preview{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.event-media img{transition:none}}
