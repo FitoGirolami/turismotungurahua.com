@@ -17,6 +17,19 @@
 .event-teaser-body{padding:20px}
 .btn-dark{background:var(--forest-2);color:#fff}
 .btn-dark:hover{background:var(--forest);color:#fff}
+
+/*
+  External publishers sometimes block hotlinking. These rules keep the exact
+  official source artwork but request it through an image delivery proxy.
+  Source links and credits remain attached to every card.
+*/
+img[src*="cdn.buenplan.com.ec"]{content:url("https://images.weserv.nl/?url=cdn.buenplan.com.ec/pictures/9f4d1a2d-dd33-4edb-9dba-f1de80692959.png&w=1200&output=webp")}
+img[src*="8krutadelasmandarinas.com/fotos/post-8k.jpg"]{content:url("https://images.weserv.nl/?url=8krutadelasmandarinas.com/fotos/post-8k.jpg&w=1200&output=webp")}
+img[src*="cronometrajeinstantaneo-eventos"]{content:url("https://images.weserv.nl/?url=storage.googleapis.com/cronometrajeinstantaneo-eventos/3886/afiche_1.jpeg&w=1200&output=webp")}
+img[src*="tungurahua.gob.ec/file/2026/05/ninna-4.jpeg"]{content:url("https://images.weserv.nl/?url=www.tungurahua.gob.ec/file/2026/05/ninna-4.jpeg&w=1200&output=webp")}
+img[src*="aldeamagica.art/imagenes/aldea1.jpg"]{content:url("https://images.weserv.nl/?url=aldeamagica.art/imagenes/aldea1.jpg&w=1200&output=webp")}
+img[src*="res.cloudinary.com/dykjwnszb"]{content:url("https://images.weserv.nl/?url=res.cloudinary.com/dykjwnszb/image/upload/f_auto%2Cq_auto%2Cw_1100/v1750823397/La_casa_del_Duende_Banos_hlghri.jpg&w=1200&output=webp")}
+
 @media(max-width:900px){.event-card,.event-card-wide{grid-template-columns:1fr}.event-media img{min-height:0;max-height:520px}.agenda-preview{grid-template-columns:1fr 1fr}}
 @media(max-width:680px){.agenda-preview{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.event-media img{transition:none}}
