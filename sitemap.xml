@@ -1,81 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://turismotungurahua.com/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/" />
   </url>
-
+  <url>
+    <loc>https://turismotungurahua.com/en/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/" />
+  </url>
   <url>
     <loc>https://turismotungurahua.com/start-here/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://turismotungurahua.com/estudios/turismo-tematico-etica/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/start-here/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/start-here/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/start-here/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/guia-banos-agua-santa/Index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/en/start-here/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/start-here/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/start-here/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/start-here/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/banos-de-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/banos-de-agua-santa/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/que-hacer-en-banos-ecuador/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/en/banos-de-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/banos-de-agua-santa/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/cascadas-de-banos-agua-santa/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/que-hacer-en-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/que-hacer-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/things-to-do-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/que-hacer-en-banos-ecuador/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/termas-de-banos-agua-santa/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/en/things-to-do-in-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/things-to-do-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/que-hacer-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/que-hacer-en-banos-ecuador/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/cascadas-de-banos-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/cascadas-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/waterfalls-in-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/cascadas-de-banos-agua-santa/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/waterfalls-in-banos-de-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/waterfalls-in-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/cascadas-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/cascadas-de-banos-agua-santa/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/termas-de-banos-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/termas-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/hot-springs-in-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/termas-de-banos-agua-santa/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/aventura-en-banos-ecuador/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/en/hot-springs-in-banos-de-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/hot-springs-in-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/termas-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/termas-de-banos-agua-santa/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/miradores-de-banos/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/aventura-en-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/aventura-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/adventure-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/aventura-en-banos-ecuador/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/adventure-in-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/adventure-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/aventura-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/aventura-en-banos-ecuador/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/miradores-de-banos/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.87</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/miradores-de-banos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/viewpoints-in-banos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/miradores-de-banos/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/historia-de-banos-agua-santa/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://turismotungurahua.com/en/viewpoints-in-banos/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.87</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/viewpoints-in-banos/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/miradores-de-banos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/miradores-de-banos/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/historia-de-banos-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/historia-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/history-of-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/historia-de-banos-agua-santa/" />
   </url>
-
   <url>
-    <loc>https://turismotungurahua.com/duendes-en-banos-ecuador/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://turismotungurahua.com/en/history-of-banos-de-agua-santa/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/history-of-banos-de-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/historia-de-banos-agua-santa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/historia-de-banos-agua-santa/" />
   </url>
-
+  <url>
+    <loc>https://turismotungurahua.com/duendes-en-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/duendes-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/duendes-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/duendes-en-banos-ecuador/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/duendes-in-banos-ecuador/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/duendes-in-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/duendes-en-banos-ecuador/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/duendes-en-banos-ecuador/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/estudios/turismo-tematico-etica/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/studies/themed-tourism-and-ethics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/studies/themed-tourism-and-ethics/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/studies/themed-tourism-and-ethics/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/estudios/turismo-tematico-etica/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/estudios/memoria-fuego-agua-resiliencia/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/estudios/memoria-fuego-agua-resiliencia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/studies/fire-water-and-resilience/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/estudios/memoria-fuego-agua-resiliencia/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/studies/fire-water-and-resilience/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/studies/fire-water-and-resilience/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/estudios/memoria-fuego-agua-resiliencia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/estudios/memoria-fuego-agua-resiliencia/" />
+  </url>
 </urlset>
