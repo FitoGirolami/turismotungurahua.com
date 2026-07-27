@@ -97,6 +97,15 @@ details.faq summary{cursor:pointer;font-weight:800;color:var(--forest-2)}
 .inline-links a{font-weight:750}
 hr{border:0;border-top:1px solid var(--line);margin:28px 0}
 code{background:#ebe6db;padding:.12em .35em;border-radius:5px}
+
+/* Keep official agenda artwork visible when source websites reject hotlinking. */
+img[src*="cdn.buenplan.com.ec"]{content:url("https://images.weserv.nl/?url=cdn.buenplan.com.ec/pictures/9f4d1a2d-dd33-4edb-9dba-f1de80692959.png&w=1200&output=webp")}
+img[src*="8krutadelasmandarinas.com/fotos/post-8k.jpg"]{content:url("https://images.weserv.nl/?url=8krutadelasmandarinas.com/fotos/post-8k.jpg&w=1200&output=webp")}
+img[src*="cronometrajeinstantaneo-eventos"]{content:url("https://images.weserv.nl/?url=storage.googleapis.com/cronometrajeinstantaneo-eventos/3886/afiche_1.jpeg&w=1200&output=webp")}
+img[src*="tungurahua.gob.ec/file/2026/05/ninna-4.jpeg"]{content:url("https://images.weserv.nl/?url=www.tungurahua.gob.ec/file/2026/05/ninna-4.jpeg&w=1200&output=webp")}
+img[src*="aldeamagica.art/imagenes/aldea1.jpg"]{content:url("https://images.weserv.nl/?url=aldeamagica.art/imagenes/aldea1.jpg&w=1200&output=webp")}
+img[src*="res.cloudinary.com/dykjwnszb"]{content:url("https://images.weserv.nl/?url=res.cloudinary.com/dykjwnszb/image/upload/f_auto%2Cq_auto%2Cw_1100/v1750823397/La_casa_del_Duende_Banos_hlghri.jpg&w=1200&output=webp")}
+
 @media(max-width:900px){.grid-3,.grid-4,.footer-grid{grid-template-columns:1fr 1fr}.header-row{align-items:flex-start;padding:12px 0}.nav{gap:3px}}
 @media(max-width:680px){.grid-2,.grid-3,.grid-4,.footer-grid{grid-template-columns:1fr}.nav a:not(.lang){display:none}.hero{min-height:72vh;background-attachment:scroll}.hero-inner{padding:68px 0 40px}.section{padding:54px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
