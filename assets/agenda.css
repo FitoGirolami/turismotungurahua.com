@@ -1,10 +1,10 @@
 /* Monthly cultural agenda */
 .agenda-hero{background:linear-gradient(145deg,#183326,#365c49)}
-.event-card{display:grid;grid-template-columns:minmax(220px,.82fr) minmax(0,1.18fr);overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 28px rgba(24,34,29,.065)}
-.event-card-wide{grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr)}
-.event-media{display:block;min-height:320px;background-color:var(--surface-2);background-position:center;background-size:cover;background-repeat:no-repeat;overflow:hidden}
-.event-media img{width:100%;height:100%;min-height:320px;object-fit:cover;opacity:0}
-.event-body{padding:24px}
+.event-card{display:grid;grid-template-columns:minmax(240px,.86fr) minmax(0,1.14fr);overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 28px rgba(24,34,29,.065)}
+.event-card-wide{grid-template-columns:minmax(300px,.75fr) minmax(0,1.25fr)}
+.event-media{display:grid;place-items:center;min-height:360px;padding:14px;background:linear-gradient(145deg,#eee8da,#f8f4ea);overflow:hidden}
+.event-media img{display:block;width:100%;height:100%;max-height:520px;min-height:332px;object-fit:contain;object-position:center;opacity:1;border-radius:12px;background:#fff;box-shadow:0 8px 24px rgba(24,34,29,.09)}
+.event-body{padding:26px}
 .event-date{margin:.85rem 0 .35rem;font-weight:850;color:var(--gold-2)}
 .event-facts{padding-left:1.15rem;margin:1rem 0}
 .event-facts li{margin:.35rem 0}
@@ -12,28 +12,21 @@
 .image-credit{font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.75rem;margin-top:1rem}
 .agenda-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .agenda-preview .event-teaser{overflow:hidden;padding:0}
-.agenda-preview .event-teaser>a{display:block;aspect-ratio:16/10;background-color:var(--surface-2);background-position:center;background-size:cover;background-repeat:no-repeat;overflow:hidden}
-.event-teaser img{width:100%;height:100%;object-fit:cover;opacity:0}
+.agenda-preview .event-teaser>a{display:grid;place-items:center;aspect-ratio:4/3;padding:10px;background:linear-gradient(145deg,#eee8da,#f8f4ea);overflow:hidden}
+.event-teaser img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;opacity:1;border-radius:10px;background:#fff}
 .event-teaser-body{padding:20px}
 .btn-dark{background:var(--forest-2);color:#fff}
 .btn-dark:hover{background:var(--forest);color:#fff}
 
-/*
-  Safari does not reliably replace a broken <img> through content:url().
-  The official source artwork is therefore rendered as a background image
-  through a delivery proxy. The original image element remains hidden so its
-  alt text does not appear as a broken-image block. Source links and credits
-  remain unchanged.
-*/
-a.event-media[href*="buenplan.com.ec"],
-.agenda-preview a[href*="buenplan.com.ec"]{background-image:url("https://images.weserv.nl/?url=cdn.buenplan.com.ec/pictures/9f4d1a2d-dd33-4edb-9dba-f1de80692959.png&w=1200&output=webp")}
-a.event-media[href*="8krutadelasmandarinas.com"],
-.agenda-preview a[href*="8krutadelasmandarinas.com"]{background-image:url("https://images.weserv.nl/?url=8krutadelasmandarinas.com/fotos/post-8k.jpg&w=1200&output=webp")}
-a.event-media[href*="cronometrajeinstantaneo.com"]{background-image:url("https://images.weserv.nl/?url=storage.googleapis.com/cronometrajeinstantaneo-eventos/3886/afiche_1.jpeg&w=1200&output=webp")}
-a.event-media[href*="tungurahua.gob.ec"]{background-image:url("https://images.weserv.nl/?url=www.tungurahua.gob.ec/file/2026/05/ninna-4.jpeg&w=1200&output=webp")}
-a.event-media[href*="aldeamagica.art"],
-.agenda-preview a[href*="aldeamagica.art"]{background-image:url("https://images.weserv.nl/?url=aldeamagica.art/imagenes/aldea1.jpg&w=1200&output=webp")}
-a.event-media[href*="lacasadelduende.art"]{background-image:url("https://images.weserv.nl/?url=res.cloudinary.com/dykjwnszb/image/upload/f_auto%2Cq_auto%2Cw_1100/v1750823397/La_casa_del_Duende_Banos_hlghri.jpg&w=1200&output=webp")}
+/* Photographic venue images may fill the frame; event posters remain fully visible. */
+a.event-media[href*="aldeamagica.art"] img,
+a.event-media[href*="lacasadelduende.art"] img,
+a.event-media[href*="tungurahua.gob.ec"] img,
+.agenda-preview a[href*="aldeamagica.art"] img{object-fit:cover}
 
-@media(max-width:900px){.event-card,.event-card-wide{grid-template-columns:1fr}.event-media{min-height:280px}.event-media img{min-height:280px}.agenda-preview{grid-template-columns:1fr 1fr}}
-@media(max-width:680px){.agenda-preview{grid-template-columns:1fr}}
+/* The source image remains visible. No delivery proxy or opacity workaround is used. */
+.event-media img:not([src]),
+.event-teaser img:not([src]){visibility:hidden}
+
+@media(max-width:900px){.event-card,.event-card-wide{grid-template-columns:1fr}.event-media{min-height:300px}.event-media img{min-height:272px;max-height:460px}.agenda-preview{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.agenda-preview{grid-template-columns:1fr}.event-media{min-height:260px;padding:10px}.event-media img{min-height:240px}.agenda-preview .event-teaser>a{aspect-ratio:16/11}}
