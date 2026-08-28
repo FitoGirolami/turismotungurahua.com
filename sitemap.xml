@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://turismotungurahua.com/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/" />
@@ -11,12 +11,30 @@
   </url>
   <url>
     <loc>https://turismotungurahua.com/en/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/agenda-cultural/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/agenda-cultural/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/cultural-agenda/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/agenda-cultural/" />
+  </url>
+  <url>
+    <loc>https://turismotungurahua.com/en/cultural-agenda/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://turismotungurahua.com/en/cultural-agenda/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://turismotungurahua.com/agenda-cultural/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://turismotungurahua.com/agenda-cultural/" />
   </url>
   <url>
     <loc>https://turismotungurahua.com/start-here/</loc>
